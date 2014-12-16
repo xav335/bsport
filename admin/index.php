@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if (isset($_SESSION['accessGranted']) && $_SESSION['accessGranted']) {
+		 header('Location: /admin/home.php');
+	}
+	
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -31,14 +38,14 @@
 					<h3 class="panel-title">Identifiez Vous</h3>
 				</div>
 				<div class="panel-body">
-					<form role="form" action="home.php">
+					<form role="form" action="home.php" method="post">
 				  		<div class="form-group">
 				    		<label for="exampleInputEmail1">Identifiant</label>
-				    		<input type="email" class="form-control" id="login" placeholder="Entrez login">
+				    		<input type="text" class="form-control" name="login" placeholder="Entrez login">
 				  		</div>
 				  		<div class="form-group">
 				    		<label for="exampleInputPassword1">Mot de passe</label>
-				    		<input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
+				    		<input type="password" class="form-control" name="mdp" placeholder="Mot de passe">
 				  		</div>
 				  		<button type="submit" class="btn btn-default">Validez</button>
 					</form>

@@ -1,3 +1,18 @@
+<?php 
+	require 'classes/StorageManager.php';
+	session_start();
+	
+	if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
+		$storageManager = new StorageManager();
+		$accessGranted = $storageManager->grantAccess($_POST['login'], $_POST['mdp']);
+		if (!$accessGranted){
+			header('Location: /admin/');
+		} else {
+			$_SESSION['accessGranted'] = true;
+		}
+	} 
+	
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
