@@ -23,30 +23,6 @@ class StorageManager{
 	
 	}
 	
-	function authentifier($login, $mdp) {
-		$this->dbConnect("bsport");
-		// On recherche dans la base un utilisateur ayant ces identifiants
-		$requete = "SELECT * FROM admin";
-		$requete .= " WHERE login = '" . mysql_real_escape_string( $login ) . "'";
-		$requete .= " AND mdp = '" . mysql_real_escape_string( $mdp ) . "'";
-		//echo $requete . "<br><br>";
-		$result=mysql_query($requete);
-		if ($result==false)
-		{
-			die(mysql_error());
-		}
-		$count=mysql_num_rows($result);
-		// On a trouvé un utilisateur
-		if ($count != 0) {
-			$this->dbDisConnect();
-			return true;
-		}
-		// Personne --> Erreur!
-		else
-			$this->dbDisConnect();
-			return false;
-	}
-	
 	
 	public function storeIntoCRMAssos($value,$cat){
 		//$this->dbConnect("dolibarr");
