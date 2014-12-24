@@ -6,7 +6,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="/img/logo.png" width="140"/></a>
+                    <a class="navbar-brand" href="/admin/"><img src="/img/logo.png" width="140"/></a>
                 </div>
                 <div class="collapse navbar-collapse">
            			<ul class="nav navbar-nav">

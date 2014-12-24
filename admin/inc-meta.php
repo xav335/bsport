@@ -13,3 +13,5 @@
 <!--[if lt IE 9]><script type="text/javascript" src="/admin/js/respond.min.js"></script><![endif]-->
 <script type="text/javascript" src="/admin/js/jquery.min.js"></script>
 <script type="text/javascript" src="/admin/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/admin/tinymce/tinymce.min.js"></script>

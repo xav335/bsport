@@ -24,11 +24,14 @@ class StorageManager{
 	}
 	
 	
-	public function storeIntoCRMAssos($value,$cat){
+	public function addWews($value,$cat){
 		//$this->dbConnect("dolibarr");
-		$this->dbConnect("crmstaging");
+		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
+			$sql = "INSERT INTO `bsportnv`.`news` 
+					(`id_news`, `date_news`, `titre`, `description`) 
+					VALUES (NULL, '2014-12-15 00:00:00', 'Nouveau site', 'Nous avons mis en ligne notre nouveau site');";
 			$requete = "INSERT INTO `llx_societe`(
 			`nom`,
 			`fk_departement`,
@@ -138,16 +141,14 @@ class StorageManager{
 		$this->dbDisConnect();
 	}
 	
-	public function getRecordsFromTable($recordStart,$numrecords){
-		$this->dbConnect("winesworld");
-		$requete = "SELECT
-					`chateau` ,
-					`email`	,
-					`phone`
-				,	`site`
-				,	`societe`
-				,   `fax` FROM `wines` LIMIT ". $recordStart .",".$numrecords;
-	
+	public function getNews($id){
+		$this->dbConnect("bsportnv");
+		if (!isset($id)){
+			$requete = "SELECT * FROM `news` ORDER BY date_news DESC" ;
+		} else {
+			$requete = "SELECT * FROM `news` WHERE id_news=". $id ." ORDER BY date_news DESC" ;
+		}	
+		$new_array = null;
 		$result = mysql_query($requete);
 		while( $row = mysql_fetch_assoc( $result)){
 			$new_array[] = $row;
