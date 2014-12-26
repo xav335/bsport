@@ -4,7 +4,7 @@
 require 'classes/StorageManager.php';
 
 	$storageManager = new StorageManager();
-	$accessGranted = $storageManager->getNews(null);
+	$accessGranted = $storageManager->newsGet(null);
 	//print_r($accessGranted);
 	if (empty($accessGranted)) {
 		$message = 'Aucun enregistrements';
@@ -38,8 +38,11 @@ require 'classes/StorageManager.php';
 							<th class="col-md-4" style="">
 								Titre
 							</th>
+							<th class="col-md-4" style="">
+								Accroche
+							</th>
 							<th class="col-md-6" style="">
-								Description
+								Contenu
 							</th>
 							<th class="col-md-1" colspan="2" style="">
 								Actions
@@ -58,9 +61,16 @@ require 'classes/StorageManager.php';
 								<td><?php echo $value['id_news']?></td>
 								<td><?php echo traitement_datetime_affiche($value['date_news'])?></td>
 								<td><?php echo $value['titre']?></td>
-								<td><?php echo $value['description']?></td>
-								<td><a href="actu-ajout.php?id=<?php echo $value['id_news'] ?>"><img src="img/modif.png" width="30" alt="Modifier" ></a></td>
-								<td><a href="actu-suppr.php?id=<?php echo $value['id_news'] ?>"><img src="img/del.png" width="20" alt="Supprimer"> </a></td>
+								<td><?php echo $value['accroche']?></td>
+								<td><?php echo $value['contenu']?></td>
+								<td><a href="news-edit.php?id=<?php echo $value['id_news'] ?>"><img src="img/modif.png" width="30" alt="Modifier" ></a></td>
+								<td>
+									<div style="display: none;" class="supp<?php echo $value['id_news']?> alert alert-warning alert-dismissible fade in" role="alert">
+								      <button type="button" class="close"  aria-label="Close" onclick="$('.supp<?php echo $value['id_news']?>').css('display', 'none');"><span aria-hidden="true">×</span></button>
+								      <strong>Voulez vous vraiment supprimer ?</strong>
+								      <button type="button" class="btn btn-danger" onclick="location.href='formprocess.php?reference=news&action=delete&id=<?php echo $value['id_news'] ?>'">Oui !</button>
+								 	</div>
+								<img src="img/del.png" width="20" alt="Supprimer" onclick="$('.supp<?php echo $value['id_news']?>').css('display', 'block');"> </td>
 							</tr>
 							<?php } ?>
 						<?php } ?>	

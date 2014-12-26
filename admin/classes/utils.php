@@ -68,7 +68,7 @@
 			$tab = split(" ", $date);
 			$tab2 = split("-", $tab[0]);
 			
-		   	return $tab2[2] . "/" . $tab2[1] . "/" . $tab2[0] . " &agrave; " . $tab[1];
+		   	return $tab2[2] . "/" . $tab2[1] . "/" . $tab2[0] ;
 		}
 		else
 			return "";

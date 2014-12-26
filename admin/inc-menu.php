@@ -13,17 +13,17 @@
            				<li class="dropdown">
 				          	<a href="?" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Actualités <span class="caret"></span></a>
 				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="actu-ajout.php">Ajout</a></li>
-				            	<li><a href="actu-liste.php">Modification</a></li>
-				            	<li><a href="actu-liste.php">Suppression</a></li>
+				            	<li><a href="news-edit.php">Ajout</a></li>
+				            	<li><a href="news-list.php">Modification</a></li>
+				            	<li><a href="news-list.php">Suppression</a></li>
 				          	</ul>
 				        </li>
                         <li class="dropdown">
 				          	<a href="?" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Livre d'or <span class="caret"></span></a>
 				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="livredor-ajout.php">Ajout</a></li>
-				            	<li><a href="livredor-liste.php">Modification</a></li>
-				            	<li><a href="livredor-liste.php">Suppression</a></li>
+				            	<li><a href="goldbook-edit.php">Ajout</a></li>
+				            	<li><a href="goldbook-list.php">Modification</a></li>
+				            	<li><a href="goldbook-list.php">Suppression</a></li>
 				          	</ul>
 				        </li>
                         <li class="dropdown">

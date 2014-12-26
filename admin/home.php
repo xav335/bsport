@@ -1,17 +1,17 @@
 <?php 
-	require 'classes/StorageManager.php';
-	session_start();
-	
-	if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
-		$storageManager = new StorageManager();
-		$accessGranted = $storageManager->grantAccess($_POST['login'], $_POST['mdp']);
-		if (!$accessGranted){
-			header('Location: /admin/?action=error');
-		} else {
-			$_SESSION['accessGranted'] = true;
-		}
-	} 
-	
+require 'classes/StorageManager.php';
+session_start();
+
+if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
+	$storageManager = new StorageManager();
+	$result = $storageManager->grantAccess($_POST['login'], $_POST['mdp']);
+	if (!$result){
+		header('Location: /admin/?action=error');
+	} else {
+		$_SESSION['accessGranted'] = true;
+	}
+}
+
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -29,7 +29,7 @@
 			</div>
 			<div class="panel-body">
 				<p>
-					sfsdfsdfsdfsd
+					Dernier message
 				</p>
 				<p>
 					<a class="btn btn-success pull-right" href="http://webchat.freenode.net?channels=zftalk" target="_blank">Modifier</a>
