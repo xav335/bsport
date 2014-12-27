@@ -135,6 +135,19 @@ class StorageManager{
 
 	//////////////////   GOLDBOOK GOLDBOOK GOLDBOOK GOLDBOOK GOLDBOOK GOLDBOOK GOLDBOOK  //////////////////////////
 	
+	public function goldbookUnvalidateGet(){
+		$this->dbConnect("bsportnv");
+		$requete = "SELECT count(*) as nb FROM `goldbook` WHERE online=0;" ;
+		//print_r($requete);
+		$new_array = null;
+		$result = mysql_query($requete);
+		while( $row = mysql_fetch_assoc( $result)){
+			$new_array[] = $row;
+		}
+		$this->dbDisConnect();
+		return $new_array;
+	}
+	
 	public function goldbookGet($id){
 		$this->dbConnect("bsportnv");
 		if (!isset($id)){
@@ -158,13 +171,19 @@ class StorageManager{
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
+			if($value['online']=='on') {
+				$online = 1;
+			} else {
+				$online = 0;
+			}
 			$sql = "INSERT INTO `bsportnv`.`goldbook`
-						(`date`, `nom`, `email`, `message`)
+						(`date`, `nom`, `email`, `message`,`online`)
 						VALUES (
 						'". $this->inserer_date($value['datepicker']) ."',
 						'". addslashes($value['nom']) ."',
 						'". addslashes($value['email']) ."',
-						'". addslashes($value['message']) ."'
+						'". addslashes($value['message']) ."',
+						". $online ."
 					);";
 			$result = mysql_query($sql);
 				

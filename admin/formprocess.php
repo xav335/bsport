@@ -41,7 +41,7 @@ if (!empty($_POST)){
 	
 	// traitement des livre d'or
 	if ($_POST['reference'] == 'goldbook'){
-		if ($_POST['action'] == 'modif') { //Modifier la news
+		if ($_POST['action'] == 'modif') { //Modifier 
 			try {
 				$result = $storageManager->goldbookModify($_POST);
 				header('Location: /admin/goldbook-list.php');
@@ -50,7 +50,7 @@ if (!empty($_POST)){
 				exit();
 			}
 				
-		} else {  //ajouter une news
+		} else {  //ajouter 
 			try {
 				$result = $storageManager->goldbookAdd($_POST);
 				header('Location: /admin/goldbook-edit.php?id='.$result);
@@ -63,7 +63,7 @@ if (!empty($_POST)){
 	}
 	
 } elseif (!empty($_GET)) { // GET GET GET
-	if ($_GET['reference'] == 'news'){ //Modifier la news
+	if ($_GET['reference'] == 'news'){ //supprimer
 		if ($_GET['action'] == 'delete'){
 			try {
 				$result = $storageManager->newsDelete($_GET['id']);
@@ -73,6 +73,17 @@ if (!empty($_POST)){
 				exit();
 			}
 		}	
+	}
+	if ($_GET['reference'] == 'goldbook'){ //supprimer
+		if ($_GET['action'] == 'delete'){
+			try {
+				$result = $storageManager->goldbookDelete($_GET['id']);
+				header('Location: /admin/goldbook-list.php');
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				exit();
+			}
+		}
 	}
 } else {
 	header('Location: /admin/');

@@ -11,10 +11,10 @@ if (!empty($_GET)){ //Modif
 	if (empty($result)) {
 		$message = 'Aucun enregistrements';
 	} else {
-		$labelTitle = 'Livre d\' or N°: '. $_GET['id'];
-		$date_goldbook= 	traitement_datetime_affiche($result[0]['date']);
+		$labelTitle= 	'Livre d\' or N°: '. $_GET['id'];
+		$date_goldbook= traitement_datetime_affiche($result[0]['date']);
 		$id= 			$_GET['id'];
-		$nom=  		$result[0]['nom'];
+		$nom=  			$result[0]['nom'];
 		$email=  		$result[0]['email'];
 		$message= 		$result[0]['message'];
 		if($result[0]['online']=='1') { 
@@ -31,6 +31,7 @@ if (!empty($_GET)){ //Modif
 	$email= 		null;
 	$date_goldbook= null;
 	$message= 		null;
+	$online = 		null;
 }
 ?>
 <!doctype html>
@@ -44,8 +45,9 @@ if (!empty($_GET)){ //Modif
 	<div class="container">
 
 		<div class="row">
+			<h3><?php echo $labelTitle ?></h3><br>
 			<div class="col-xs-12 col-sm-12 col-md-12">
-				<h3><?php echo $labelTitle ?></h3>
+				
 					<form name="formulaire" class="form-horizontal" method="POST"  action="formprocess.php">
 						<input type="hidden" name="reference" value="goldbook">
 						<input type="hidden" name="action" value="<?php echo $action ?>">
@@ -68,8 +70,8 @@ if (!empty($_GET)){ //Modif
 			           		<textarea class="col-sm-12"  name="message" required id="accroche" rows="3" ><?php echo $message ?></textarea>
 			            </div> 
 						<div class="form-group" >
-							<label class="col-sm-2" for="titre">En ligne :</label>
-						    <input type="checkbox" class="col-sm-1" name="online" <?php echo  $online ?>>
+							<label for="titre">En ligne :</label>
+						    <input type="checkbox" name="online" <?php echo  $online ?>>
 						</div>
 			            <button class="btn btn-success col-sm-12" type="submit" class="btn btn-default"> Valider </button>
 			        </form>

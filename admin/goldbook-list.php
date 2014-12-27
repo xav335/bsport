@@ -59,6 +59,11 @@ require 'classes/StorageManager.php';
 							$i=0;
 							foreach ($result as $value) { 
 							$i++;
+							if($value['online']=='1') {
+								$online = 'check';
+							} else {
+								$online = 'vide';
+							}
 							?>
 							<tr class="<?php if ($i%2!=0) echo 'info'?>">
 								<td><?php echo $value['id']?></td>
@@ -66,7 +71,7 @@ require 'classes/StorageManager.php';
 								<td><?php echo $value['nom']?></td>
 								<td><?php echo $value['email']?></td>
 								<td><?php echo $value['message']?></td>
-								<td><?php echo $value['online']?></td>
+								<td><img src="img/<?php echo $online ?>.png" width="30" ></td>
 								<td><a href="goldbook-edit.php?id=<?php echo $value['id'] ?>"><img src="img/modif.png" width="30" alt="Modifier" ></a></td>
 								<td>
 									<div style="display: none;" class="supp<?php echo $value['id']?> alert alert-warning alert-dismissible fade in" role="alert">

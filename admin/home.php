@@ -2,14 +2,21 @@
 require 'classes/StorageManager.php';
 session_start();
 
+$storageManager = new StorageManager();
 if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
-	$storageManager = new StorageManager();
 	$result = $storageManager->grantAccess($_POST['login'], $_POST['mdp']);
 	if (!$result){
 		header('Location: /admin/?action=error');
 	} else {
 		$_SESSION['accessGranted'] = true;
 	}
+}
+
+$result = $storageManager->goldbookUnvalidateGet();
+if (empty($result)) {
+	$message = 'Tous les messages sont validés';
+} else {
+	$message = 'Vous avez '. $result[0]['nb'] .' message(s) à valider';
 }
 
 ?>
@@ -29,10 +36,10 @@ if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
 			</div>
 			<div class="panel-body">
 				<p>
-					Dernier message
+					<?php echo $message ?>
 				</p>
 				<p>
-					<a class="btn btn-success pull-right" href="http://webchat.freenode.net?channels=zftalk" target="_blank">Modifier</a>
+					<a class="btn btn-success pull-right" href="/admin/goldbook-list.php" target="_blank">Modifier</a>
 				</p>
 			</div>
 		</div>
