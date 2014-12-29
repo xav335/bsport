@@ -1,3 +1,22 @@
+<?php 
+require 'admin/classes/StorageManager.php';
+require 'admin/classes/utils.php';
+session_start();
+$storageManager = new StorageManager();
+$result = $storageManager->newsGet(null);
+//print_r($result);
+if (empty($result)) {
+	$titre=  		'';
+	$date_news= 	'';
+	$accroche= 		'Pas de news pour le moment.';
+	$contenu= 		'';
+} else {
+	$titre=  		$result[0]['titre'];
+	$date_news= 	traitement_datetime_affiche($result[0]['date_news']);
+	$accroche= 		$result[0]['accroche'];
+	$contenu= 		$result[0]['contenu'];
+}
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -76,14 +95,13 @@
 	<div class="large-4 medium-4 small-12 columns">
 		&nbsp;
 		<h1>Actualités du Club</h1>
-		<h2>Nouveau site internet</h2>
+		<h2><?php echo $titre?></h2>
 		<p>
-			Votre club modifie complètement son image avec une communication à l'image du club moderne et dynamique.
-			Suivez notre actualité et les évenements du club.
+			<?php echo $accroche?>
 		</p>
 		
 		<div class="large-12 medium-12 small-12 columns">	
-			<div><a class="suite" href="actualites.php">Plus de news</a></div>
+			<div><a class="suite" href="actualites.php">Voir la Suite</a></div>
 		</div>
 	</div>	
 	

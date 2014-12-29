@@ -35,13 +35,13 @@ require 'classes/StorageManager.php';
 							<th class="col-md-1" style="">
 								Date
 							</th>
-							<th class="col-md-4" style="">
+							<th class="col-md-1" style="">
 								Titre
 							</th>
-							<th class="col-md-4" style="">
+							<th class="col-md-2" style="">
 								Accroche
 							</th>
-							<th class="col-md-6" style="">
+							<th class="col-md-5" style="">
 								Contenu
 							</th>
 							<th class="col-md-1" colspan="2" style="">
