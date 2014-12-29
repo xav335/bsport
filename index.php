@@ -96,6 +96,7 @@ if (empty($result)) {
 		&nbsp;
 		<h1>Actualités du Club</h1>
 		<h2><?php echo $titre?></h2>
+		<?php echo $date_news?> :
 		<p>
 			<?php echo $accroche?>
 		</p>

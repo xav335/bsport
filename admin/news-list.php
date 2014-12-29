@@ -4,9 +4,9 @@
 require 'classes/StorageManager.php';
 
 	$storageManager = new StorageManager();
-	$accessGranted = $storageManager->newsGet(null);
-	//print_r($accessGranted);
-	if (empty($accessGranted)) {
+	$result = $storageManager->newsGet(null);
+	//print_r($result);
+	if (empty($result)) {
 		$message = 'Aucun enregistrements';
 	} else {
 		$message = '';
@@ -52,9 +52,9 @@ require 'classes/StorageManager.php';
 					</thead>
 					<tbody>
 						<?php 
-						if (!empty($accessGranted)) {
+						if (!empty($result)) {
 							$i=0;
-							foreach ($accessGranted as $value) { 
+							foreach ($result as $value) { 
 							$i++;
 							?>
 							<tr class="<?php if ($i%2!=0) echo 'info'?>">

@@ -8,6 +8,9 @@ p {font-size:22px;}
 h1 {font-family:inherit;font-weight:bold;font-style:italic;font-size:36px;line-height:36px;color:#18293c;text-transform:uppercase;margin-bottom:0;}
 h2 {font-family:inherit;font-style:italic;font-size:18px;line-height:18px;color:#d75b00;text-transform:uppercase;margin-top:0;margin-bottom:45px;}
 h2:before {content:'// ';}
+h3 {font-family:inherit;font-weight:bold;font-size:18px;line-height:18px;color:#d75b00;text-transform:uppercase;margin-top:0;margin-bottom:0px;}
+h4 {font-family:inherit;font-style:normal;font-size:16px;line-height:18px;color:#18293c;text-transform:none;margin-top:0;margin-bottom:0px;}
+
 a:hover {color: #d75b00;}
 
 .fullwidth {max-width:100%;}
@@ -17,6 +20,9 @@ a:hover {color: #d75b00;}
 /* Liens */
 .suite {background:#18293c;padding:10px;color:#fff;text-transform:uppercase;}
 .suite:hover {background:#ff4800;color:#fff;}
+
+.suite2 {background:#18293c;padding:2px;color:#fff;text-transform:uppercase;cursor: pointer;}
+.suite2:hover {background:#ff4800;color:#fff;}
 
 /* Slider Top */
 .logo {position:absolute;top:50%;margin-top:-66px;left:50%;margin-left:-385px;z-index:100;}
