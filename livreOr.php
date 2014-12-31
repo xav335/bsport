@@ -4,7 +4,7 @@ require 'admin/classes/StorageManager.php';
 require 'admin/classes/utils.php';
 session_start();
 $storageManager = new StorageManager();
-$result = $storageManager->goldbookGet(null);
+$result = $storageManager->goldbookValidGet();
 //print_r($result);
 ?>
 <html class="no-js" lang="en">
@@ -83,11 +83,6 @@ $result = $storageManager->goldbookGet(null);
 </div>
 <!-- /Content -->
 <script type="text/javascript">
-	
-
-
-
-
 
 	$(document).on('submit','#formulaire',function(e) {
 	  e.preventDefault();
