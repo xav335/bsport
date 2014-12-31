@@ -91,8 +91,8 @@ $( document ).ready(function() {
 			  data = $(this).serializeArray();
 	
 			  data.push({
-			    name: 'tag',
-			    value: 'saveUser'
+			    name: 'action',
+			    value: 'sendMail'
 			  })
 	
 			  console.log(data);
@@ -104,9 +104,9 @@ $( document ).ready(function() {
 			        data: data,
 			        success: function (data) {
 			            $("#resultat").html("<h3>Merci pour votre message</h3>");
-			        	/*$("#nom").val("");
+			        	$("#nom").val("");
 			           	$("#email").val("");
-			           	$("#message").val("");*/
+			           	$("#message").val("");
 			            return false;
 			        },
 			        error: function() {
