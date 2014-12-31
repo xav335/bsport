@@ -5,12 +5,20 @@ session_start();
 
 $storageManager = new StorageManager();
 
+error_log(date("Y-m-d H:i:s") ." : ". $_POST['datepicker'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['nom'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['email'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['message'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['action'] ."\n", 3, "../log/spy.log");
 
 if ($_POST["action"] == "sendMail") {
+	
+	try {
+		$result = $storageManager->goldbookAdd($_POST);
+	} catch (Exception $e) {
+		error_log(date("Y-m-d H:i:s") ." Erreur: ". $e->getMessage() ."\n", 3, "../log/spy.log");
+		exit();
+	}
 
 	//$_to = "contact@bsport.fr";
 	$_to = "fjavi.gonzalez@gmail.com";

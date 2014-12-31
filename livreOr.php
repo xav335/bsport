@@ -31,7 +31,8 @@ $result = $storageManager->goldbookGet(null);
 		<div id="resultat">
 		
     	</div>
-    	<form data-abide id="user-form">
+    	<form data-abide id="formulaire">
+    		<input type="hidden" name="datepicker" id="datepicker"  value="<?php echo date("d/m/Y")?>">
 			<div class="row">
 				<div class="large-12 columns">
 					<label>Nom
@@ -56,7 +57,7 @@ $result = $storageManager->goldbookGet(null);
 					<small class="error">Merci de saisir votre message</small>
 				</div>
 			</div>
-			<input class="suite " type="submit" value="Laissez nous votre témoignage"/>
+			<input class="suite" id="bouton" type="submit" value="Laissez nous votre témoignage"/>
 		</form>
 	</div>
 	<div class="large-7 medium-7 small-12 columns">
@@ -84,42 +85,75 @@ $result = $storageManager->goldbookGet(null);
 <script type="text/javascript">
 	
 
+
+
+
+
+	$(document).on('submit','#formulaire',function(e) {
+	  e.preventDefault();
+	  data = $(this).serializeArray();
+
+	  data.push({
+	   		name: 'action',
+	    	value: 'sendMail'
+	  	})
+
+	  console.log(data);
+
+	    /* I put the above code for check data before send to ajax*/
+	    $.ajax({
+		        url: '/ajax/goldbook.php',
+		        type: 'post',
+		        data: data,
+		        success: function (data) {
+		            $("#resultat").html("<h3>Merci pour votre message</h3>");
+		        	$("#nom").val("");
+		           	$("#email").val("");
+		           	$("#message").val("");
+		        },
+		        error: function() {
+		        	 $("#resultat").html("<h3>Une erreur s'est produite !</h3>");
+		        }
+		   	});
+	return false;
+	})
+
+/*		
+
 $( document ).ready(function() {
-	$("#user-form").submit(function(e) {
-		 if($("form")[0].checkValidity()) {
-			 e.preventDefault();
-			  data = $(this).serializeArray();
 	
-			  data.push({
-			    name: 'action',
-			    value: 'sendMail'
-			  })
-	
-			  console.log(data);
-	
-			    /* I put the above code for check data before send to ajax*/
-			    $.ajax({
-			        url: '/ajax/goldbook.php',
-			        type: 'post',
-			        data: data,
-			        success: function (data) {
-			            $("#resultat").html("<h3>Merci pour votre message</h3>");
-			        	$("#nom").val("");
-			           	$("#email").val("");
-			           	$("#message").val("");
-			            return false;
-			        },
-			        error: function() {
-			        	 $("#resultat").html("<h3>Une erreur s'est produite !</h3>");
-			        	 return false;
-			        }
-			   });
-			}else{
-			   console.log("invalid form");
-			}
+	$("#formulaire").submit(function(e) {
+
+		e.preventDefault();
+		
+ 		if($("form")[0].checkValidity()) {
+		  	data = $(this).serializeArray();
+		  	data.push({
+		   		name: 'action',
+		    	value: 'sendMail'
+		  	})
+
+		    $.ajax({
+		        url: '/ajax/goldbook.php',
+		        type: 'post',
+		        data: data,
+		        success: function (data) {
+		            $("#resultat").html("<h3>Merci pour votre message</h3>");
+		        	$("#nom").val("");
+		           	$("#email").val("");
+		           	$("#message").val("");
+		        },
+		        error: function() {
+		        	 $("#resultat").html("<h3>Une erreur s'est produite !</h3>");
+		        }
+		   	});
+	    //return false;	     
+		}else{
+			console.log("invalid form");
+		}
 	});
 });
-				
+			*/	
 </script>
 <!-- Footer -->
 <?php include('inc/footer.php'); ?>
