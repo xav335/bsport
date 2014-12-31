@@ -24,7 +24,7 @@
 	<div class="magnify fullwidth">
 		<!-- This is the magnifying glass which will contain the original/large version -->
 		<div class="large"></div>
-		<!-- This is the small image -->
+		<!-- This is the small image width="1624" height="726"  -->
 		<img class="small" src="img/planningbig.jpg" />
 	</div>
 		

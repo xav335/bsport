@@ -1,6 +1,6 @@
 <?php
-require 'classes/StorageManager.php';
-require 'classes/utils.php';
+require '../admin/classes/StorageManager.php';
+require '../admin/classes/utils.php';
 session_start();
 
 $storageManager = new StorageManager();

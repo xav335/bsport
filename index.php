@@ -42,7 +42,13 @@ if (empty($result)) {
 		</p>
 		
 		<div class="large-8 medium-8 small-12 columns">	
-			<div><a class="fancybox-media suite" href="https://www.youtube.com/watch?v=FQY8beNFrXc"><img src="img/youtube.png" alt="" /> Notre video de présentation</a></div>
+			<div style="padding-left: 0px;">
+				<a class="fancybox-media" href="https://www.youtube.com/watch?v=FQY8beNFrXc">
+				<img src="img/video.jpg" alt="" /></a>
+			</div>	
+			<div style="padding-left: 2px;">	
+				<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=FQY8beNFrXc"><img src="img/youtube.png" alt="" /> &nbsp; &nbsp;Notre video de présentation &nbsp; &nbsp;</a>
+			</div>
 		</div>
 	</div>
 	<div class="large-4 medium-4 small-12 columns">

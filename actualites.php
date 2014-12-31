@@ -86,7 +86,7 @@ if (!empty($_GET)){
     function newsDisplay(id){
         
         $.get(
-            '/admin/process.php?id='+id, 
+            '/ajax/actu.php?id='+id, 
             {
             },
             function(data){ 
