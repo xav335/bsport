@@ -83,8 +83,8 @@ if (!empty($_GET)){ //Modif
 						// ===========================================
 						// SET RELATIVE_URLS to FALSE (This is required for images to display properly)
 						// ===========================================
-						// AJOUTE LES URL EN ENTIER
-						//document_base_url: "http://bsport.localxav.lan",
+						// AJOUTE LES URL EN ENTIER decommenter les 2 lignes suivantes
+						//document_base_url: "http://dev.bsport.fr",
 						//remove_script_host : false,
 						relative_urls: false,
 						file_browser_callback: RoxyFileBrowser

@@ -165,6 +165,19 @@ class StorageManager{
 		return $new_array;
 	}
 	
+	public function goldbookValidGet(){
+		$this->dbConnect("bsportnv");
+		$requete = "SELECT * FROM `goldbook` WHERE online=1 ORDER BY `date` DESC" ;
+		//print_r($requete);
+		$new_array = null;
+		$result = mysql_query($requete);
+		while( $row = mysql_fetch_assoc( $result)){
+			$new_array[] = $row;
+		}
+		$this->dbDisConnect();
+		return $new_array;
+	}
+	
 	public function goldbookAdd($value){
 		//print_r($value);
 		//exit();

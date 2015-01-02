@@ -64,7 +64,7 @@ if (!empty($_GET)){
 					foreach ($result as $value) { 
 					$i++;
 					?>
-					<div style=";border-bottom : 4px ridge white;padding:24px 4px 24px 4px; " class="<?php if ($i%2!=0) echo 'info'?>">
+					<div style=";border-bottom : 4px ridge white;padding:24px 4px 24px 4px; <?php if ($i%2==0) echo 'background: #FFF;'?>">
 						Actu publiée le: <b><?php echo traitement_datetime_affiche($value['date_news'])?></b><br>
 						<h3><?php echo $value['titre']?></h3><br>
 						<h4><?php echo $value['accroche']?></h4><br>
