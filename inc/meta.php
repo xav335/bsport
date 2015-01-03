@@ -54,7 +54,8 @@
 				closeEffect : 'none',
 				prevEffect : 'none',
 				nextEffect : 'none',
-
+				'width': 560,
+			    'height': 380,
 				arrows : false,
 				helpers : {
 					media : {},
