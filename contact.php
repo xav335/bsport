@@ -22,30 +22,33 @@
 			28-32 rue des marronniers 33110 LE BOUSCAT (sur boulevard Godard)<br/>
 			Tél. 05 56 69 91 23
 		</p>
-		<form data-abide>
+		<div id="resultat">
+		
+    	</div>
+		<form data-abide id="formulaire">
 			<div class="row">
 				<div class="large-6 columns">
 					<label>Nom
-						<input type="text" placeholder="Nom" required pattern="[a-zA-Z]+" />
+						<input type="text" id="nom" name="nom" placeholder="Nom" required pattern="[a-zA-Z]+" />
 					</label>
 					<small class="error">Votre nom est obligatoire</small>
 				</div>
 				<div class="large-6 columns">
 					<label>Prénom
-						<input type="text" placeholder="Prénom" />
+						<input id="prenom" type="text" name="prenom" placeholder="Prénom" />
 					</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="large-6 columns">
 					<label>Téléphone
-						<input type="text" placeholder="Téléphone" required />
+						<input type="text" id="tel" name="tel" placeholder="Téléphone" />
 					</label>
 					<small class="error">Votre téléphone est obligatoire</small>
 				</div>
 				<div class="large-6 columns">
 					<label>e-mail
-						<input type="text" placeholder="e-mail" required />
+						<input type="text" id="email" name="email" placeholder="e-mail" required />
 					</label>
 					<small class="error">Votre e-mail est obligatoire</small>
 				</div>
@@ -53,7 +56,7 @@
 			<div class="row">
 				<div class="large-12 columns">
 					<label>Sujet
-						<select required>
+						<select required id="sujet" name="sujet" >
 							<option value="renseignement">Renseignement</option>
 							<option value="abonnement">Abonnement</option>
 							<option value="programme">Programme des cours</option>
@@ -63,12 +66,18 @@
 					<small class="error">Merci de choisir un sujet</small>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="large-12 columns">
 					<label>Message
-						<textarea placeholder="Votre message" required></textarea>
+						<textarea id="message" name="message" placeholder="Votre message" required></textarea>
 					</label>
 					<small class="error">Merci de saisir votre message</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<input type="checkbox" id="newsletter" name="newsletter" value="1" checked/> J'accepte de recevoir la newsletter de B'Sport.
 				</div>
 			</div>
 			<button type="submit">Envoyer la demande</button>
@@ -89,6 +98,41 @@
 	</div>
 </div>
 <!-- /Content -->
+<script type="text/javascript">
+
+	$(document).on('submit','#formulaire',function(e) {
+	  e.preventDefault();
+	  data = $(this).serializeArray();
+
+	  data.push({
+	   		name: 'action',
+	    	value: 'sendMail'
+	  	})
+
+	  console.log(data);
+
+	    /* I put the above code for check data before send to ajax*/
+	    $.ajax({
+		        url: '/ajax/contact.php',
+		        type: 'post',
+		        data: data,
+		        success: function (data) {
+		            $("#resultat").html("<h3>Merci pour votre message</h3>");
+		        	$("#nom").val("");
+		        	$("#prenom").val("");
+		        	$("#email").val("");
+		        	$("#tel").val("");
+		           	$("#message").val("");
+		        },
+		        error: function() {
+		        	 $("#resultat").html("<h3>Une erreur s'est produite !</h3>");
+		        }
+		   	});
+	return false;
+	})
+
+</script>
+
 
 <!-- Footer -->
 <?php include('inc/footer.php'); ?>

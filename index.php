@@ -51,21 +51,21 @@ if (empty($result)) {
 			</div>
 		</div>
 	</div>
+	
 	<div class="large-4 medium-4 small-12 columns">
 		&nbsp;
-		<a href="les-cours.php" >
-		<div class="slider-espace autoplay2">
-			<div><img src="img/bodybalancemain.jpg" alt="" /></div>
-			<div><img src="img/bodycombatmain.jpg" alt="" /></div>
-			<div><img src="img/bodypumpmain.jpg" alt="" /></div>
-			<div><img src="img/rpmmain.jpg" alt="" /></div>
+		<h1>Actualités du Club</h1>
+		<h2><?php echo $titre?></h2>
+		<?php echo $date_news?> :
+		<p>
+			<?php echo $accroche?>
+		</p>
+		
+		<div class="large-12 medium-12 small-12 columns">	
+			<div><a class="suite" href="actualites.php">Voir la Suite</a></div>
 		</div>
-		<div class="encart bg-orange">
-			<span class="titre">Tous nos cours</span><br/>
-			<span class="titre2">LES MILLS</span>
-		</div>
-		</a>
-	</div>		
+	</div>	
+	
 	
 </div>
 <div class="row">
@@ -85,6 +85,21 @@ if (empty($result)) {
 		</a>
 	</div>
 		
+	<div class="large-4 medium-4 small-12 columns">
+		&nbsp;
+		<a href="les-cours.php" >
+		<div class="slider-espace autoplay2">
+			<div><img src="img/bodybalancemain.jpg" alt="" /></div>
+			<div><img src="img/bodycombatmain.jpg" alt="" /></div>
+			<div><img src="img/bodypumpmain.jpg" alt="" /></div>
+			<div><img src="img/rpmmain.jpg" alt="" /></div>
+		</div>
+		<div class="encart bg-orange">
+			<span class="titre">Tous nos cours</span><br/>
+			<span class="titre2">LES MILLS</span>
+		</div>
+		</a>
+	</div>			
 	
 	<div class="large-4 medium-4 small-12 columns">
 		&nbsp;
@@ -98,20 +113,6 @@ if (empty($result)) {
 		</a>
 	</div>
 
-	<div class="large-4 medium-4 small-12 columns">
-		&nbsp;
-		<h1>Actualités du Club</h1>
-		<h2><?php echo $titre?></h2>
-		<?php echo $date_news?> :
-		<p>
-			<?php echo $accroche?>
-		</p>
-		
-		<div class="large-12 medium-12 small-12 columns">	
-			<div><a class="suite" href="actualites.php">Voir la Suite</a></div>
-		</div>
-	</div>	
-	
 </div>
 <div class="row content">
 	

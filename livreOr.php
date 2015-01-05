@@ -57,6 +57,11 @@ $result = $storageManager->goldbookValidGet();
 					<small class="error">Merci de saisir votre message</small>
 				</div>
 			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<input type="checkbox" id="newsletter" name="newsletter" value="1" checked/> J'accepte de recevoir la newsletter de B'Sport.
+				</div>
+			</div>
 			<input class="suite" id="bouton" type="submit" value="Laissez nous votre témoignage"/>
 		</form>
 	</div>

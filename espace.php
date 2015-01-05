@@ -30,7 +30,7 @@
 	</div>		
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px; " >
 		<div class="large-7 medium-7 small-12 columns">
-			<h3>Espace Aquatique</h3>
+			<h3>Espace Aquatique</h3><br>
 			<p>
 				Une piscine à votre disposition de 15 m sur 6 vous autorise de véritables moments de détente dans un milieu où stress, complexe et préoccupations n’existent plus… Avec l’aquagym…que du plaisir : efficacité renforcée, efforts allégés, amélioration de la circulation sanguine, massage remodelant.
 			</p>
@@ -44,7 +44,7 @@
 	</div>		
 	<div class="large-12 columns" style="; padding: 30px 10px 30px 10px;  background: #FFF;" >
 		<div class="large-7 medium-7 small-12 columns">
-			<h3>Espace Musculation</h3>
+			<h3>Espace Musculation</h3><br>
 			<p>
 				Avec prés de 60 postes cet espace permet de pratiquer toutes les formes de musculation ; quels que soient vos objectifs, l’ensemble de l’équipe vous aidera à les concrétiser grâce à 1 bilan forme, 1 programme personnalisé dés le 1er jour et 1 suivi permanent et attentif de vos séances d’entraînement.
 			</p>
@@ -67,7 +67,7 @@
 	</div>	
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px; " >
 		<div class="large-7 medium-7 small-12 columns">
-			<h3>Studio Fitness</h3>
+			<h3>Studio Fitness</h3><br>
 			<p>
 				Dynamiques, entraînants et motivants, les cours de fitness, par leur diversité et leur aspect ludique, conviennent à tous quelque soit le niveau.
 			</p>
@@ -78,7 +78,7 @@
 	</div>	
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px;  background: #FFF;" >
 		<div class="large-7 medium-7 small-12 columns">
-			<h3>Studio vélo indoor</h3>
+			<h3>Studio vélo indoor</h3><br>
 			<p>
 				50 vélos indoor de marque BODYBIKE dernière génération. Espace dédié aux adeptes des cours sur vélos pour entrainer son cœur différemment, brûler le maximum de calories, se dépasser, se défouler.
 			</p>
@@ -93,7 +93,7 @@
 	
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px; " >
 		<div class="large-7 medium-7 small-12 columns">
-			<h3>Salle Cardio-training</h3>
+			<h3>Salle Cardio-training</h3><br>
 			<p>
 				Lieu de pèlerinage pour tous ceux qui souhaitent améliorer leur souffle, leur condition physique générale et brûler des calories.
 			</p>
@@ -107,7 +107,7 @@
 	</div>		
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px;  background: #FFF;" >
 		<div class="large-7 medium-7 small-12 columns">
-			<h3>ETIREMENTS, ABDOS, ECHAUFFEMENTS</h3>
+			<h3>ETIREMENTS, ABDOS, ECHAUFFEMENTS</h3><br>
 			<p>
 			</p>
 		</div>
