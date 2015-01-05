@@ -29,7 +29,7 @@
                         <li class="dropdown">
 				          	<a href="?" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Newsletter<span class="caret"></span></a>
 				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="newsletter-modif.php">Newsletter Html</a></li>
+				            	<li><a href="newsletter-edit.php">Newsletter Html</a></li>
 				            	<li><a href="newsletter-texte_modif.php">Newsletter texte</a></li>
 				            	<li class="divider"></li>
 				            	<li><a href="#">Envoi</a></li>

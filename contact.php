@@ -117,7 +117,7 @@
 		        type: 'post',
 		        data: data,
 		        success: function (data) {
-		            $("#resultat").html("<h3>Merci pour votre message</h3>");
+		            $("#resultat").html("<h3>Merci pour votre message - Nous allons y donner suite très vite</h3>");
 		        	$("#nom").val("");
 		        	$("#prenom").val("");
 		        	$("#email").val("");

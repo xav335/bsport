@@ -25,7 +25,7 @@ if ($_POST["action"] == "sendMail") {
 
 	//$_to = "contact@bsport.fr";
 	$_to = "fjavi.gonzalez@gmail.com";
-	$sujet = "Bsport - Nv Contact ";
+	$sujet = "Bsport - Contact Site";
 	//echo "Envoi du message à " . $_to . "<br>";
 		
 	$entete = "From:Bsport <contact@bsport.fr>\n";
@@ -34,10 +34,10 @@ if ($_POST["action"] == "sendMail") {
 	$entete .= "Bcc: xav335@hotmail.com\n";
 		
 	$corps = "";
-	$corps .= "Bonjour,<br><br>";
+	$corps .= "Bonjour,<br>";
 	$corps .= "Sujet : " . $_POST["sujet"] ."<br>";
-	$corps .= "Nv contact de :<br><b>" . $_POST["nom"] . " ". $_POST["prenom"]  . "</b> (" . $_POST["email"] . ")<br>";
-	$corps .= "Tel : " . $_POST["tel"] ."<br>";
+	$corps .= "Nv message de :<br>" . $_POST["nom"] . " ". $_POST["prenom"]  . " (" . $_POST["email"] . ")<br>";
+	$corps .= "Tel : ". $_POST["tel"] ."<br>";
 	$corps .= "<b>Message :</b><br>";
 	$corps .= $_POST["message"] . "<br><br>";
 	$corps = utf8_decode( $corps );
