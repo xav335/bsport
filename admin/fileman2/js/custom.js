@@ -33,7 +33,7 @@ function FileSelected(file){
    * height - if the file is image, this will be the height of the original image, 0 otherwise
    * 
    */
- idImage = $(window.parent.document).find('#idImage').val();
+  idImage = $(window.parent.document).find('#idImage').val();
   $(window.parent.document).find('#customRoxyImage'+idImage).attr('src', file.fullPath);
   $(window.parent.document).find('#url'+idImage).val(file.fullPath);
   window.parent.closeCustomRoxy();

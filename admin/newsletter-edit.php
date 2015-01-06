@@ -42,10 +42,11 @@ if (!empty($_GET)){ //Modif
 			<h3><?php echo $labelTitle ?></h3>
 			<div class="col-xs-12 col-sm-12 col-md-12">
 				<form name="formulaire" class="form-horizontal" method="POST"  action="formprocess.php">
-					<input type="hidden" name="reference" value="news">
+					<input type="hidden" name="reference" value="newsletter">
 					<input type="hidden" name="action" value="<?php echo $action ?>">
 					<input type="hidden" name="id" id="id" value="<?php echo $id ?>">
 					
+					<input type="hidden"  name="idImage"  id="idImage" value=""><br>
 					<div class="form-group" >
 						<label class="col-sm-1">Date :</label>
 					    <input class="col-sm-2" type="text" name="datepicker" required id="datepicker" value="<?php echo $date_news?>" >
@@ -54,35 +55,45 @@ if (!empty($_GET)){ //Modif
 						<label class="col-sm-1" for="titre">Titre :</label>
 					    <input type="text" class="col-sm-11" name="titre" required  value="<?php echo $titre ?>">
 					</div>
-					<input type="text"  name="idImage"  id="idImage" value=""><br>
-		             <input type="text"  name="url1"  id="url1" value=""><br>
-		            <a href="javascript:openCustomRoxy('1')"><img src="/admin/fileman/Uploads/national-geographic-1.jpg" id="customRoxyImage1" style="max-width:350px;"></a>
-					 <br>
-					 <input type="text"  name="url1"  id="url2" value=""><br>
-					<a href="javascript:openCustomRoxy('2')"><img src="/admin/fileman/Uploads/national-geographic-1.jpg" id="customRoxyImage2" style="max-width:350px;"></a>
-					
-						<div id="roxyCustomPanel" style="display: none;">
-  							<iframe src="/admin/fileman2/index.html?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
-						</div>
+					<?php for ($i = 1; $i < 5; $i++) { ?>
+					<div class="form-group" style=" border:4px ridge white; padding: 30px 10px 30px 10px; ">
+						<label class="col-sm-1" for="titre">Texte <?php echo $i ?> :</label>
+					  	
+						<input type="text" class="col-sm-10" name="text1"  id="text1" value=""><br>
+             			<input type="hidden"  name="url<?php echo $i ?>"  id="url<?php echo $i ?>" value=""><br>
+            			<a href="javascript:openCustomRoxy('<?php echo $i ?>')"><img src="/img/ajoutImage.jpg" id="customRoxyImage<?php echo $i ?>" style="max-width:350px;"></a>
+						<img src="img/del.png" width="20" alt="Supprimer" onclick="clearImage(<?php echo $i ?>)"/>
+ 					
+					</div>
+					<?php }?>
 						
-						
-						
+					<div class="form-group" >
+						<label class="col-sm-1" for="titre">Bas de page :</label>
+					    <input type="text" class="col-sm-11" name="bas_page" required  value="">
+					</div>	
 		            <button class="btn btn-success col-sm-12" type="submit" class="btn btn-default"> Valider </button>
 		            
+					<div id="roxyCustomPanel" style="display: none;">
+  							<iframe src="/admin/fileman2/index.html?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
+					</div>
 					
-					<script>
-					function openCustomRoxy(idImage){
-						$('#idImage').val(idImage);
-					  $('#roxyCustomPanel').dialog({modal:true, width:875,height:600});
-					}
-					function closeCustomRoxy(){
-					  $('#roxyCustomPanel').dialog('close');
-					}
+					
+					<script type="text/javascript">
+						function openCustomRoxy(idImage){
+							$('#idImage').val(idImage);
+						 	$('#roxyCustomPanel').dialog({modal:true, width:875,height:600});
+						}
+						function closeCustomRoxy(){
+						  	$('#roxyCustomPanel').dialog('close');
+						}
+	
+						function clearImage(idImage){
+							$('#customRoxyImage'+idImage).attr('src', '/img/ajoutImage.jpg');
+							$('#url'+idImage).val('');
+						}
 					</script>
 					
 					<script type="text/javascript">
-						
-
 						
 						$(document).ready(
 						  /* This is the function that will get executed after the DOM is fully loaded */
