@@ -2,30 +2,29 @@
 <?php include_once 'classes/utils.php';?>
 <?php 
 require 'classes/StorageManager.php';
+require 'classes/Newsletter.php';
 
 if (!empty($_GET)){ //Modif 
 	$action = 'modif';
-	$storageManager = new StorageManager();
-	$result = $storageManager->newsGet($_GET['id']);
+	$newsletter = new Newsletter();
+	$result = $newsletter->newsletterGet($_GET['id']);
 	//print_r($result);
 	if (empty($result)) {
 		$message = 'Aucun enregistrements';
 	} else {
-		$labelTitle = 'Actu N°: '. $_GET['id'];
+		$labelTitle = 'Newsletter N°: '. $_GET['id'];
 		$id= 			$_GET['id'];
 		$titre=  		$result[0]['titre'];
-		$date_news= 	traitement_datetime_affiche($result[0]['date_news']);
-		$accroche= 		$result[0]['accroche'];
-		$contenu= 	$result[0]['contenu'];
+		$date= 			traitement_datetime_affiche($result[0]['date']);
+		$bas_page= 		$result[0]['bas_page'];
 	}
 } else { //ajout News
 	$action = 'add';
-	$labelTitle = 'Edition Nouvelle actu ';
+	$labelTitle = 'Edition Nouvelle Newsletter ';
 	$id= 			null;
 	$titre=  		null;
-	$date_news= 	null;
-	$accroche= 		null;
-	$contenu= 	null;
+	$date= 	null;
+	$bas_page= 		null;
 }
 ?>
 <!doctype html>
@@ -49,7 +48,7 @@ if (!empty($_GET)){ //Modif
 					<input type="hidden"  name="idImage"  id="idImage" value=""><br>
 					<div class="form-group" >
 						<label class="col-sm-1">Date :</label>
-					    <input class="col-sm-2" type="text" name="datepicker" required id="datepicker" value="<?php echo $date_news?>" >
+					    <input class="col-sm-2" type="text" name="datepicker" required id="datepicker" value="<?php echo $date?>" >
 					</div>
 					<div class="form-group" >
 						<label class="col-sm-1" for="titre">Titre :</label>
@@ -57,19 +56,25 @@ if (!empty($_GET)){ //Modif
 					</div>
 					<?php for ($i = 1; $i < 5; $i++) { ?>
 					<div class="form-group" style=" border:4px ridge white; padding: 30px 10px 30px 10px; ">
-						<label class="col-sm-1" for="titre">Texte <?php echo $i ?> :</label>
+						<label class="col-sm-2" for="titre">Sous-titre <?php echo $i ?> :</label>
 					  	
-						<input type="text" class="col-sm-10" name="text1"  id="text1" value=""><br>
+						<input type="text" class="col-sm-10" name="sstitre<?php echo $i ?>"  id="sstitre<?php echo $i ?>" value=""><br>
              			<input type="hidden"  name="url<?php echo $i ?>"  id="url<?php echo $i ?>" value=""><br>
-            			<a href="javascript:openCustomRoxy('<?php echo $i ?>')"><img src="/img/ajoutImage.jpg" id="customRoxyImage<?php echo $i ?>" style="max-width:350px;"></a>
+            			<a href="javascript:openCustomRoxy('<?php echo $i ?>')"><img src="/img/ajoutImage.jpg" id="customRoxyImage<?php echo $i ?>" style="max-width:600px;"></a>
 						<img src="img/del.png" width="20" alt="Supprimer" onclick="clearImage(<?php echo $i ?>)"/>
- 					
+						<br>
+ 						<label for="link<?php echo $i ?>">Url image <?php echo $i ?>:</label><br>
+ 						<input type="text" class="col-sm-11" name="link<?php echo $i ?>"  id="sstitre<?php echo $i ?>" value="" placeholder="http://www.bsport.fr/"><br>
+ 						<br>
+ 						<label for="text<?php echo $i ?>">Texte <?php echo $i ?>:</label><br>
+		           		<textarea class="col-sm-11"  name="texte<?php echo $i ?>"  id="texte<?php echo $i ?>" rows="2" ></textarea>
+		           
 					</div>
 					<?php }?>
 						
 					<div class="form-group" >
 						<label class="col-sm-1" for="titre">Bas de page :</label>
-					    <input type="text" class="col-sm-11" name="bas_page" required  value="">
+					    <textarea class="col-sm-11"  name="bas_page"  id="bas_page" rows="3" required ><?php echo $bas_page ?></textarea>
 					</div>	
 		            <button class="btn btn-success col-sm-12" type="submit" class="btn btn-default"> Valider </button>
 		            

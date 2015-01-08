@@ -32,7 +32,7 @@ class StorageManager{
 		if (!isset($id)){
 			$requete = "SELECT * FROM `news` ORDER BY date_news DESC" ;
 		} else {
-			$requete = "SELECT * FROM `news` WHERE id_news=". $id ." ORDER BY date_news DESC" ;
+			$requete = "SELECT * FROM `news` WHERE id_news=". $id ;
 		}
 		//print_r($requete);
 		$new_array = null;
@@ -282,12 +282,12 @@ class StorageManager{
 	
 	
 	////////////////// UTILS UTILS UTILS UTILS UTILS UTILS UTILS UTILS UTILS UTILS UTILS //////////////////////////
-	private function inserer_date($date) {
+	protected function inserer_date($date) {
 		$tab = split("/", $date);
 		return $tab[2] . "-" . $tab[1] . "-" . $tab[0];
 	}
 	
-	private function dbConnect($bddz) {
+	protected function dbConnect($bddz) {
 		$host = "localhost";
 		$user = "bsportnv";
 		$pass = "bsportnv33";
@@ -302,17 +302,17 @@ class StorageManager{
 	}
 	
 	
-	private function dbDisConnect() {
+	protected function dbDisConnect() {
 		mysql_close();
 	}
 	
-	function begin() {
+	protected function begin() {
 		mysql_query("BEGIN");
 	}
-	function commit() {
+	protected function commit() {
 		mysql_query("COMMIT");
 	}
-	function rollback() {
+	protected function rollback() {
 		mysql_query("ROLLBACK");
 	}
 

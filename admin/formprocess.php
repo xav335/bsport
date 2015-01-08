@@ -1,5 +1,6 @@
 <?php
 require 'classes/StorageManager.php';
+require 'classes/Newsletter.php';
 session_start();
 
 $storageManager = new StorageManager();
@@ -62,6 +63,32 @@ if (!empty($_POST)){
 	
 	}
 	
+	// traitement des newsletters
+	if ($_POST['reference'] == 'newsletter'){
+		$newsletter = new Newsletter();
+		if ($_POST['action'] == 'modif') { //Modifier
+			try {
+				$result = $newsletter->newsletterModify($_POST);
+				$newsletter = null;
+				header('Location: /admin/newsletter-list.php');
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				exit();
+			}
+	
+		} else {  //ajouter
+			try {
+				$result = $newsletter->newsletterAdd($_POST);
+				$newsletter = null;
+				header('Location: /admin/newsletter-edit.php?id='.$result);
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				exit();
+			}
+		}
+	
+	}
+	
 } elseif (!empty($_GET)) { // GET GET GET
 	if ($_GET['reference'] == 'news'){ //supprimer
 		if ($_GET['action'] == 'delete'){
@@ -79,6 +106,19 @@ if (!empty($_POST)){
 			try {
 				$result = $storageManager->goldbookDelete($_GET['id']);
 				header('Location: /admin/goldbook-list.php');
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				exit();
+			}
+		}
+	}
+	if ($_GET['reference'] == 'newsletter'){ //supprimer
+		$newsletter = new Newsletter();
+		if ($_GET['action'] == 'delete'){
+			try {
+				$result = $newsletter->newsletterDelete($_GET['id']);
+				$newsletter = null;
+				header('Location: /admin/newsletter-list.php');
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
 				exit();

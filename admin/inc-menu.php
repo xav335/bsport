@@ -26,14 +26,31 @@
 				            	<li><a href="goldbook-list.php">Suppression</a></li>
 				          	</ul>
 				        </li>
-                        <li class="dropdown">
-				          	<a href="?" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Newsletter<span class="caret"></span></a>
+				        <li class="dropdown">
+				          	<a href="contact-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contacts <span class="caret"></span></a>
 				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="newsletter-edit.php">Newsletter Html</a></li>
-				            	<li><a href="newsletter-texte_modif.php">Newsletter texte</a></li>
+				            	<li><a href="contact-edit.php">Ajout</a></li>
+				            	<li><a href="contact-list.php">Modification</a></li>
+				            	<li><a href="contact-list.php">Suppression</a></li>
+				          	</ul>
+				        </li>
+                        <li class="dropdown">
+				          	<a href="newsletter-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Newsletter<span class="caret"></span></a>
+				          	<ul class="dropdown-menu" role="menu">
+				            	<li><a href="newsletter-edit.php">Ajout Newsletter Html</a></li>
+				            	<li><a href="newsletter-list.php">Liste Newsletter Html</a></li>
+				            	<li class="divider"></li>
+				            	<li><a href="newslettertxt-edit.php">Ajout Newsletter texte</a></li>
+				            	<li><a href="newslettertxt-texte_modif.php">Newsletter texte</a></li>
 				            	<li class="divider"></li>
 				            	<li><a href="#">Envoi</a></li>
 				            	<li><a href="#">Envoi Test</a></li>
+				          	</ul>
+				        </li>
+				         <li class="dropdown">
+				          	<a href="planning.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Planning <span class="caret"></span></a>
+				          	<ul class="dropdown-menu" role="menu">
+				            	<li><a href="planning.php">Modification</a></li>
 				          	</ul>
 				        </li>
                     </ul>
