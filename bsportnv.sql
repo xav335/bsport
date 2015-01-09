@@ -42,6 +42,78 @@ INSERT INTO `admin` VALUES (1,'bsport','alcbousc','administrateur');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `categorie`
+--
+
+DROP TABLE IF EXISTS `categorie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categorie` (
+  `id` int(10) unsigned NOT NULL,
+  `categorie` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categorie`
+--
+
+LOCK TABLES `categorie` WRITE;
+/*!40000 ALTER TABLE `categorie` DISABLE KEYS */;
+/*!40000 ALTER TABLE `categorie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contact`
+--
+
+DROP TABLE IF EXISTS `contact`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact` (
+  `id` int(10) unsigned NOT NULL,
+  `nom` varchar(250) DEFAULT NULL,
+  `prenom` varchar(250) DEFAULT NULL,
+  `email` varchar(250) DEFAULT NULL,
+  `tel` varchar(50) DEFAULT NULL,
+  `newsletter` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact`
+--
+
+LOCK TABLES `contact` WRITE;
+/*!40000 ALTER TABLE `contact` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contact` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contact_categorie`
+--
+
+DROP TABLE IF EXISTS `contact_categorie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_categorie` (
+  `id_contact` int(11) unsigned NOT NULL,
+  `id_categorie` int(10) unsigned NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contact_categorie`
+--
+
+LOCK TABLES `contact_categorie` WRITE;
+/*!40000 ALTER TABLE `contact_categorie` DISABLE KEYS */;
+/*!40000 ALTER TABLE `contact_categorie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `goldbook`
 --
 
@@ -56,7 +128,7 @@ CREATE TABLE `goldbook` (
   `message` text,
   `online` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +137,7 @@ CREATE TABLE `goldbook` (
 
 LOCK TABLES `goldbook` WRITE;
 /*!40000 ALTER TABLE `goldbook` DISABLE KEYS */;
-INSERT INTO `goldbook` VALUES (1,'2014-12-10 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Un accueil génial, des cours au top, très belle salle et prof très pro et sympa',1),(2,'2014-12-10 00:00:00','Frederic Lesca','fredericlesca@iconeo.fr','Un accueil et un suivi hors paire, très beau lieu, très convivial',1);
+INSERT INTO `goldbook` VALUES (1,'2014-12-10 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Un accueil génial, des cours au top, très belle salle et prof très pro et sympa',1),(2,'2014-12-10 00:00:00','Frederic Lesca','fredericlesca@iconeo.fr','Un accueil et un suivi hors paire, très beau lieu, très convivial',0);
 /*!40000 ALTER TABLE `goldbook` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -109,7 +181,7 @@ CREATE TABLE `news` (
   `accroche` text,
   `contenu` text,
   PRIMARY KEY (`id_news`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -118,7 +190,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (10,'2014-12-01 00:00:00','Nouveau site ','Nouveau site nouvelle année nouvelles résolution dans le sport','<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"/admin/fileman/Uploads/Logo.jpg\" alt=\"\" width=\"262\" height=\"262\" /></p>');
+INSERT INTO `news` VALUES (10,'2015-01-01 00:00:00','Trés bonne année à tous !','Cette année Votre club modifie complètement son image avec une communication à l\'image du club moderne et dynamique. Suivez notre actualité et les évenements du club. ','<p><strong>Nouveau site</strong></p>\r\n<p>Votre club modifie compl&egrave;tement son image avec une communication &agrave; l\'image du club moderne et dynamique. Suivez notre actualit&eacute; et les &eacute;venements du club.</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p>&nbsp;<img src=\"/uploads/DSC01984.jpg\" alt=\"\" width=\"413\" height=\"309\" /></p>'),(14,'2015-01-07 00:00:00','autre ','aaatre','<p><img src=\"/uploads/DSC_2987.jpg\" alt=\"\" width=\"222\" />kqjsdlkqjsdlkqjsd</p>\r\n<p><img src=\"/uploads/DSC01972.jpg\" alt=\"\" width=\"489\" height=\"367\" /></p>');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,11 +203,11 @@ DROP TABLE IF EXISTS `newsletter`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `newsletter` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `date` datetime DEFAULT NULL,
   `titre` varchar(250) DEFAULT NULL,
-  `titre_bas` varchar(250) DEFAULT NULL,
-  `texte` text,
+  `bas_page` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +216,36 @@ CREATE TABLE `newsletter` (
 
 LOCK TABLES `newsletter` WRITE;
 /*!40000 ALTER TABLE `newsletter` DISABLE KEYS */;
+INSERT INTO `newsletter` VALUES (3,'2015-01-09 00:00:00','Ceci est la toute nouvelle actu','ggggg'),(4,'2015-01-16 00:00:00','La piscine up','Retrouver tt les actus du club très prochainement Retrouver tt les actus du club très prochainement Retrouver tt les actus du club très prochainement Retrouver tt les actus du club très prochainement Retrouver tt les actus du club très prochainement '),(6,'2015-01-21 00:00:00','Ceci est la toute nouvelle actu','cccccc'),(7,'2015-01-15 00:00:00','La piscine up','jjkhjh');
 /*!40000 ALTER TABLE `newsletter` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `newsletter_detail`
+--
+
+DROP TABLE IF EXISTS `newsletter_detail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `newsletter_detail` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_newsletter` int(10) unsigned NOT NULL,
+  `titre` varchar(250) DEFAULT NULL,
+  `url` varchar(250) DEFAULT NULL,
+  `link` varchar(250) DEFAULT NULL,
+  `texte` text,
+  PRIMARY KEY (`id`,`id_newsletter`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `newsletter_detail`
+--
+
+LOCK TABLES `newsletter_detail` WRITE;
+/*!40000 ALTER TABLE `newsletter_detail` DISABLE KEYS */;
+INSERT INTO `newsletter_detail` VALUES (29,6,'bonjour','/uploads/bsport5.jpg','cccc','ccccc'),(30,6,'','/uploads/DSC01984.jpg','',''),(33,4,'ffff','/uploads/bsport5.jpg','gdfgdfgd','dfgdfgdfgdgdgdfgdgd');
+/*!40000 ALTER TABLE `newsletter_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -156,4 +257,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-27 12:41:34
+-- Dump completed on 2015-01-10  0:55:34

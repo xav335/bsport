@@ -36,7 +36,7 @@ require 'classes/Newsletter.php';
 							<th class="col-md-1" style="">
 								Date
 							</th>
-							<th class="col-md-1" style="">
+							<th class="col-md-2" style="">
 								Titre
 							</th>
 							<th class="col-md-1" colspan="2" style="">
@@ -56,7 +56,8 @@ require 'classes/Newsletter.php';
 								<td><?php echo $value['id']?></td>
 								<td><?php echo traitement_datetime_affiche($value['date'])?></td>
 								<td><?php echo $value['titre']?></td>
-								<td><a href="newsletter-edit.php?id=<?php echo $value['id'] ?>"><img src="img/modif.png" width="30" alt="Modifier" ></a></td>
+								<td><a href="newsletter-edit.php?id=<?php echo $value['id'] ?>"><img src="img/modif.png" width="30" alt="Modifier" ></a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<img src="img/eye.png" width="20" alt="preview" onclick="openPreview('<?php echo $value['id']?>')"> </td>
 								<td>
 									<div style="display: none;" class="supp<?php echo $value['id']?> alert alert-warning alert-dismissible fade in" role="alert">
 								      <button type="button" class="close"  aria-label="Close" onclick="$('.supp<?php echo $value['id']?>').css('display', 'none');"><span aria-hidden="true">×</span></button>
@@ -74,6 +75,17 @@ require 'classes/Newsletter.php';
 			</div>
 		</div>
 	</div>
+	
+					<div id="preview" style="display: none;">
+  							<iframe id="laframe" src="" style="width:100%;height:100%" frameborder="0"></iframe>
+					</div>
+					<script type="text/javascript">
+						function openPreview(id){
+							$('#laframe').attr('src', '/admin/mailnewslettercore.php?id='+id);
+						 	$('#preview').dialog({modal:true, width:780,height:500});
+						}
+					</script>
+	
 </body>
 </html>
 

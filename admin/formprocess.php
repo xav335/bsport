@@ -14,6 +14,8 @@ if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
 	}
 }
 
+//print_r($_POST);
+//exit();
 //Forms processing
 if (!empty($_POST)){
 	
@@ -66,11 +68,15 @@ if (!empty($_POST)){
 	// traitement des newsletters
 	if ($_POST['reference'] == 'newsletter'){
 		$newsletter = new Newsletter();
-		if ($_POST['action'] == 'modif') { //Modifier
+		if ($_POST['action'] == 'modif' ) { //Modifier
 			try {
 				$result = $newsletter->newsletterModify($_POST);
 				$newsletter = null;
-				header('Location: /admin/newsletter-list.php');
+				if ($_POST['postaction'] == 'preview' ) {
+					header('Location: /admin/mailnewslettercore.php?id='. $_POST['id']);
+				} else {
+					header('Location: /admin/newsletter-list.php');
+				}	
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
 				exit();
