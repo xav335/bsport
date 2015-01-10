@@ -5,7 +5,6 @@ require 'classes/StorageManager.php';
 require 'classes/Newsletter.php';
 
 if (!empty($_GET)){ //Modif 
-	$postaction = $_GET['$postaction'];
 	$newsletter = new Newsletter();
 	$result = $newsletter->newsletterAllGet($_GET['id']);
 	//print_r($result);
@@ -60,7 +59,7 @@ $corps = <<<EOD
 		    <td align="center">
 				<div style="text-align:center;  margin-left:auto;margin-right:auto; width: 640px; border: 4px ridge white; padding:20px 20px 20px 20px; ">
 					
-					<img  src="http://dev.bsport.fr/newsletter/logo.png">
+					<a href="http://dev.bsport.fr"><img  src="http://dev.bsport.fr/newsletter/logo.png"></a>
 				
 					<h1>$titre</h1>
 					<br><br>
@@ -74,13 +73,13 @@ if(isset($detail)) {
 		} else {
 			$titre= '';
 		}
+		$link = $value['link'];
 		$url = $value['url'];
 		if ($url!='' & $url != '/img/ajoutImage.jpg') {
-			$url = "<img width=\"640\" src=\"http://dev.bsport.fr". $url ."\"><br>";
+			$url = "<a href=\"http://dev.bsport.fr/". $link ."\"><img width=\"640\" src=\"http://dev.bsport.fr". $url ."\"></a><br>";
 		} else {
 			$url= '';
 		}
-		$link = $value['link'];
 		$texte = $value['texte'];
 		if ($titre != '' || $url != '' || $texte != '') {
 			$corps .= <<<EOD
@@ -95,7 +94,7 @@ EOD;
 }
 $corps .= <<<EOD
 
-					<img  src="http://dev.bsport.fr/newsletter/pano.png"><br>
+					<a href="http://dev.bsport.fr"><img  src="http://dev.bsport.fr/newsletter/pano.png"></a><br>
 					<p>$bas_page</p>
 					<a><img src="http://dev.bsport.fr/newsletter/log2.png"></a><br>
 					<p class="bas">Si vous souhaitez vous désinscrire de cette newslettrer suivez le lien suivant : <a href="http://dev.bsport.fr/newsletter/desinscription.php?id=" >désinscription</a></p>
@@ -115,7 +114,7 @@ echo $corps;
 
 
 // Envoi des identifiants par mail
-if ($postaction=='preview') {
+if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 	echo "<br><br><h3>Newsletter envoyée !!!! </h3><br><br>";
 	mail($_to, $sujet, stripslashes($corps), $entete);
 }
