@@ -32,7 +32,7 @@ $sujet = "Bsport - Newsletter ";
 $entete = "From:Bsport <contact@bsport.fr>\n";
 $entete .= "MIME-version: 1.0\n";
 $entete .= "Content-type: text/html; charset= iso-8859-1\n";
-$entete .= "Bcc: xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com,fredericlesca@iconeo.fr\n";
+$entete .= "Bcc: xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com\n";
 
 $corps = <<<EOD
 
@@ -108,7 +108,7 @@ $corps .= <<<EOD
 
 EOD;
 
-//$corps = utf8_decode( $corps );
+$corps = utf8_decode( $corps );
 
 echo $corps;
 
