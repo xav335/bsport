@@ -113,8 +113,9 @@ EOD;
 
 echo $corps;
 
-echo "<br><br><h3>Newsletter envoyée !!!! </h3><br><br>";
+
 // Envoi des identifiants par mail
 if ($postaction=='preview') {
+	echo "<br><br><h3>Newsletter envoyée !!!! </h3><br><br>";
 	mail($_to, $sujet, stripslashes($corps), $entete);
 }
