@@ -75,7 +75,7 @@ if (!empty($_POST)){
 					$result = $newsletter->newsletterModify($_POST);
 				}
 				if ($_POST['postaction'] == 'preview' ) {
-					header('Location: /admin/mailnewslettercore.php?id='. $_POST['id']);
+					header('Location: /admin/mailnewslettercore.php?postaction=preview&id='. $_POST['id']);
 				} elseif ($_POST['postaction']=='addBloc') {
 					header('Location: /admin/newsletter-edit.php?addBloc=1&id='. $_POST['id']);
 				} elseif ($_POST['postaction']=='delBloc') {

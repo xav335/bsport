@@ -5,7 +5,7 @@ require 'classes/StorageManager.php';
 require 'classes/Newsletter.php';
 
 if (!empty($_GET)){ //Modif 
-	$action = 'modif';
+	$postaction = $_GET['$postaction'];
 	$newsletter = new Newsletter();
 	$result = $newsletter->newsletterAllGet($_GET['id']);
 	//print_r($result);
@@ -33,7 +33,7 @@ $sujet = "Bsport - Newsletter ";
 $entete = "From:Bsport <contact@bsport.fr>\n";
 $entete .= "MIME-version: 1.0\n";
 $entete .= "Content-type: text/html; charset= iso-8859-1\n";
-$entete .= "Bcc: xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com\n";
+$entete .= "Bcc: xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com,fredericlesca@iconeo.fr\n";
 
 $corps = <<<EOD
 
@@ -115,4 +115,6 @@ echo $corps;
 
 echo "<br><br><h3>Newsletter envoyée !!!! </h3><br><br>";
 // Envoi des identifiants par mail
-mail($_to, $sujet, stripslashes($corps), $entete);
+if ($postaction=='preview') {
+	mail($_to, $sujet, stripslashes($corps), $entete);
+}
