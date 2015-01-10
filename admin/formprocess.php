@@ -67,16 +67,24 @@ if (!empty($_POST)){
 	
 	// traitement des newsletters
 	if ($_POST['reference'] == 'newsletter'){
+		//print_r($_POST); exit();
 		$newsletter = new Newsletter();
 		if ($_POST['action'] == 'modif' ) { //Modifier
 			try {
-				$result = $newsletter->newsletterModify($_POST);
-				$newsletter = null;
+				if ($_POST['postaction'] !='delBloc') {
+					$result = $newsletter->newsletterModify($_POST);
+				}
 				if ($_POST['postaction'] == 'preview' ) {
 					header('Location: /admin/mailnewslettercore.php?id='. $_POST['id']);
+				} elseif ($_POST['postaction']=='addBloc') {
+					header('Location: /admin/newsletter-edit.php?addBloc=1&id='. $_POST['id']);
+				} elseif ($_POST['postaction']=='delBloc') {
+					$newsletter->newsletterDetailUniqueDelete($_POST['idbloc']);
+					header('Location: /admin/newsletter-edit.php?id='. $_POST['id']);
 				} else {
 					header('Location: /admin/newsletter-list.php');
 				}	
+				$newsletter = null;
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
 				exit();

@@ -47,6 +47,7 @@ if (!empty($_GET)){ //Modif
 					<input type="hidden" name="reference" value="newsletter">
 					<input type="hidden" name="action" id="action" value="<?php echo $action ?>">
 					<input type="hidden" name="postaction" id="postaction" value="">
+					<input type="hidden" name="idbloc" id="idbloc" value="">
 					<input type="hidden" name="id" id="id" value="<?php echo $id ?>">
 					
 					<input type="hidden"  name="idImage"  id="idImage" value=""><br>
@@ -65,7 +66,9 @@ if (!empty($_GET)){ //Modif
 							$url = $value['url'];
 							if ($value['url']=='') 
 								$url='/img/ajoutImage.jpg';  ?>
-							<div class="form-group" style=" border:4px ridge white; padding: 30px 10px 30px 10px; ">
+								
+							<div class="form-group" style=" border:6px ridge white; padding: 30px 10px 30px 10px; ">
+							
 								<label class="col-sm-2" for="titre">Sous-titre <?php echo $i ?> :</label>
 							  	
 								<input type="text" class="col-sm-10" name="sstitre<?php echo $i ?>"  id="sstitre<?php echo $i ?>" value="<?php echo $value['titre'] ?>"><br>
@@ -78,14 +81,18 @@ if (!empty($_GET)){ //Modif
 		 						<br>
 		 						<label for="text<?php echo $i ?>">Texte <?php echo $i ?>:</label><br>
 				           		<textarea class="col-sm-11"  name="texte<?php echo $i ?>"  id="texte<?php echo $i ?>" rows="2" ><?php echo $value['texte'] ?></textarea>
-				           
+				           		<br><br><br>
+								
+							</div>
+							<div class="form-group">
+								<button class="btn btn-danger col-sm-6" type="submit" onclick="$('#postaction').val('delBloc');$('#idbloc').val('<?php echo  $value['id'] ?>');"> + Supprimer le bloc précédent</button>
 							</div>
 					<?php 
 						$i++;
 						} 
 					} else {
 						$i=1; ?>
-							<div class="form-group" style=" border:4px ridge white; padding: 30px 10px 30px 10px; ">
+							<div class="form-group" style=" border:6px ridge white; padding: 30px 10px 30px 10px; ">
 								<label class="col-sm-2" for="titre">Sous-titre <?php echo $i ?> :</label>
 							  	
 								<input type="text" class="col-sm-10" name="sstitre<?php echo $i ?>"  id="sstitre<?php echo $i ?>" value=""><br>
@@ -103,16 +110,44 @@ if (!empty($_GET)){ //Modif
 					
 					
 					<?php 
-					$i++;
-					}?>
+						$i++;
+					}
+					
+					if (isset($_GET['addBloc']) && $_GET['addBloc']==1) {  ?>
+							<div class="form-group" style=" border:6px ridge white; padding: 30px 10px 30px 10px; ">
+								<label class="col-sm-2" for="titre">Sous-titre <?php echo $i ?> :</label>
+							  	
+								<input type="text" class="col-sm-10" name="sstitre<?php echo $i ?>"  id="sstitre<?php echo $i ?>" value=""><br>
+		             			<input type="hidden"  name="url<?php echo $i ?>"  id="url<?php echo $i ?>" value=""><br>
+		            			<a href="javascript:openCustomRoxy('<?php echo $i ?>')"><img src="/img/ajoutImage.jpg"" id="customRoxyImage<?php echo $i ?>" style="max-width:600px;"></a>
+								<img src="img/del.png" width="20" alt="Supprimer" onclick="clearImage(<?php echo $i ?>)"/>
+								<br>
+		 						<label for="link<?php echo $i ?>">Url image <?php echo $i ?>:</label><br>
+		 						<input type="text" class="col-sm-11" name="link<?php echo $i ?>"  id="link<?php echo $i ?>" value="" placeholder="http://www.bsport.fr/"><br>
+		 						<br>
+		 						<label for="text<?php echo $i ?>">Texte <?php echo $i ?>:</label><br>
+				           		<textarea class="col-sm-11"  name="texte<?php echo $i ?>"  id="texte<?php echo $i ?>" rows="2" ></textarea>
+				           
+							</div>						
+						
+					<?php	
+						$i++;
+					}
+					
+					?>
+					
+					<div class="form-group" >
+						<button class="btn btn-primary col-sm-6 " type="submit" onclick="$('#postaction').val('addBloc');"> + Ajouter un bloc </button>
+					</div>
 					<input type="hidden" name="ndencards" id="ndencards" value="<?php echo $i-1 ?>">
 					<div class="form-group" >
 						<label class="col-sm-1" for="titre">Bas de page :</label>
 					    <textarea class="col-sm-11"  name="bas_page"  id="bas_page" rows="3" required ><?php echo $bas_page ?></textarea>
 					</div>	
-		            <button class="btn btn-success col-sm-6" type="submit" onclick="$('#postaction').val('modif')"> Valider </button>
-		            <button class="btn btn-warning col-sm-6" type="submit" onclick="$('#postaction').val('preview')"> Previsiualiser la news </button>
-		            
+					<div class="form-group" >
+		            	<button class="btn btn-success col-sm-6" type="submit" onclick="$('#postaction').val('modif')"> Valider </button>
+		            	<button class="btn btn-warning col-sm-6" type="submit" onclick="$('#postaction').val('preview')"> Tester la newsletter </button>
+		            </div>
 					<div id="roxyCustomPanel" style="display: none;">
   							<iframe src="/admin/fileman2/index.html?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
 					</div>

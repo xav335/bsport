@@ -33,7 +33,7 @@ class Newsletter extends StorageManager {
 		while( $row = mysql_fetch_assoc( $result)){
 			$new_arraydetail = null;
 			$requete = "SELECT * FROM `newsletter_detail` as nld
-					WHERE `id_newsletter`=". $row['id'] ." ORDER BY `id` ASC" ;
+						WHERE `id_newsletter`=". $row['id'] ." ORDER BY `id` ASC" ;
 			//print_r($requete);
 			$resultdetail = mysql_query($requete);
 			
@@ -49,8 +49,7 @@ class Newsletter extends StorageManager {
 	}
 	
 	public function newsletterAdd($value){
-		//print_r($value);
-		//exit();
+		//print_r($value); exit();
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
@@ -74,7 +73,7 @@ class Newsletter extends StorageManager {
 	
 		} catch (Exception $e) {
 			$this->rollback();
-			throw new Exception("Erreur Mysql ". $e->getMessage());
+			throw new Exception("Erreur Mysql newsletterAdd". $e->getMessage());
 			return "errrrrrrooooOOor";
 		}
 		$this->dbDisConnect();
@@ -82,8 +81,7 @@ class Newsletter extends StorageManager {
 	}
 	
 	public function newsletterModify($value){
-		//print_r($value);
-		//exit();
+		//print_r($value); exit();
 	
 		$this->dbConnect("bsportnv");
 		$this->begin();
@@ -98,21 +96,15 @@ class Newsletter extends StorageManager {
 				throw new Exception($sql);
 			}
 			
-			$sql = "DELETE FROM `bsportnv`.`newsletter_detail`
-					WHERE `id_newsletter`=". $value['id'] .";";
-			$result = mysql_query($sql);
-			if (!$result) {
-				throw new Exception($sql);
-			}
+			$this->newsletterDetailDelete( $value['id']);
 			
 			$this->newsletterDetailAdd($value, $value['id']);
-			
 			
 			$this->commit();
 	
 		} catch (Exception $e) {
 			$this->rollback();
-			throw new Exception("Erreur Mysql ". $e->getMessage());
+			throw new Exception("Erreur Mysql newsletterModify ". $e->getMessage());
 			return "errrrrrrooooOOor";
 		}
 	
@@ -124,14 +116,14 @@ class Newsletter extends StorageManager {
 		for ($i = 1; $i <  $value['ndencards']+1; $i++) {
 		
 			$sql = "INSERT INTO `bsportnv`.`newsletter_detail`
-							(`id_newsletter`,`titre`, `url`, `link`,`texte`)
-							VALUES (
-							". $id .",
-							'". addslashes($value['sstitre'.$i]) ."',
-							'". addslashes($value['url'.$i]) ."',
-							'". addslashes($value['link'.$i]) ."',
-							'". addslashes($value['texte'.$i]) ."'
-						);";
+						(`id_newsletter`,`titre`, `url`, `link`,`texte`)
+						VALUES (
+						". $id .",
+						'". addslashes($value['sstitre'.$i]) ."',
+						'". addslashes($value['url'.$i]) ."',
+						'". addslashes($value['link'.$i]) ."',
+						'". addslashes($value['texte'.$i]) ."'
+					);";
 			$result = mysql_query($sql);
 		
 			if (!$result) {
@@ -142,9 +134,48 @@ class Newsletter extends StorageManager {
 	}	
 	
 	
+	private function newsletterDetailDelete($id_newsletter){
+		//print_r($id_newsletter); exit();
+		try {
+			$sql = "DELETE FROM `bsportnv`.`newsletter_detail`
+					WHERE `id_newsletter`=". $id_newsletter .";";
+			$result = mysql_query($sql);
+			if (!$result) {
+				throw new Exception($sql);
+			}
+		
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+		
+	}
+	
+	
+	public function newsletterDetailUniqueDelete($id){
+		//print_r($id); exit();
+	
+		$this->dbConnect("bsportnv");
+		$this->begin();
+		try {
+		$sql = "DELETE FROM `bsportnv`.`newsletter_detail`
+					WHERE `id`=". $id .";";
+			$result = mysql_query($sql);
+			if (!$result) {
+				throw new Exception($sql);
+			}
+			$this->commit();
+	
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	
+	}
+	
 	public function newsletterDelete($value){
-		//print_r($value);
-		//exit();
+		//print_r($value); exit();
 	
 		$this->dbConnect("bsportnv");
 		$this->begin();
@@ -157,6 +188,8 @@ class Newsletter extends StorageManager {
 				throw new Exception($sql);
 			}
 	
+			$this->newsletterDetailDelete( $value );
+			
 			$this->commit();
 	
 		} catch (Exception $e) {

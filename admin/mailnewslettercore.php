@@ -113,5 +113,6 @@ EOD;
 
 echo $corps;
 
+echo "<br><br><h3>Newsletter envoyée !!!! </h3><br><br>";
 // Envoi des identifiants par mail
-//mail($_to, $sujet, stripslashes($corps), $entete);
+mail($_to, $sujet, stripslashes($corps), $entete);
