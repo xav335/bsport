@@ -7,7 +7,7 @@ require 'classes/Newsletter.php';
 if (!empty($_GET)){ //Modif 
 	$action = 'modif';
 	$newsletter = new Newsletter();
-	$result = $newsletter->newsletterGet($_GET['id']);
+	$result = $newsletter->newsletterAllGet($_GET['id']);
 	//print_r($result);
 	if (empty($result)) {
 		$message = 'Aucun enregistrements';
@@ -16,6 +16,7 @@ if (!empty($_GET)){ //Modif
 		$titre=  		$result[0]['titre'];
 		$date= 			traitement_datetime_affiche($result[0]['date']);
 		$bas_page= 		$result[0]['bas_page'];
+		$detail=		$result[0]['newsletter_detail'];
 	}
 } else { 
 	echo 'Erreur contactez votre administrateur <br> :\n';
@@ -47,8 +48,7 @@ $corps = <<<EOD
 	p {font-size:18px; text-align: justify;}
 	p.bas {font-size:11px;}
 	h1 {font-family:inherit;font-weight:bold;font-style:italic;font-size:36px;line-height:36px;color:#18293c;text-transform:uppercase;margin-bottom:0;}
-	h2 {font-family:inherit;font-style:italic;font-size:18px;line-height:18px;color:#d75b00;text-transform:uppercase;margin-top:0;margin-bottom:30px;}
-	h2:before {content:'// ';}
+	h2 {font-family:inherit;font-style:italic;font-size:20px;line-height:18px;color:#d75b00;text-transform:uppercase;margin-top:0;margin-bottom:30px;}
 	h3 {font-family:inherit;font-weight:bold;font-size:20px;line-height:18px;color:#d75b00;text-transform:uppercase;margin-top:0;margin-bottom:0px;}
 	h4 {font-family:inherit;font-style:normal;font-size:18px;line-height:18px;color:#18293c;text-transform:none;margin-top:0;margin-bottom:0px;}
 
@@ -64,22 +64,37 @@ $corps = <<<EOD
 				
 					<h1>$titre</h1>
 					<br><br>
-			
-					<h2>La piscine est réparé et à 32° !!</h2>
-					<img width="640" src="http://dev.bsport.fr/uploads/bsport3.jpg"><br>
-					<p >Notre piscine est enfin réparé, nous avons mis tous les moyens afin que vosu puissiez retrouvé le fleuron de notre club dans un état impeccable.
-					Encore toute nos excuses pour ce désagrément et à très bientôt. B'Sportez vous bien !!</p>
+EOD;
+if(isset($detail)) {
+	
+	foreach ($detail as $value) {
+		$titre = $value['titre'];
+		if ($titre !='') {
+			$titre = "<h2>$titre</h2>";
+		} else {
+			$titre= '';
+		}
+		$url = $value['url'];
+		if ($url!='' & $url != '/img/ajoutImage.jpg') {
+			$url = "<img width=\"640\" src=\"http://dev.bsport.fr". $url ."\"><br>";
+		} else {
+			$url= '';
+		}
+		$link = $value['link'];
+		$texte = $value['texte'];
+		if ($titre != '' || $url != '' || $texte != '') {
+			$corps .= <<<EOD
+					$titre
+					$url
+					<p >$texte</p>
 					<img  src="http://dev.bsport.fr/newsletter/sep.png">
-					<br><br>
-					<br><br>
-					
-					<h2>Les vélos sont trop super</h2>
-					<img width="640" src="http://dev.bsport.fr/uploads/bsport5.jpg"><br>
-					<p >Des supers vélos de dingue</p>
-					<img  src="http://dev.bsport.fr/newsletter/sep.png">
-					<br><br>
-					<br><br>
-					
+					<br><br><br>
+EOD;
+		}
+	}
+}
+$corps .= <<<EOD
+
 					<img  src="http://dev.bsport.fr/newsletter/pano.png"><br>
 					<p>$bas_page</p>
 					<a><img src="http://dev.bsport.fr/newsletter/log2.png"></a><br>
