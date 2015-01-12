@@ -1,4 +1,5 @@
 <?php
+require_once("StorageManager.php");
 class Newsletter extends StorageManager {
 
 	public function __construct(){

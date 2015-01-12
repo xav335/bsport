@@ -1,9 +1,11 @@
 <?php
-require 'classes/StorageManager.php';
+require 'classes/Authentication.php';
+require 'classes/News.php';
+require 'classes/Goldbook.php';
 require 'classes/Newsletter.php';
 session_start();
 
-$storageManager = new StorageManager();
+$authentication = new Authentication();
 //Security
 if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
 	$result = $storageManager->grantAccess($_POST['login'], $_POST['mdp']);
@@ -20,10 +22,11 @@ if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
 if (!empty($_POST)){
 	
 	// traitement des news
+	$news = new News();
 	if ($_POST['reference'] == 'news'){
 		if ($_POST['action'] == 'modif') { //Modifier la news
 			try {
-				$result = $storageManager->newsModify($_POST);
+				$result = $news->newsModify($_POST);
 				header('Location: /admin/news-list.php');
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
@@ -32,7 +35,7 @@ if (!empty($_POST)){
 			
 		} else {  //ajouter une news
 			try {
-				$result = $storageManager->newsAdd($_POST);
+				$result = $news->newsAdd($_POST);
 				header('Location: /admin/news-edit.php?id='.$result);
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
@@ -44,25 +47,29 @@ if (!empty($_POST)){
 	
 	// traitement des livre d'or
 	if ($_POST['reference'] == 'goldbook'){
+		$goldbook = new Goldbook();
 		if ($_POST['action'] == 'modif') { //Modifier 
 			try {
-				$result = $storageManager->goldbookModify($_POST);
+				$result = $goldbook->goldbookModify($_POST);
+				$goldbook = null;
 				header('Location: /admin/goldbook-list.php');
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$goldbook = null;
 				exit();
 			}
 				
 		} else {  //ajouter 
 			try {
-				$result = $storageManager->goldbookAdd($_POST);
+				$result = $goldbook->goldbookAdd($_POST);
+				$goldbook = null;
 				header('Location: /admin/goldbook-edit.php?id='.$result);
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$goldbook = null;
 				exit();
 			}
 		}
-	
 	}
 	
 	// traitement des newsletters
@@ -75,18 +82,22 @@ if (!empty($_POST)){
 					$result = $newsletter->newsletterModify($_POST);
 				}
 				if ($_POST['postaction'] == 'preview' ) {
+					$newsletter = null;
 					header('Location: /admin/mailnewslettercore.php?postaction=preview&id='. $_POST['id']);
 				} elseif ($_POST['postaction']=='addBloc') {
+					$newsletter = null;
 					header('Location: /admin/newsletter-edit.php?addBloc=1&id='. $_POST['id']);
 				} elseif ($_POST['postaction']=='delBloc') {
 					$newsletter->newsletterDetailUniqueDelete($_POST['idbloc']);
+					$newsletter = null;
 					header('Location: /admin/newsletter-edit.php?id='. $_POST['id']);
 				} else {
 					header('Location: /admin/newsletter-list.php');
 				}	
-				$newsletter = null;
+				
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$newsletter = null;
 				exit();
 			}
 	
@@ -97,31 +108,37 @@ if (!empty($_POST)){
 				header('Location: /admin/newsletter-edit.php?id='.$result);
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$newsletter = null;
 				exit();
 			}
 		}
-	
 	}
 	
 } elseif (!empty($_GET)) { // GET GET GET
 	if ($_GET['reference'] == 'news'){ //supprimer
+		$news = new News();
 		if ($_GET['action'] == 'delete'){
 			try {
-				$result = $storageManager->newsDelete($_GET['id']);
+				$result = $news->newsDelete($_GET['id']);
+				$news = null;
 				header('Location: /admin/news-list.php');
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$news = null;
 				exit();
 			}
 		}	
 	}
 	if ($_GET['reference'] == 'goldbook'){ //supprimer
+		$goldbook = new Goldbook();
 		if ($_GET['action'] == 'delete'){
 			try {
-				$result = $storageManager->goldbookDelete($_GET['id']);
+				$result = $goldbook->goldbookDelete($_GET['id']);
+				$goldbook = null;
 				header('Location: /admin/goldbook-list.php');
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$goldbook = null;
 				exit();
 			}
 		}

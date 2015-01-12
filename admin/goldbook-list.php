@@ -1,10 +1,10 @@
 <?php include_once 'inc-auth-granted.php';?>
 <?php include_once 'classes/utils.php';?>
 <?php 
-require 'classes/StorageManager.php';
+require 'classes/Goldbook.php';
 
-	$storageManager = new StorageManager();
-	$result = $storageManager->goldbookGet(null);
+	$goldbook = new Goldbook();
+	$result = $goldbook->goldbookGet(null);
 	//print_r($result);
 	if (empty($result)) {
 		$message = 'Aucun enregistrements';

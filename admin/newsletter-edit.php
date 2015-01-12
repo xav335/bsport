@@ -1,7 +1,6 @@
 <?php include_once 'inc-auth-granted.php';?>
 <?php include_once 'classes/utils.php';?>
 <?php 
-require 'classes/StorageManager.php';
 require 'classes/Newsletter.php';
 
 if (!empty($_GET)){ //Modif 
@@ -34,6 +33,7 @@ if (!empty($_GET)){ //Modif
 <html class="no-js" lang="fr">
 <head>
 	<?php include_once 'inc-meta.php';?>
+			
 </head>
 <body>	
 	<?php require_once 'inc-menu.php';?>
@@ -43,7 +43,7 @@ if (!empty($_GET)){ //Modif
 		<div class="row">
 			<h3><?php echo $labelTitle ?></h3>
 			<div class="col-xs-12 col-sm-12 col-md-12">
-				<form name="formulaire" class="form-horizontal" method="POST"  action="formprocess.php">
+				<form name="formulaire" class="form-horizontal" method="POST"  action="formprocess.php" >
 					<input type="hidden" name="reference" value="newsletter">
 					<input type="hidden" name="action" id="action" value="<?php echo $action ?>">
 					<input type="hidden" name="postaction" id="postaction" value="">
@@ -165,8 +165,9 @@ if (!empty($_GET)){ //Modif
 							$('#customRoxyImage'+idImage).attr('src', '/img/ajoutImage.jpg');
 							$('#url'+idImage).val('');
 						}
+						
 					</script>
-					
+						
 					
 					<script type="text/javascript">
 						

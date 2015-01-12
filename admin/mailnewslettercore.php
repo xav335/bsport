@@ -1,7 +1,6 @@
 <?php include_once 'inc-auth-granted.php';?>
 <?php include_once 'classes/utils.php';?>
 <?php 
-require 'classes/StorageManager.php';
 require 'classes/Newsletter.php';
 
 if (!empty($_GET)){ //Modif 
@@ -25,7 +24,7 @@ if (!empty($_GET)){ //Modif
 
 <?php
 //$_to = "contact@bsport.fr";
-$_to = "fjavi.gonzalez@gmail.com";
+$_to = "web-mMvuNA@mail-tester.com";
 $sujet = "Bsport - Newsletter ";
 //echo "Envoi du message à " . $_to . "<br>";
 
@@ -76,7 +75,7 @@ if(isset($detail)) {
 		$link = $value['link'];
 		$url = $value['url'];
 		if ($url!='' & $url != '/img/ajoutImage.jpg') {
-			$url = "<a href=\"http://dev.bsport.fr/". $link ."\"><img width=\"640\" src=\"http://dev.bsport.fr". $url ."\"></a><br>";
+			$url = "<a href=\"". $link ."\"><img width=\"640\" src=\"http://dev.bsport.fr". $url ."\"></a><br>";
 		} else {
 			$url= '';
 		}
@@ -108,9 +107,10 @@ $corps .= <<<EOD
 
 EOD;
 
-$corps = utf8_decode( $corps );
 
 echo $corps;
+
+$corps = utf8_decode( $corps );
 
 
 // Envoi des identifiants par mail

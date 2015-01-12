@@ -1,10 +1,10 @@
 <?php include_once 'inc-auth-granted.php';?>
 <?php include_once 'classes/utils.php';?>
 <?php 
-require 'classes/StorageManager.php';
+require 'classes/News.php';
 
-	$storageManager = new StorageManager();
-	$result = $storageManager->newsGet(null);
+	$news = new News();
+	$result = $news->newsGet(null);
 	//print_r($result);
 	if (empty($result)) {
 		$message = 'Aucun enregistrements';

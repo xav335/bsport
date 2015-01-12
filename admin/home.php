@@ -1,18 +1,19 @@
 <?php 
-require 'classes/StorageManager.php';
+require 'classes/Authentication.php';
+require 'classes/Goldbook.php';
 session_start();
 
-$storageManager = new StorageManager();
+$authentication = new Authentication();
 if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
-	$result = $storageManager->grantAccess($_POST['login'], $_POST['mdp']);
+	$result = $authentication->grantAccess($_POST['login'], $_POST['mdp']);
 	if (!$result){
 		header('Location: /admin/?action=error');
 	} else {
 		$_SESSION['accessGranted'] = true;
 	}
 }
-
-$result = $storageManager->goldbookUnvalidateGet();
+$goldbook = new Goldbook();
+$result = $goldbook->goldbookUnvalidateGet();
 if (empty($result)) {
 	$message = 'Tous les messages sont validés';
 } else {
