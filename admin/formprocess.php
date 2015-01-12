@@ -128,7 +128,13 @@ if (!empty($_POST)){
 				$newsletter = null;
 				exit();
 			}
-	
+		} elseif ($_POST['action'] == 'envoi' ) {  //ajouter
+			if ($_POST['postaction'] == 'envoi' ) {
+				header('Location: /admin/mailnewslettercore.php?action=envoi&postaction=envoi&id='. $_POST['id']);
+			} else {
+				header('Location: /admin/mailnewslettercore.php?action=envoi&postaction=preview&id='. $_POST['id']);
+			}	
+			
 		} else {  //ajouter
 			try {
 				$result = $newsletter->newsletterAdd($_POST);

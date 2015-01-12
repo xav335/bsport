@@ -145,8 +145,7 @@ if (!empty($_GET)){ //Modif
 					    <textarea class="col-sm-11"  name="bas_page"  id="bas_page" rows="3" required ><?php echo $bas_page ?></textarea>
 					</div>	
 					<div class="form-group" >
-		            	<button class="btn btn-success col-sm-6" type="submit" onclick="$('#postaction').val('modif')"> Valider </button>
-		            	<button class="btn btn-warning col-sm-6" type="submit" onclick="$('#postaction').val('preview')"> Tester la newsletter </button>
+		            	<button class="btn btn-success col-sm-12" type="submit" onclick="$('#postaction').val('modif')"> Valider </button>
 		            </div>
 					<div id="roxyCustomPanel" style="display: none;">
   							<iframe src="/admin/fileman2/index.html?integration=custom" style="width:100%;height:100%" frameborder="0"></iframe>
