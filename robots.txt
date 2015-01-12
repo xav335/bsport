@@ -1,4 +1,10 @@
-# www.robotstxt.org/
-# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
-
 User-agent: *
+Disallow: /admin/
+Disallow: /stats/ 
+Disallow: /ajax/
+Disallow: /newsletter/
+Disallow: /css/
+Disallow: /js/
+Disallow: /lib/
+Disallow: /log/
+Disallow: /source/

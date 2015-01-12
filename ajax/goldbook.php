@@ -1,9 +1,9 @@
 <?php
-require '../admin/classes/StorageManager.php';
+require '../admin/classes/Goldbook.php';
 require '../admin/classes/utils.php';
 session_start();
 
-$storageManager = new StorageManager();
+$goldbook = new Goldbook();
 
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['datepicker'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['nom'] ."\n", 3, "../log/spy.log");
@@ -14,7 +14,8 @@ error_log(date("Y-m-d H:i:s") ." : ". $_POST['newsletter'] ."\n", 3, "../log/spy
 
 if ($_POST["action"] == "sendMail") {
 	try {
-		$result = $storageManager->goldbookAdd($_POST);
+		$result = $goldbook->goldbookAdd($_POST);
+		$goldbook = null;
 	} catch (Exception $e) {
 		error_log(date("Y-m-d H:i:s") ." Erreur: ". $e->getMessage() ."\n", 3, "../log/spy.log");
 		exit();

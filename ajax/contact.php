@@ -1,9 +1,9 @@
 <?php
-require '../admin/classes/StorageManager.php';
+require '../admin/classes/Contact.php';
 require '../admin/classes/utils.php';
 session_start();
 
-$storageManager = new StorageManager();
+$contact = new Contact();
 
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['action'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['nom'] ."\n", 3, "../log/spy.log");
@@ -17,9 +17,11 @@ error_log(date("Y-m-d H:i:s") ." : ". $_POST['newsletter'] ."\n", 3, "../log/spy
 if ($_POST["action"] == "sendMail") {
 	
 	try {
-		//$result = $storageManager->goldbookAdd($_POST);
+		//$result = $contact->$contactAdd($_POST);
+		$contact = null;
 	} catch (Exception $e) {
 		error_log(date("Y-m-d H:i:s") ." Erreur: ". $e->getMessage() ."\n", 3, "../log/spy.log");
+		$contact = null;
 		exit();
 	}
 

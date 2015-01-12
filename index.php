@@ -1,9 +1,9 @@
 <?php 
-require 'admin/classes/StorageManager.php';
+require 'admin/classes/News.php';
 require 'admin/classes/utils.php';
 session_start();
-$storageManager = new StorageManager();
-$result = $storageManager->newsGet(null);
+$news = new News();
+$result = $news->newsGet(null);
 //print_r($result);
 if (empty($result)) {
 	$titre=  		'';

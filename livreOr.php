@@ -1,10 +1,11 @@
 <!doctype html>
 <?php 
-require 'admin/classes/StorageManager.php';
+require 'admin/classes/Goldbook.php';
 require 'admin/classes/utils.php';
 session_start();
-$storageManager = new StorageManager();
-$result = $storageManager->goldbookValidGet();
+$goldbook = new Goldbook();
+$result = $goldbook->goldbookValidGet();
+$goldbook = null;
 //print_r($result);
 ?>
 <html class="no-js" lang="en">

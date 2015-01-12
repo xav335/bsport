@@ -1,12 +1,12 @@
 <?php 
-require 'admin/classes/StorageManager.php';
+require 'admin/classes/News.php';
 require 'admin/classes/utils.php';
 session_start();
-$storageManager = new StorageManager();
+$news = new News();
 if (!empty($_GET)){
-	$result = $storageManager->newsGet($_GET['id']);
+	$result = $news->newsGet($_GET['id']);
 } else {
-	$result = $storageManager->newsGet(null);
+	$result = $news->newsGet(null);
 }	
 	//print_r($result);
 	if (empty($result)) {

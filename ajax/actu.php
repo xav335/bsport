@@ -1,16 +1,15 @@
 <?php
-require '../admin/classes/StorageManager.php';
+require '../admin/classes/News.php';
 require '../admin/classes/utils.php';
 session_start();
 
-$storageManager = new StorageManager();
-
+$news = new News();
 //Forms processing
 if (!empty($_GET)){
 	
 	// traitement des news
 			try {
-				$result = $storageManager->newsGet($_GET['id']);
+				$result = $news->newsGet($_GET['id']);
 				echo 
 					"<h4>Date : <b>". traitement_datetime_affiche($result[0]['date_news']) ."</b></h4><br>".
 					"<h3>".  $result[0]['titre'] ."</h3><br>".
