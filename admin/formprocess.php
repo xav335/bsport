@@ -3,6 +3,7 @@ require 'classes/Authentication.php';
 require 'classes/News.php';
 require 'classes/Goldbook.php';
 require 'classes/Newsletter.php';
+require 'classes/Contact.php';
 session_start();
 
 $authentication = new Authentication();
@@ -67,6 +68,33 @@ if (!empty($_POST)){
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
 				$goldbook = null;
+				exit();
+			}
+		}
+	}
+	
+	// traitement des Contact
+	if ($_POST['reference'] == 'contact'){
+		$contact = new Contact();
+		if ($_POST['action'] == 'modif') { //Modifier
+			try {
+				$result = $contact->contactModify($_POST);
+				$contact = null;
+				header('Location: /admin/contact-list.php');
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$contact = null;
+				exit();
+			}
+	
+		} else {  //ajouter
+			try {
+				$result = $contact->contactAdd($_POST);
+				$contact = null;
+				header('Location: /admin/contact-edit.php?id='.$result);
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$contact = null;
 				exit();
 			}
 		}
@@ -139,6 +167,20 @@ if (!empty($_POST)){
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
 				$goldbook = null;
+				exit();
+			}
+		}
+	}
+	if ($_GET['reference'] == 'contact'){ //supprimer
+		$contact = new Contact();
+		if ($_GET['action'] == 'delete'){
+			try {
+				$result = $contact->contactDelete($_GET['id']);
+				$contact = null;
+				header('Location: /admin/contact-list.php');
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				$contact = null;
 				exit();
 			}
 		}
