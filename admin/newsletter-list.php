@@ -77,7 +77,7 @@ require 'classes/Newsletter.php';
 	</div>
 	
 					<div id="preview" style="display: none;">
-  							<iframe id="laframe" src="" style="width:100%;height:100%" frameborder="0"></iframe>
+  						<iframe id="laframe" src="" style="width:100%;height:100%" frameborder="0"></iframe>
 					</div>
 					<script type="text/javascript">
 						function openPreview(id){

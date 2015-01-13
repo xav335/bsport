@@ -1,54 +1,54 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                	<div class="navbar-header">
+	                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	                        <span class="icon-bar"></span>
+	                        <span class="icon-bar"></span>
+	                        <span class="icon-bar"></span>
+	                    </button>
                     <a class="navbar-brand" href="/admin/"><img src="/admin/img/logo.png" width="150"/></a>
-                </div>
-                <div class="collapse navbar-collapse">
-           			<ul class="nav navbar-nav">
-           				<li class="dropdown">
-				          	<a href="news-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Actualités <span class="caret"></span></a>
-				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="news-edit.php">Ajout</a></li>
-				            	<li><a href="news-list.php">Modif/Suppr</a></li>
-				          	</ul>
-				        </li>
-                        <li class="dropdown">
-				          	<a href="goldbook-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Livre d'or <span class="caret"></span></a>
-				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="goldbook-edit.php">Ajout</a></li>
-				            	<li><a href="goldbook-list.php">Modif/Suppr</a></li>
-				          	</ul>
-				        </li>
-				        <li class="dropdown">
-				          	<a href="contact-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contacts <span class="caret"></span></a>
-				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="contact-edit.php">Ajout</a></li>
-				            	<li><a href="contact-list.php">Modif/Suppr</a></li>
-				          	</ul>
-				        </li>
-                        <li class="dropdown">
-				          	<a href="newsletter-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Newsletter<span class="caret"></span></a>
-				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="newsletter-edit.php">Ajout Newsletter</a></li>
-				            	<li><a href="newsletter-list.php">Modif/Suppr Newsletter</a></li>
-				            	<li class="divider"></li>
-				            	<li><a href="newsletter-list.php">Envoi !!</a></li>
-				          	</ul>
-				        </li>
-				         <li class="dropdown">
-				          	<a href="planning.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Planning <span class="caret"></span></a>
-				          	<ul class="dropdown-menu" role="menu">
-				            	<li><a href="planning.php">Modification</a></li>
-				          	</ul>
-				        </li>
-                    </ul>
-                     <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;Back Office</a>
-                      <a class="btn btn-success pull-right" href="/admin/?action=getout">Déconnexion</a>
+                	</div>
+                	<div class="col-md-6 collapse navbar-collapse">
+	           			<ul class="nav navbar-nav">
+	           				<li class="dropdown">
+					          	<a href="news-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Actualités <span class="caret"></span></a>
+					          	<ul class="dropdown-menu" role="menu">
+					            	<li><a href="news-edit.php">Ajout</a></li>
+					            	<li><a href="news-list.php">Modif / Suppr</a></li>
+					          	</ul>
+					        </li>
+	                        <li class="dropdown">
+					          	<a href="goldbook-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Livre d'or <span class="caret"></span></a>
+					          	<ul class="dropdown-menu" role="menu">
+					            	<li><a href="goldbook-edit.php">Ajout</a></li>
+					            	<li><a href="goldbook-list.php">Modif / Suppr</a></li>
+					          	</ul>
+					        </li>
+					        <li class="dropdown">
+					          	<a href="contact-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contacts <span class="caret"></span></a>
+					          	<ul class="dropdown-menu" role="menu">
+					            	<li><a href="contact-edit.php">Ajout</a></li>
+					            	<li><a href="contact-list.php">Modif / Suppr</a></li>
+					          	</ul>
+					        </li>
+	                        <li class="dropdown">
+					          	<a href="newsletter-list.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Newsletter<span class="caret"></span></a>
+					          	<ul class="dropdown-menu" role="menu">
+					            	<li><a href="newsletter-edit.php">Ajout Newsletter</a></li>
+					            	<li><a href="newsletter-list.php">Modif / Suppr / Envoi</a></li>
+					          	</ul>
+					        </li>
+					         <li class="dropdown">
+					          	<a href="planning.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Planning <span class="caret"></span></a>
+					          	<ul class="dropdown-menu" role="menu">
+					            	<li><a href="planning.php">Modification</a></li>
+					          	</ul>
+					        </li>
+	                    </ul>
+                    </div> 
+                    <div class="col-md-2 collapse navbar-collapse">
+                      	<a class="btn btn-success pull-right" href="/admin/?action=getout">Déconnexion</a>
+                     </div> 
                 </div><!--/.nav-collapse -->
                
             </div>
