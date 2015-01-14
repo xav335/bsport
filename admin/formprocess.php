@@ -4,6 +4,7 @@ require 'classes/News.php';
 require 'classes/Goldbook.php';
 require 'classes/Newsletter.php';
 require 'classes/Contact.php';
+require 'classes/Planning.php';
 session_start();
 
 $authentication = new Authentication();
@@ -21,6 +22,20 @@ if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
 //exit();
 //Forms processing
 if (!empty($_POST)){
+	
+	// traitement du planning
+	$planning = new Planning();
+	if ($_POST['reference'] == 'planning'){
+		if ($_POST['action'] == 'modif') { //Modifier la news
+			try {
+				$result = $planning->planningModify($_POST);
+				header('Location: /admin/home.php');
+			} catch (Exception $e) {
+				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
+				exit();
+			}
+		} 
+	}
 	
 	// traitement des news
 	$news = new News();

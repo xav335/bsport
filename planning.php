@@ -1,5 +1,23 @@
 <!doctype html>
 <html class="no-js" lang="en">
+<?php 
+require 'admin/classes/Planning.php';
+require 'admin/classes/utils.php';
+session_start();
+$planning = new Planning();
+$result = $planning->planningGet();
+$planning = null;
+
+$titre= null;
+$url= null;
+$pdf= null;
+if (!empty($result)) {
+	$titre= $result[0]['titre'];
+	$url= $result[0]['url'];
+	$pdf= $result[0]['pdf'];
+}
+//print_r($result);
+?>
 <head>
 	<title>B.SPORT Club de forme | Les Cours</title>
 	<meta name="description" content="" />
@@ -25,11 +43,11 @@
 		<!-- This is the magnifying glass which will contain the original/large version -->
 		<div class="large"></div>
 		<!-- This is the small image width="1624" height="726"  -->
-		<img class="small" src="img/planningbig.jpg" />
+		<img class="small" src="<?php echo $url?>" />
 	</div>
 		
 	<div class="large-6 medium-6 small-12 columns">	
-			<div><a class="suite" target="_blank" href="img/planning.pdf"><img src="img/pdf-icon.png" alt="" /> Téléchargez le programne des cours</a></div>
+			<div><a class="suite" target="_blank" href="<?php echo $pdf?>"><img src="img/pdf-icon.png" alt="" /> Téléchargez le programne des cours</a></div>
 	</div>
 </div>
 </div>

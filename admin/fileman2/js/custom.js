@@ -33,10 +33,19 @@ function FileSelected(file){
    * height - if the file is image, this will be the height of the original image, 0 otherwise
    * 
    */
-  idImage = $(window.parent.document).find('#idImage').val();
-  $(window.parent.document).find('#customRoxyImage'+idImage).attr('src', file.fullPath);
-  $(window.parent.document).find('#url'+idImage).val(file.fullPath);
-  window.parent.closeCustomRoxy();
+	
+	  idImage = $(window.parent.document).find('#idImage').val();
+	  console.log("pouet"+ idImage);
+	  	if (idImage=='pdf') {
+	  		 $(window.parent.document).find('#customRoxyImage'+idImage).attr('href', file.fullPath);
+	  		 $(window.parent.document).find('#customRoxyImage'+idImage).text(file.fullPath);
+	  		 $(window.parent.document).find('#pdf'+idImage).val(file.fullPath);
+		} else {
+			 $(window.parent.document).find('#customRoxyImage'+idImage).attr('src', file.fullPath);
+			 $(window.parent.document).find('#url'+idImage).val(file.fullPath);
+		}
+	  
+	  window.parent.closeCustomRoxy();
 }
 
 

@@ -85,7 +85,7 @@ if (!empty($_GET)){ //Modif
 								
 							</div>
 							<div class="form-group">
-								<button class="btn btn-danger col-sm-6" type="submit" onclick="$('#postaction').val('delBloc');$('#idbloc').val('<?php echo  $value['id'] ?>');"> + Supprimer le bloc précédent</button>
+								<button class="btn btn-danger col-sm-6" type="submit" onclick="$('#postaction').val('delBloc');$('#idbloc').val('<?php echo  $value['id'] ?>');"> - Supprimer le bloc précédent</button>
 							</div>
 					<?php 
 						$i++;
