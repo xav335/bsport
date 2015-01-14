@@ -29,7 +29,7 @@ if (!empty($_POST)){
 		if ($_POST['action'] == 'modif') { //Modifier la news
 			try {
 				$result = $planning->planningModify($_POST);
-				header('Location: /admin/planning.php');
+				header('Location: /admin/home.php');
 			} catch (Exception $e) {
 				echo 'Erreur contactez votre administrateur <br> :',  $e->getMessage(), "\n";
 				exit();

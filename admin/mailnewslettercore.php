@@ -24,14 +24,14 @@ if (!empty($_GET)){ //Modif
 
 <?php
 //$_to = "contact@bsport.fr";
-$_to = "fredericlesca@iconeo.fr";
+$_to = "fjavi.gonzalez@gmail.com";
 $sujet = "Bsport - Newsletter ";
 //echo "Envoi du message à " . $_to . "<br>";
 
 $entete = "From:Bsport <contact@bsport.fr>\n";
 $entete .= "MIME-version: 1.0\n";
 $entete .= "Content-type: text/html; charset= iso-8859-1\n";
-$entete .= "Bcc: fjavi.gonzalez@gmail.com,xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com\n";
+$entete .= "Bcc: xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com\n";
 
 $corps = <<<EOD
 

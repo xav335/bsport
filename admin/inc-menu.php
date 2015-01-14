@@ -29,6 +29,8 @@
 					          	<ul class="dropdown-menu" role="menu">
 					            	<li><a href="contact-edit.php">Ajout</a></li>
 					            	<li><a href="contact-list.php">Modif / Suppr</a></li>
+					            	<li class="divider"></li>
+					            	<li><a href="contact-import.php">Import / Export</a></li>
 					          	</ul>
 					        </li>
 	                        <li class="dropdown">
