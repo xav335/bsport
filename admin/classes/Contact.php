@@ -132,7 +132,7 @@ class Contact extends StorageManager {
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
-				
+			// Ne pas oublier d'ajouter les prilèges FILE sur le users de la DB
 			$sql = "SELECT firstname,name,email,newsletter INTO OUTFILE '". $value ."'
 				FIELDS
 					TERMINATED BY ';'
@@ -167,8 +167,8 @@ class Contact extends StorageManager {
 		$this->begin();
 		try {
 			$this->contactDeleteALL();
-			
-			$sql = "LOAD DATA LOCAL INFILE '". $value ."'
+			// Ne pas oublier d'ajouter les prilèges FILE sur le users de la DB
+			$sql = "LOAD DATA INFILE '". $value ."'
 	          INTO TABLE contact
 			FIELDS
 				TERMINATED BY ';'
