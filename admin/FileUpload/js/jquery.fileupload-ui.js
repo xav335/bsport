@@ -545,6 +545,16 @@
                 type: 'DELETE'
             }, button.data()));
         },
+        _importHandler: function (e) {
+        	console.log("XAV: import Handler");
+            e.preventDefault();
+            var button = $(e.currentTarget);
+            console.log(button.data());
+            if (confirm('Attention tous les contacts seront supprimés et remplacés par ce fichier ! Etes vous certain ! Dernière chance')){
+            	document.location.href = "contact-import2.php?action="+button.data().type+"&url="+button.data().url;
+            }
+            
+        },
 
         _forceReflow: function (node) {
             return $.support.transition && node.length &&
@@ -624,12 +634,14 @@
             this._on(this.options.filesContainer, {
                 'click .start': this._startHandler,
                 'click .cancel': this._cancelHandler,
-                'click .delete': this._deleteHandler
+                'click .delete': this._deleteHandler,
+                'click .import': this._importHandler
             });
             this._initButtonBarEventHandlers();
         },
 
         _destroyEventHandlers: function () {
+        	
             this._destroyButtonBarEventHandlers();
             this._off(this.options.filesContainer, 'click');
             this._super();

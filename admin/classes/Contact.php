@@ -105,8 +105,7 @@ class Contact extends StorageManager {
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
-			$sql = "DELETE FROM `bsportnv`.`contact`
-					WHERE `id`=". $value .";";
+			$sql = "DELETE FROM `bsportnv`.`contact` WHERE `id`=". $value .";";
 			$result = mysql_query($sql);
 	
 			if (!$result) {
@@ -123,5 +122,92 @@ class Contact extends StorageManager {
 	
 	
 		$this->dbDisConnect();
+	}
+	
+	public function contactExportCSV(){
+		//print_r($value);
+		//exit();
+		$date = date("Ymd-H:i:s");      
+		$value = $_SERVER["DOCUMENT_ROOT"] ."/admin/FileUpload/server/php/files/export-". $date .".csv";
+		$this->dbConnect("bsportnv");
+		$this->begin();
+		try {
+				
+			$sql = "SELECT firstname,name,email,newsletter INTO OUTFILE '". $value ."'
+				FIELDS
+					TERMINATED BY ';'
+					ENCLOSED BY '\\\"'
+					ESCAPED BY '\\\\'
+				LINES
+					STARTING BY ''
+					TERMINATED BY '\\r'
+				FROM contact;";
+			echo $sql;
+				
+			$result = mysql_query($sql) or die(mysql_error());
+			if (!$result) {
+				throw new Exception($sql);
+			}
+			$this->commit();
+			return $result;
+	
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql contactImportCSV". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	
+		$this->dbDisConnect();
+	}
+	
+	public function contactImportCSV($value){
+		//print_r($value);
+		//exit();
+		$this->dbConnect("bsportnv");
+		$this->begin();
+		try {
+			$this->contactDeleteALL();
+			
+			$sql = "LOAD DATA LOCAL INFILE '". $value ."'
+	          INTO TABLE contact
+			FIELDS
+				TERMINATED BY ';'
+				ENCLOSED BY '\\\"'
+				ESCAPED BY '\\\\'
+			LINES
+				STARTING BY ''
+				TERMINATED BY '\\r'
+				(`firstname`,`name`,`email`,`newsletter`) ;";
+			//echo $sql;
+			
+			$result = mysql_query($sql) or die(mysql_error());
+			if (!$result) {
+				throw new Exception($sql);
+			}
+			$this->commit();
+			return $result;
+		
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql contactImportCSV". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	
+		$this->dbDisConnect();
+	}
+	
+	protected function contactDeleteALL(){
+		try {
+			$sql = "DELETE FROM `bsportnv`.`contact` ;";
+			$result = mysql_query($sql);
+	
+			if (!$result) {
+				throw new Exception($sql);
+			}
+	
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
 	}
 }

@@ -18,13 +18,27 @@
 	<?php require_once 'inc-menu.php';?>
 	<div class="container">
 	    <h3>Importation des CSV</h3>
+	    <div class="col-lg-7">
+	    	<h4 class="text-warning">ATTENTION !! l'importation remplace tous les contacts par la liste contenue dans le fichier CSV</h4>
+	    	
+	   	</div>
+	   	<div class="col-lg-4">
+	   		<h5 class="btn-danger">Faire une exportation afin de ne pas perdre les fichiers</h5>
+	   		 <a href="contact-export.php" > 
+			    		<button class="btn btn-info">
+		                    <span>Exporter la base Contact</span>
+		                </button>
+		            </a>    <br><br>
+	    	<br><br>
+	    </div>	
 		<!-- The file upload form used as target for the file upload widget -->
 	    <form id="fileupload" action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
 	        <!-- Redirect browsers with JavaScript disabled to the origin page -->
 	        <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
 	        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+	       
 	        <div class="row fileupload-buttonbar">
-	            <div class="col-lg-7">
+	            <div class="col-lg-10">
 	                <!-- The fileinput-button span is used to style the file input field as button -->
 	                <span class="btn btn-success fileinput-button">
 	                    <i class="glyphicon glyphicon-plus"></i>
@@ -44,6 +58,8 @@
 	                    <span>Supprimer</span>
 	                </button>
 	                <input type="checkbox" class="toggle">
+	                
+	                &nbsp;&nbsp;&nbsp;<a href="FileUpload/img/exemple.csv" >Exemple de fichier compatible</a>
 	                <!-- The global file processing state -->
 	                <span class="fileupload-process"></span>
 	            </div>
@@ -57,6 +73,7 @@
 	                <div class="progress-extended">&nbsp;</div>
 	            </div>
 	        </div>
+            <h5>Liste des fichiers CSV disponibles:</h5>
 	        <!-- The table listing the files available for upload/download -->
 	        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
 	    </form>
@@ -73,6 +90,7 @@
     <a class="play-pause"></a>
     <ol class="indicator"></ol>
 </div>
+
 <!-- The template to display files available for upload -->
 <script id="template-upload" type="text/x-tmpl">
 {% for (var i=0, file; file=o.files[i]; i++) { %}
