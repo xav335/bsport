@@ -540,10 +540,12 @@
         _deleteHandler: function (e) {
             e.preventDefault();
             var button = $(e.currentTarget);
-            this._trigger('destroy', e, $.extend({
-                context: button.closest('.template-download'),
-                type: 'DELETE'
-            }, button.data()));
+            if (confirm('Etes vous certain !')){
+	            this._trigger('destroy', e, $.extend({
+	                context: button.closest('.template-download'),
+	                type: 'DELETE'
+	            }, button.data()));
+            }
         },
         _importHandler: function (e) {
         	console.log("XAV: import Handler");
