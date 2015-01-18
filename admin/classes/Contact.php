@@ -11,7 +11,7 @@ class Contact extends StorageManager {
 		try {
 			if (!isset($id)){
 				if (isset($offset) && isset($count)) {
-					$requete = "SELECT * FROM `contact` ORDER BY `name` DESC LIMIT ". $offset .",". $count .";" ;
+					$requete = "SELECT * FROM `contact` ORDER BY `name` ASC LIMIT ". $offset .",". $count .";" ;
 				} else {
 					$requete = "SELECT * FROM `contact` ORDER BY `name`;" ;
 				}
