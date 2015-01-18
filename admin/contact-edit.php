@@ -6,7 +6,7 @@ require 'classes/Contact.php';
 if (!empty($_GET)){ //Modif 
 	$action = 'modif';
 	$contact = new Contact();
-	$result = $contact->contactGet($_GET['id']);
+	$result = $contact->contactGet($_GET['id'], null, null);
 	//print_r($result);
 	if (empty($result)) {
 		$message = 'Aucun enregistrements';

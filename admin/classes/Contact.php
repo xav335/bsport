@@ -6,23 +6,49 @@ class Contact extends StorageManager {
 
 	}
 
-	public function contactGet($id){
+	public function contactGet($id, $offset, $count){
 		$this->dbConnect("bsportnv");
-		if (!isset($id)){
-			$requete = "SELECT * FROM `contact` ORDER BY `name` DESC" ;
-		} else {
-			$requete = "SELECT * FROM `contact` WHERE id=". $id;
-		}
-		//print_r($requete);
-		$new_array = null;
-		$result = mysql_query($requete);
-		while( $row = mysql_fetch_assoc( $result)){
-			$new_array[] = $row;
-		}
-		$this->dbDisConnect();
-		return $new_array;
+		try {
+			if (!isset($id)){
+				if (isset($offset) && isset($count)) {
+					$requete = "SELECT * FROM `contact` ORDER BY `name` DESC LIMIT ". $offset .",". $count .";" ;
+				} else {
+					$requete = "SELECT * FROM `contact` ORDER BY `name`;" ;
+				}
+			} else {
+				$requete = "SELECT * FROM `contact` WHERE id=". $id;
+			}
+			//print_r($requete);
+			$new_array = null;
+			$result = mysql_query($requete);
+			while( $row = mysql_fetch_assoc( $result)){
+				$new_array[] = $row;
+			}
+			$this->dbDisConnect();
+			return $new_array;
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql contactGet ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}	
 	}
 
+	public function contactNumberGet(){
+		$this->dbConnect("bsportnv");
+		try {
+			$requete = "SELECT count(*) as nb FROM `contact`;" ;
+			//print_r($requete);
+			$new_array = null;
+			$result = mysql_query($requete);
+			while( $row = mysql_fetch_assoc( $result)){
+				$new_array[] = $row;
+			}
+			$this->dbDisConnect();
+			return $new_array[0]['nb'];
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql contactGet ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	}
 	
 	public function contactAdd($value){
 		//print_r($value);

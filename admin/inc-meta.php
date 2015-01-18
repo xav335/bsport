@@ -8,6 +8,7 @@
 <link href="/admin/css/style.css" media="screen" rel="stylesheet" type="text/css">
 <link href="/img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 <link href="/admin/js/jquery-ui.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/admin/css/pagination.css" media="screen" rel="stylesheet" type="text/css">
 <!-- Scripts -->
 <script type="text/javascript" src="/admin/js/custom.js"></script>
 <!--[if lt IE 9]><script type="text/javascript" src="/admin/js/html5shiv.js"></script><![endif]-->
