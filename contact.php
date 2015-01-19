@@ -29,13 +29,13 @@
 			<div class="row">
 				<div class="large-6 columns">
 					<label>Nom
-						<input type="text" id="nom" name="nom" placeholder="Nom" required pattern="[a-zA-Z]+" />
+						<input type="text" id="nom" name="name" placeholder="Nom" required pattern="[a-zA-Z]+" />
 					</label>
 					<small class="error">Votre nom est obligatoire</small>
 				</div>
 				<div class="large-6 columns">
 					<label>Prénom
-						<input id="prenom" type="text" name="prenom" placeholder="Prénom" />
+						<input id="prenom" type="text" name="firstname" placeholder="Prénom" />
 					</label>
 				</div>
 			</div>
@@ -77,7 +77,7 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<input type="checkbox" id="newsletter" name="newsletter" value="1" checked/> J'accepte de recevoir la newsletter de B'Sport.
+					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de B'Sport.
 				</div>
 			</div>
 			<button type="submit">Envoyer la demande</button>

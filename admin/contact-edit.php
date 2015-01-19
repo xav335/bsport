@@ -16,11 +16,9 @@ if (!empty($_GET)){ //Modif
 		$name=  			$result[0]['name'];
 		$email=  		$result[0]['email'];
 		$firstname= 	$result[0]['firstname'];
-		if($result[0]['newsletter']=='1') { 
-			$online = 'checked'; 
-		} else {
-			$online = '';
-		}
+		($result[0]['newsletter']=='1') ? $online = 1 : $online = '';
+		($result[0]['fromcontact']=='1') ? $fromcontact = "origine: formulaire de contact" : $fromcontact = '';
+		($result[0]['fromgoldbook']=='1') ? $fromgoldbook = "origine: livre d'or" : $fromgoldbook = '';
 	}
 } else { //ajout goldbook
 	$action = 'add';
@@ -30,6 +28,8 @@ if (!empty($_GET)){ //Modif
 	$email= 		null;
 	$firstname= 		null;
 	$online= 	null;
+	$fromcontact = '';
+	$fromgoldbook = '';
 }
 ?>
 <!doctype html>
@@ -68,6 +68,9 @@ if (!empty($_GET)){ //Modif
 						<div class="form-group" >
 							<label for="titre"> Newsletter:</label>
 						    <input type="checkbox" name="newsletter" <?php echo  $online ?>>
+						</div>
+						<div class="form-group" >
+							<label class="col-sm-3"><?php echo $fromcontact ?></label> ---- <label class="col-sm-3"><?php echo $fromgoldbook ?></label><br>
 						</div>
 			            <button class="btn btn-success col-sm-12" type="submit" class="btn btn-default"> Valider </button>
 			        </form>

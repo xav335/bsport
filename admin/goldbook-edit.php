@@ -59,7 +59,7 @@ if (!empty($_GET)){ //Modif
 						</div>
 						<div class="form-group" >
 							<label class="col-sm-1" for="titre">Nom :</label>
-						    <input type="text" class="col-sm-11" name="nom" required  value="<?php echo $nom ?>">
+						    <input type="text" class="col-sm-11" name="name" required  value="<?php echo $nom ?>">
 						</div>
 						<div class="form-group" >
 							<label class="col-sm-1" for="titre">Email :</label>

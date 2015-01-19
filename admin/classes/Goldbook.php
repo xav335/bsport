@@ -55,16 +55,13 @@ class Goldbook extends StorageManager {
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
-			if($value['online']=='on') {
-				$online = 1;
-			} else {
-				$online = 0;
-			}
+			($value['$online']=='on') ? $online = 1 : $online = 0;
+			
 			$sql = "INSERT INTO `bsportnv`.`goldbook`
 						(`date`, `nom`, `email`, `message`,`online`)
 						VALUES (
 						'". $this->inserer_date($value['datepicker']) ."',
-						'". addslashes($value['nom']) ."',
+						'". addslashes($value['name']) ."',
 						'". addslashes($value['email']) ."',
 						'". addslashes($value['message']) ."',
 						". $online ."
@@ -93,15 +90,11 @@ class Goldbook extends StorageManager {
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
-			if($value['online']=='on') {
-				$online = 1;
-			} else {
-				$online = 0;
-			}
+			($value['online']=='on') ? $online = 1 : $online = 0;
 				
 			$sql = "UPDATE `bsportnv`.`goldbook` SET
 					`date`='". $this->inserer_date($value['datepicker']) ."',
-					`nom`='". addslashes($value['nom']) ."',
+					`nom`='". addslashes($value['name']) ."',
 					`email`='". addslashes($value['email']) ."',
 					`message`='". addslashes($value['message']) ."',
 					`online`=". $online ."

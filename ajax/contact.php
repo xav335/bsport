@@ -6,8 +6,8 @@ session_start();
 $contact = new Contact();
 
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['action'] ."\n", 3, "../log/spy.log");
-error_log(date("Y-m-d H:i:s") ." : ". $_POST['nom'] ."\n", 3, "../log/spy.log");
-error_log(date("Y-m-d H:i:s") ." : ". $_POST['prenom'] ."\n", 3, "../log/spy.log");
+error_log(date("Y-m-d H:i:s") ." : ". $_POST['name'] ."\n", 3, "../log/spy.log");
+error_log(date("Y-m-d H:i:s") ." : ". $_POST['firstname'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['email'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['tel'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['sujet'] ."\n", 3, "../log/spy.log");
@@ -17,8 +17,10 @@ error_log(date("Y-m-d H:i:s") ." : ". $_POST['newsletter'] ."\n", 3, "../log/spy
 if ($_POST["action"] == "sendMail") {
 	
 	try {
-		//$result = $contact->$contactAdd($_POST);
+		$_POST['fromcontact']='on';
+		$contact->contactAdd($_POST);
 		$contact = null;
+		
 	} catch (Exception $e) {
 		error_log(date("Y-m-d H:i:s") ." Erreur: ". $e->getMessage() ."\n", 3, "../log/spy.log");
 		$contact = null;
@@ -38,7 +40,7 @@ if ($_POST["action"] == "sendMail") {
 	$corps = "";
 	$corps .= "Bonjour,<br>";
 	$corps .= "Sujet : " . $_POST["sujet"] ."<br>";
-	$corps .= "Nv message de :<br>" . $_POST["nom"] . " ". $_POST["prenom"]  . " (" . $_POST["email"] . ")<br>";
+	$corps .= "Nv message de :<br>" . $_POST["name"] . " ". $_POST["firstname"]  . " (" . $_POST["email"] . ")<br>";
 	$corps .= "Tel : ". $_POST["tel"] ."<br>";
 	$corps .= "<b>Message :</b><br>";
 	$corps .= $_POST["message"] . "<br><br>";

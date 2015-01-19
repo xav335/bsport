@@ -37,7 +37,7 @@ $goldbook = null;
 			<div class="row">
 				<div class="large-12 columns">
 					<label>Nom
-						<input name="nom" id="nom" type="text" placeholder="Nom" required pattern="[a-zA-Z]+" />
+						<input name="name" id="nom" type="text" placeholder="Nom" required pattern="[a-zA-Z]+" />
 					</label>
 					<small class="error">Votre nom est obligatoire</small>
 				</div>
@@ -60,7 +60,7 @@ $goldbook = null;
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<input type="checkbox" id="newsletter" name="newsletter" value="1" checked/> J'accepte de recevoir la newsletter de B'Sport.
+					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de B'Sport.
 				</div>
 			</div>
 			<input class="suite" id="bouton" type="submit" value="Laissez nous votre témoignage"/>

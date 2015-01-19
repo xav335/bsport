@@ -56,19 +56,21 @@ class Contact extends StorageManager {
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
-			if($value['newsletter']=='on') {
-				$online = 1;
-			} else {
-				$online = 0;
-			}
+			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
+			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
+			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
+
 			$sql = "INSERT INTO `bsportnv`.`contact`
-						(`name`, `email`, `firstname`,`newsletter`)
+						(`name`, `email`, `firstname`,`newsletter`,`fromgoldbook`,`fromcontact`)
 						VALUES (
 						'". addslashes($value['name']) ."',
 						'". addslashes($value['email']) ."',
 						'". addslashes($value['firstname']) ."',
-						". $online ."
+						". $newsletter .",
+						". $fromgoldbook .",
+						". $fromcontact ."
 					);";
+			//error_log(date("Y-m-d H:i:s") ." : ".$sql."\n", 3, "../log/spy.log");
 			$result = mysql_query($sql);
 	
 			if (!$result) {
@@ -93,17 +95,17 @@ class Contact extends StorageManager {
 		$this->dbConnect("bsportnv");
 		$this->begin();
 		try {
-			if($value['newsletter']=='on') {
-				$online = 1;
-			} else {
-				$online = 0;
-			}
+			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
+			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
+			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
 	
 			$sql = "UPDATE `bsportnv`.`contact` SET
 					`name`='". addslashes($value['name']) ."',
 					`email`='". addslashes($value['email']) ."',
 					`firstname`='". addslashes($value['firstname']) ."',
-					`newsletter`=". $online ."
+					`newsletter`=". $newsletter .",
+					`fromgoldbook`=". $fromgoldbook .",
+					`fromcontact`=". $fromcontact ."
 					WHERE `id`=". $value['id'] .";";
 			$result = mysql_query($sql);
 	
@@ -224,7 +226,7 @@ class Contact extends StorageManager {
 	
 	protected function contactDeleteALL(){
 		try {
-			$sql = "DELETE FROM `bsportnv`.`contact` ;";
+			$sql = "DELETE FROM `bsportnv`.`contact` WHERE fromcontact=0 AND fromgoldbook=0 ;";
 			$result = mysql_query($sql);
 	
 			if (!$result) {
