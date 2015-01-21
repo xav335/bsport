@@ -11,11 +11,11 @@ class StorageManager{
 		return $tab[2] . "-" . $tab[1] . "-" . $tab[0];
 	}
 	
-	protected function dbConnect($bddz) {
+	protected function dbConnect() {
 		$host = "localhost";
 		$user = "bsportnv";
 		$pass = "bsportnv33";
-		$bdd = $bddz;
+		$bdd = "bsportnv";
 			
 		// connexion
 		mysql_connect($host, $user, $pass)

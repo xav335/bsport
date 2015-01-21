@@ -7,7 +7,7 @@ class Contact extends StorageManager {
 	}
 
 	public function contactGet($id, $offset, $count){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		try {
 			if (!isset($id)){
 				if (isset($offset) && isset($count)) {
@@ -33,7 +33,7 @@ class Contact extends StorageManager {
 	}
 
 	public function contactNumberGet(){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		try {
 			$requete = "SELECT count(*) as nb FROM `contact`;" ;
 			//print_r($requete);
@@ -53,14 +53,14 @@ class Contact extends StorageManager {
 	public function contactAdd($value){
 		//print_r($value);
 		//exit();
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
 			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
 			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
 			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
 
-			$sql = "INSERT INTO `bsportnv`.`contact`
+			$sql = "INSERT INTO  .`contact`
 						(`name`, `email`, `firstname`,`newsletter`,`fromgoldbook`,`fromcontact`)
 						VALUES (
 						'". addslashes($value['name']) ."',
@@ -92,14 +92,14 @@ class Contact extends StorageManager {
 		//print_r($value);
 		//exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
 			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
 			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
 			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
 	
-			$sql = "UPDATE `bsportnv`.`contact` SET
+			$sql = "UPDATE  .`contact` SET
 					`name`='". addslashes($value['name']) ."',
 					`email`='". addslashes($value['email']) ."',
 					`firstname`='". addslashes($value['firstname']) ."',
@@ -130,10 +130,10 @@ class Contact extends StorageManager {
 		//print_r($value);
 		//exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "DELETE FROM `bsportnv`.`contact` WHERE `id`=". $value .";";
+			$sql = "DELETE FROM  .`contact` WHERE `id`=". $value .";";
 			$result = mysql_query($sql);
 	
 			if (!$result) {
@@ -157,7 +157,7 @@ class Contact extends StorageManager {
 		//exit();
 		$date = date("Ymd-H:i:s");      
 		$value = $_SERVER["DOCUMENT_ROOT"] ."/admin/FileUpload/server/php/files/export-". $date .".csv";
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
 			// Ne pas oublier d'ajouter les prilèges FILE sur le users de la DB
@@ -191,7 +191,7 @@ class Contact extends StorageManager {
 	public function contactImportCSV($value){
 		//print_r($value);
 		//exit();
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
 			$this->contactDeleteALL();
@@ -226,7 +226,7 @@ class Contact extends StorageManager {
 	
 	protected function contactDeleteALL(){
 		try {
-			$sql = "DELETE FROM `bsportnv`.`contact` WHERE fromcontact=0 AND fromgoldbook=0 ;";
+			$sql = "DELETE FROM  .`contact` WHERE fromcontact=0 AND fromgoldbook=0 ;";
 			$result = mysql_query($sql);
 	
 			if (!$result) {

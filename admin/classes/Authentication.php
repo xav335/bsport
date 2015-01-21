@@ -7,7 +7,7 @@ class Authentication extends StorageManager {
 	}
 	
 	public function grantAccess($login,$mdp){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$requete = "SELECT * FROM admin";
 		$requete .= " WHERE login = '" . mysql_real_escape_string( $login ) . "'";
 		$requete .= " AND mdp = '" . mysql_real_escape_string( $mdp ) . "'";

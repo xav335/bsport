@@ -7,7 +7,7 @@ class News extends StorageManager {
 	}
 	
 	public function newsGet($id){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		if (!isset($id)){
 			$requete = "SELECT * FROM `news` ORDER BY date_news DESC" ;
 		} else {
@@ -26,10 +26,10 @@ class News extends StorageManager {
 	public function newsAdd($value){
 		//print_r($value);
 		//exit();
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "INSERT INTO `bsportnv`.`news`
+			$sql = "INSERT INTO  .`news`
 						(`date_news`, `titre`, `accroche`, `contenu`)
 						VALUES (
 						'". $this->inserer_date($value['datepicker']) ."', 
@@ -58,10 +58,10 @@ class News extends StorageManager {
 		//print_r($value);
 		//exit();
 		
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "UPDATE `bsportnv`.`news` SET
+			$sql = "UPDATE  .`news` SET
 					`date_news`='". $this->inserer_date($value['datepicker']) ."', 
 					`titre`='". addslashes($value['titre']) ."', 
 					`accroche`='". addslashes($value['accroche']) ."', 
@@ -89,10 +89,10 @@ class News extends StorageManager {
 		//print_r($value);
 		//exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "DELETE FROM `bsportnv`.`news` 
+			$sql = "DELETE FROM  .`news` 
 					WHERE `id_news`=". $value .";";
 			$result = mysql_query($sql);
 				

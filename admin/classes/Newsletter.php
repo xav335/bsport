@@ -7,7 +7,7 @@ class Newsletter extends StorageManager {
 	}
 	
 	public function newsletterGet($id){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		if (!isset($id)){
 			$requete = "SELECT * FROM `newsletter` ORDER BY `date` DESC" ;
 		} else {
@@ -25,7 +25,7 @@ class Newsletter extends StorageManager {
 	}
 	
 	public function newsletterAllGet($id){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 			
 		$requete = "SELECT * FROM `newsletter` WHERE `id`=". $id ;
 		//print_r($requete);
@@ -51,10 +51,10 @@ class Newsletter extends StorageManager {
 	
 	public function newsletterAdd($value){
 		//print_r($value); exit();
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "INSERT INTO `bsportnv`.`newsletter`
+			$sql = "INSERT INTO  .`newsletter`
 						(`date`, `titre`, `bas_page`)
 						VALUES (
 						'". $this->inserer_date($value['datepicker']) ."',
@@ -84,10 +84,10 @@ class Newsletter extends StorageManager {
 	public function newsletterModify($value){
 		//print_r($value); exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "UPDATE `bsportnv`.`newsletter` SET
+			$sql = "UPDATE  .`newsletter` SET
 					`date`='". $this->inserer_date($value['datepicker']) ."',
 					`titre`='". addslashes($value['titre']) ."',
 					`bas_page`='". addslashes($value['bas_page']) ."'
@@ -116,7 +116,7 @@ class Newsletter extends StorageManager {
 		
 		for ($i = 1; $i <  $value['ndencards']+1; $i++) {
 		
-			$sql = "INSERT INTO `bsportnv`.`newsletter_detail`
+			$sql = "INSERT INTO  .`newsletter_detail`
 						(`id_newsletter`,`titre`, `url`, `link`,`texte`)
 						VALUES (
 						". $id .",
@@ -138,7 +138,7 @@ class Newsletter extends StorageManager {
 	private function newsletterDetailDelete($id_newsletter){
 		//print_r($id_newsletter); exit();
 		try {
-			$sql = "DELETE FROM `bsportnv`.`newsletter_detail`
+			$sql = "DELETE FROM  .`newsletter_detail`
 					WHERE `id_newsletter`=". $id_newsletter .";";
 			$result = mysql_query($sql);
 			if (!$result) {
@@ -156,10 +156,10 @@ class Newsletter extends StorageManager {
 	public function newsletterDetailUniqueDelete($id){
 		//print_r($id); exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-		$sql = "DELETE FROM `bsportnv`.`newsletter_detail`
+		$sql = "DELETE FROM  .`newsletter_detail`
 					WHERE `id`=". $id .";";
 			$result = mysql_query($sql);
 			if (!$result) {
@@ -178,10 +178,10 @@ class Newsletter extends StorageManager {
 	public function newsletterDelete($value){
 		//print_r($value); exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "DELETE FROM `bsportnv`.`newsletter`
+			$sql = "DELETE FROM  .`newsletter`
 					WHERE `id`=". $value .";";
 			$result = mysql_query($sql);
 	

@@ -7,7 +7,7 @@ class Planning extends StorageManager {
 	}
 
 	public function planningGet(){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$requete = "SELECT * FROM `planning` WHERE id=1";
 		//print_r($requete);
 		$new_array = null;
@@ -26,10 +26,10 @@ class Planning extends StorageManager {
 		//print_r($value);
 		//exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "UPDATE `bsportnv`.`planning` SET
+			$sql = "UPDATE  .`planning` SET
 					`titre`='". addslashes($value['titre']) ."',
 					`url`='". addslashes($value['url']) ."',
 					`pdf`='". addslashes($value['pdf']) ."'

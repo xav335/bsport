@@ -7,7 +7,7 @@ class Goldbook extends StorageManager {
 	}
 	
 	public function goldbookUnvalidateGet(){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$requete = "SELECT count(*) as nb FROM `goldbook` WHERE online=0;" ;
 		//print_r($requete);
 		$new_array = null;
@@ -20,7 +20,7 @@ class Goldbook extends StorageManager {
 	}
 	
 	public function goldbookGet($id){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		if (!isset($id)){
 			$requete = "SELECT * FROM `goldbook` ORDER BY `date` DESC" ;
 		} else {
@@ -37,7 +37,7 @@ class Goldbook extends StorageManager {
 	}
 	
 	public function goldbookValidGet(){
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$requete = "SELECT * FROM `goldbook` WHERE online=1 ORDER BY `date` DESC" ;
 		//print_r($requete);
 		$new_array = null;
@@ -52,12 +52,12 @@ class Goldbook extends StorageManager {
 	public function goldbookAdd($value){
 		//print_r($value);
 		//exit();
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
 			($value['$online']=='on') ? $online = 1 : $online = 0;
 			
-			$sql = "INSERT INTO `bsportnv`.`goldbook`
+			$sql = "INSERT INTO  .`goldbook`
 						(`date`, `nom`, `email`, `message`,`online`)
 						VALUES (
 						'". $this->inserer_date($value['datepicker']) ."',
@@ -87,12 +87,12 @@ class Goldbook extends StorageManager {
 		//print_r($value);
 		//exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
 			($value['online']=='on') ? $online = 1 : $online = 0;
 				
-			$sql = "UPDATE `bsportnv`.`goldbook` SET
+			$sql = "UPDATE  .`goldbook` SET
 					`date`='". $this->inserer_date($value['datepicker']) ."',
 					`nom`='". addslashes($value['name']) ."',
 					`email`='". addslashes($value['email']) ."',
@@ -121,10 +121,10 @@ class Goldbook extends StorageManager {
 		//print_r($value);
 		//exit();
 	
-		$this->dbConnect("bsportnv");
+		 $this->dbConnect();
 		$this->begin();
 		try {
-			$sql = "DELETE FROM `bsportnv`.`goldbook`
+			$sql = "DELETE FROM  .`goldbook`
 					WHERE `id`=". $value .";";
 			$result = mysql_query($sql);
 	
