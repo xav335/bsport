@@ -981,8 +981,8 @@ class UploadHandler
                 exec($cmd, $output, $error);
                 if (!$error && !empty($output)) {
                     // image.jpg JPEG 1920x1080 1920x1080+0+0 8-bit sRGB 465KB 0.000u 0:00.000
-                    $infos = preg_split('/\s+/', $output[0]);
-                    $dimensions = preg_split('/x/', $infos[2]);
+                    $infos = preg_explode('/\s+/', $output[0]);
+                    $dimensions = preg_explode('/x/', $infos[2]);
                     return $dimensions;
                 }
                 return false;
@@ -1312,7 +1312,7 @@ class UploadHandler
         // Content-Range: bytes 0-524287/2000000
         $content_range_header = $this->get_server_var('HTTP_CONTENT_RANGE');
         $content_range = $content_range_header ?
-            preg_split('/[^0-9]+/', $content_range_header) : null;
+            preg_explode('/[^0-9]+/', $content_range_header) : null;
         $size =  $content_range ? $content_range[3] : null;
         $files = array();
         if ($upload) {

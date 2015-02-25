@@ -29,8 +29,14 @@
 						Tél. 05 56 69 91 23<br/>
 						<a href="mailto:contact@bsport.fr">contact@bsport.fr</a>
 					</div>
+					
+				</div>
+				<div class="row">
+					Powered by <a href="http://www.iconeo.fr" target="_blank">www.iconeo.fr</a>
 				</div>
 			</div>
+			
+			
 		</div>
 		<!-- /Footer -->
 

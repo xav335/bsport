@@ -44,7 +44,9 @@
 				<div class="panel-heading">
 					<h3 class="panel-title">Identifiez Vous</h3>
 				</div>
-				<?php if (isset($_GET['action']) && $_GET['action']=='error') { ?>
+				<?php if (isset($_GET['action']) && $_GET['action']=='error') { 
+					echo $_GET['lib'];
+					?>
 					<h4 class="bg-danger">- Erreur d'identification -</h4>
 				<?php }?>
 				<div class="panel-body">

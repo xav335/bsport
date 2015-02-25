@@ -8,3 +8,5 @@ Disallow: /js/
 Disallow: /lib/
 Disallow: /log/
 Disallow: /source/
+
+Sitemap: http://www.bsport.fr/sitemap.xml

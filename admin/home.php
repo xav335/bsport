@@ -5,12 +5,17 @@ session_start();
 
 $authentication = new Authentication();
 if (!isset($_SESSION['accessGranted']) || !$_SESSION['accessGranted']) {
-	$result = $authentication->grantAccess($_POST['login'], $_POST['mdp']);
-	if (!$result){
-		header('Location: /admin/?action=error');
-	} else {
-		$_SESSION['accessGranted'] = true;
+	try {
+		$result = $authentication->grantAccess($_POST['login'], $_POST['mdp']);
+		if (!$result){
+			header('Location: /admin/?action=error');
+		} else {
+			$_SESSION['accessGranted'] = true;
+		}
+	} catch (Exception $e) {
+		header('Location: /admin/?action=error&lib='.$e->getMessage());
 	}
+	
 }
 $goldbook = new Goldbook();
 $result = $goldbook->goldbookUnvalidateGet();

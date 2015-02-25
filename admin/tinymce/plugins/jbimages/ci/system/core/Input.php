@@ -470,7 +470,7 @@ class CI_Input {
 		$collapsed = FALSE;
 
 		$chunks = array_filter(
-			preg_split('/(:{1,2})/', $str, NULL, PREG_SPLIT_DELIM_CAPTURE)
+			preg_explode('/(:{1,2})/', $str, NULL, PREG_SPLIT_DELIM_CAPTURE)
 		);
 
 		// Rule out easy nonsense
