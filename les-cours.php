@@ -67,8 +67,12 @@
 			</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-				
-				
+				<div class="large-12 columns" style="margin-top: 4px;">
+					<div class="slider-mills">
+						<div><img src="img/body1.jpg" alt="" /></div>
+						<div><img src="img/body2.jpg" alt="" /></div>
+					</div>
+				</div>
 			</div>	
 		</div>
 		
@@ -116,7 +120,7 @@
 			</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-				
+					<div><img src="img/aquawork1.jpg" alt="" /></div>
 			</div>	
 		</div>
 		
@@ -135,7 +139,12 @@
 				</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-				
+				<div class="large-12 columns" style="margin-top: 4px;">
+					<div class="slider-mills">
+						<div><img src="img/aqua1.jpg" alt="" /></div>
+						<div><img src="img/aqua2.jpg" alt="" /></div>
+					</div>
+				</div>
 			</div>	
 		</div>
 		
@@ -146,14 +155,19 @@
 					RPM™ est un cours de vélo indoor inspiré du cyclisme sur route.
 					 Vous pédalerez sur des musiques motivantes pour parcourir l’équivalent de 20 à 25 km sur un parcours varié,
 					  en contrôlant votre intensité de travail grâce à une résistance individuelle, et à votre cadence de Pédalage.
-						Entrez dans la course !
+						Entrez dans la course !<br><br>
 				</p>
 				<div style="padding-left: 2px;">	
 					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=BQuaO3BVwg0"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez la video &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
 				</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-				
+				<div class="large-12 columns" style="margin-top: 2px;">
+					<div class="slider-mills">
+						<div><img src="img/rpm1.jpg" alt="" /></div>
+						<div><img src="img/rpm2.jpg" alt="" /></div>
+					</div>
+				</div>
 			</div>	
 		</div>
 		
@@ -170,7 +184,12 @@
 				</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-				
+				<div class="large-12 columns" style="margin-top: 34px;">
+					<div class="slider-mills">
+						<div><img src="img/shbam1.jpg" alt="" /></div>
+						<div><img src="img/shbam2.jpg" alt="" /></div>
+					</div>
+				</div>
 			</div>	
 		</div>
 		
@@ -186,7 +205,12 @@
 				</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-				
+				<div class="large-12 columns" style="margin-top: 34px;">
+					<div class="slider-mills">
+						<div><img src="img/cxworx1.jpg" alt="" /></div>
+						<div><img src="img/cxworx2.jpg" alt="" /></div>
+					</div>
+				</div>
 			</div>	
 		</div>
 		
