@@ -27,15 +27,15 @@ if ($_POST["action"] == "sendMail") {
 		exit();
 	}
 
-	//$_to = "contact@bsport.fr";
-	$_to = "fjavi.gonzalez@gmail.com";
+	$_to = "contact@bsport.fr";
+	//$_to = "fjavi.gonzalez@gmail.com";
 	$sujet = "Bsport - Contact Site";
 	//echo "Envoi du message à " . $_to . "<br>";
 		
 	$entete = "From:Bsport <contact@bsport.fr>\n";
 	$entete .= "MIME-version: 1.0\n";
 	$entete .= "Content-type: text/html; charset= iso-8859-1\n";
-	$entete .= "Bcc: xav335@hotmail.com\n";
+	$entete .= "Bcc: fjavi.gonzalez@gmail.com, xav335@hotmail.com\n";
 		
 	$corps = "";
 	$corps .= "Bonjour,<br>";
