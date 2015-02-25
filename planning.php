@@ -19,9 +19,9 @@ if (!empty($result)) {
 //print_r($result);
 ?>
 <head>
-	<title>B.SPORT Club de forme | Les Cours</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<title>Bsport.fr | Salle de sport | Planning </title>
+	<meta name="Description" content="Prennez connaissance et téléchargez le planning des cours actualisé">
+	<meta name="Keywords" content="cours, planning, réservations, agenda">
 <?php include('inc/meta.php'); ?>
 	
 </head>

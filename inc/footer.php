@@ -22,7 +22,7 @@
 					</div>
 					<div class="large-4 medium-4 small-12 columns">
 						<img src="img/logo-footer.png" alt="" title="BSPORT" /><br/>
-						28-32 rue des marronniers - 33110 LE BOUSCAT
+						32 rue des marronniers - 33110 LE BOUSCAT
 					</div>
 					<div class="large-4 medium-4 small-12 columns">
 						<a target="_blank" href="https://www.facebook.com/pages/Bsport/184340404943880" >rejoignez-nous ! <img src="img/facebook.png" title="rejoignez-nous !" /></a><br/>

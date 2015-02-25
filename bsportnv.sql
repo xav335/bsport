@@ -140,7 +140,7 @@ CREATE TABLE `goldbook` (
 
 LOCK TABLES `goldbook` WRITE;
 /*!40000 ALTER TABLE `goldbook` DISABLE KEYS */;
-INSERT INTO `goldbook` VALUES (1,'2014-12-10 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Un accueil génial, des cours au top, très belle salle et prof très pro et sympa',1),(2,'2014-12-10 00:00:00','Frederic Lesca','fredericlesca@iconeo.fr','Un accueil et un suivi hors paire, très beau lieu, très convivial',0),(8,'2015-01-08 00:00:00','2014 - factures','dcd','dcddc',0);
+INSERT INTO `goldbook` VALUES (1,'2014-12-10 00:00:00','Xavier (Eysines)','xavier@gonzalez.pm','Un accueil génial, des cours au top, très belle salle et prof très pro.',1),(2,'2014-12-10 00:00:00','Frederic (Mérignac)','fredericlesca@iconeo.fr','Un accueil et un suivi hors paire, très beau lieu, très convivial',1),(8,'2015-01-08 00:00:00','Pierre','pedro@free.fr','Les cours d\'aquabike dans cette super piscine sont vraiment super.\r\nLes profs sont très sympa et très compétents.\r\nJe recommande chaudement !',1);
 /*!40000 ALTER TABLE `goldbook` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,7 +193,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (10,'2015-01-01 00:00:00','Trés bonne année à tous !','Cette année Votre club modifie complètement son image avec une communication à l\'image du club moderne et dynamique. Suivez notre actualité et les évenements du club. ','<p><strong>Nouveau site</strong></p>\r\n<p>Votre club modifie compl&egrave;tement son image avec une communication &agrave; l\'image du club moderne et dynamique. Suivez notre actualit&eacute; et les &eacute;venements du club.</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p>&nbsp;<img src=\"/uploads/DSC01985.jpg\" alt=\"\" width=\"413\" height=\"309\" /></p>'),(15,'2015-01-16 00:00:00','Très bonne année à tous l','ddd','<p><img src=\"/uploads/logo.png\" alt=\"\" width=\"463\" height=\"80\" /></p>\r\n<p>&nbsp;</p>');
+INSERT INTO `news` VALUES (15,'2015-02-25 00:00:00','Nouveau Site B\'Sport','Nouveau Site internet avec toutes les actus et  les évènements du club.','<p>D&eacute;marrage d\'un nouveau site internet pour une pr&eacute;sentation plus d&eacute;taill&eacute;e des activit&eacute;s du club.</p>\r\n<p>Vous avez acc&egrave;s &agrave; toutes les informations et les &eacute;v&eacute;nements du club en \"temps r&eacute;el\".</p>\r\n<p>N\'oubliez pas de \"liker\" notre page Facebook !!</p>\r\n<p>&nbsp;</p>\r\n<p><img src=\"/uploads/logo.png\" alt=\"\" width=\"463\" height=\"80\" /></p>');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -286,4 +286,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-25  9:45:28
+-- Dump completed on 2015-02-25 11:44:01

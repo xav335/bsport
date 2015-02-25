@@ -10,9 +10,9 @@ $goldbook = null;
 ?>
 <html class="no-js" lang="en">
 <head>
-	<title>B.SPORT Club de forme | Le Club</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<title>Bsport.fr | Salle de sport | livre d'or </title>
+	<meta name="Description" content="Laissez vos impressions et vos commentaires sur notre livre d'or et prennez connaissance des avis des autres menbres du club">
+	<meta name="Keywords" content="avis, commentaire, remarques, impressions">
 <?php include('inc/meta.php'); ?>
 	
 </head>
@@ -80,7 +80,7 @@ $goldbook = null;
 				<div style=";border-bottom : 4px ridge white;padding:24px 4px 24px 4px; <?php if ($i%2==0) echo 'background: #FFF;'?>" >
 					Message publiée le: <b><?php echo traitement_datetime_affiche($value['date'])?></b><br>
 					<h3><?php echo $value['nom']?></h3><br>
-					<h4><?php echo $value['message']?></h4><br>
+					<h4><?php echo nl2br($value['message'])?></h4><br>
 				</div>
 				<?php } ?>
 			<?php } ?>	

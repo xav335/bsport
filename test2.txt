@@ -1,3 +1,0 @@
-"xavier","Gonzalez","fjavi.gonzalez@gmail.com"
-"xav","gonzalez","xavier@gonzalez.pm"
-"jhon","begood","jav_gonz@yahoo.com"

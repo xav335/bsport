@@ -3,6 +3,15 @@
 	<meta name="robots" content="index,follow" />
 	<meta name="apple-mobile-web-app-title" content="B.SPORT" />
 	
+	<meta name="google-site-verification" content="eOp4F9hnVSo12BiWnQy39GiRqcOh-Ln_Qj3CprqmnbU" />
+	<meta name="msvalidate.01" content="F0370734803EB91841429EEF01957F36" />
+	<META name="y_key" content="2bbb32c77c8164dd">
+	<meta name="Content-Language" content="fr">
+	<meta name="publisher" content="iconeo.fr">
+	<meta name="author" content="iconeo.fr">
+	<meta name="Revisit-After" content="16 days">
+	<meta name="Robots" content="all">
+	
 	<!-- Styles -->
 	<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" />
 	<link rel="apple-touch-icon" href="img/favicon.png" />
@@ -45,7 +54,14 @@
 			 *  Simple image gallery. Uses default settings
 			 */
 
-			$('.fancybox').fancybox();
+			 $('.fancybox').fancybox({
+				  padding: 0,
+				  helpers: {
+				    overlay: {
+				      locked: false
+				    }
+				  }
+			});
 
 			$('.fancybox-media')
 			.attr('rel', 'media-gallery')
@@ -59,7 +75,10 @@
 				arrows : false,
 				helpers : {
 					media : {},
-					buttons : {}
+					buttons : {},
+					 overlay: {
+						locked: false
+					}
 				}
 			});
 

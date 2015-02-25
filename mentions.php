@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-<title>B.SPORT Club de forme | Le Club</title>
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<title>Bsport.fr | Salle de sport | Mentions légales</title>
+	<meta name="Description" content="Mentions légales du site internet">
+	<meta name="Keywords" content="mentions légales">
 <?php include('inc/meta.php'); ?>
 	
 </head>

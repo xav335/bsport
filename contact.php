@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>B.SPORT Club de forme | Contact</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<title>Bsport.fr | Salle de sport | Contact / Plan / Facebook </title>
+	<meta name="Description" content="Contactez nous à l'aide du formulaire de contact à votre disposition">
+	<meta name="Keywords" content="contact, plan, facebook, adresse, téléphone, coordonnées, like">
 <?php include('inc/meta.php'); ?>
 	
 </head>
@@ -19,7 +19,7 @@
 		<h1>Contactez B'SPORT</h1>
 		<h2>Le Bouscat</h2>
 		<p>
-			28-32 rue des marronniers 33110 LE BOUSCAT (sur boulevard Godard)<br/>
+			32 rue des marronniers 33110 LE BOUSCAT (sur boulevard Godard)<br/>
 			Tél. 05 56 69 91 23
 		</p>
 		<div id="resultat">

@@ -20,10 +20,11 @@ if (empty($result)) {
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>B.SPORT Club de forme</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-<?php include('inc/meta.php'); ?>
+	<title>Bsport.fr | Salle de sport et fitness Bordeaux - Le Bouscat</title>
+	<meta name="Description" content="Bsport est une salle de sport qui propose des cours de fitness, de remise en forme, des salles de musculation, des cours en piscine par aquagym, à Bordeaux Le Bouscat ">
+	<meta name="Keywords" content="salle de sport, fitness, aquagym, aquabike, aquabiking, piscine, musculation, remise en forme, altères, cours de gym, cours de fitness, cardio, lesmills, bordeaux">
+
+	<?php include('inc/meta.php'); ?>
 	
 </head>
 <body class="<?php if (basename(__FILE__) != "index.php") {echo "page";} ?>">

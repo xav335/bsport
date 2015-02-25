@@ -1,9 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>B.SPORT Club de forme | Espace</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<title>Bsport.fr | Nos salles de sport </title>
+	<meta name="Description" content="Découvrez notre espace et nos salle de sport ainsi que la grande piscine">
+	<meta name="Keywords" content="salles, piscine, vélo, musculation, rpm, vestiares">
+
 <?php include('inc/meta.php'); ?>
 	
 </head>
@@ -35,7 +36,7 @@
 				Une piscine à votre disposition de 15 m sur 6 vous autorise de véritables moments de détente dans un milieu où stress, complexe et préoccupations n’existent plus… Avec l’aquagym…que du plaisir : efficacité renforcée, efforts allégés, amélioration de la circulation sanguine, massage remodelant.
 			</p>
 			<div class="flex-video">
-    			<iframe width="420" height="315" src="//www.youtube.com/embed/wymgG2maG4w" frameborder="0" allowfullscreen></iframe>
+    			<a class="fancybox" href="img/photos1.jpg"><img src="img/photos1.jpg" class="fancy" alt="" /></a>
 			</div>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
@@ -56,12 +57,12 @@
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px;  background: #FFF;" >
 		<div class="large-6 medium-6 small-12 columns">
 			<div class="flex-video">
-				<iframe width="420" height="315"  src="//www.youtube.com/embed/ZbHMBe0QPUA" frameborder="0" allowfullscreen></iframe>
+				<a class="fancybox" href="img/photos2.jpg"><img src="img/photos2.jpg" class="fancy" data-fancybox-group="produit" alt="" /></a>
 			</div>	
 		</div>	
 		<div class="large-6 medium-6 small-12 columns">	
 			<div class="flex-video">	
-				<iframe width="420" height="315" src="//www.youtube.com/embed/IL5GQD4GKdA" frameborder="0" allowfullscreen></iframe>
+				<a class="fancybox" href="img/photos3.jpg"><img src="img/photos3.jpg" class="fancy" data-fancybox-group="produit"  alt="" /></a>
 			</div>	
 		</div>		
 	</div>	
@@ -71,6 +72,9 @@
 			<p>
 				Dynamiques, entraînants et motivants, les cours de fitness, par leur diversité et leur aspect ludique, conviennent à tous quelque soit le niveau.
 			</p>
+			<div class="flex-video">
+    			<a class="fancybox" href="img/photos4.jpg"><img src="img/photos4.jpg" class="fancy" alt="" /></a>
+			</div>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
 			<img src="img/espace-fitness.png" alt="" />
@@ -98,7 +102,7 @@
 				Lieu de pèlerinage pour tous ceux qui souhaitent améliorer leur souffle, leur condition physique générale et brûler des calories.
 			</p>
 			<div class="flex-video">	
-				<iframe  width="420" height="315" src="//www.youtube.com/embed/Qz5t6AL2YXE" frameborder="0" allowfullscreen></iframe>
+				<a class="fancybox" href="img/photos6.jpg"><img src="img/photos6.jpg" class="fancy" alt="" /></a>
 			</div>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
