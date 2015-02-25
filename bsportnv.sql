@@ -28,7 +28,7 @@ CREATE TABLE `admin` (
   `mdp` varchar(30) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'bsport','alcbousc','administrateur');
+INSERT INTO `admin` VALUES (1,'bsport','alcbousc','administrateur'),(2,'admin','admin33',NULL);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,7 +81,7 @@ CREATE TABLE `contact` (
   `fromgoldbook` tinyint(4) NOT NULL DEFAULT '0',
   `fromcontact` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24861 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24400 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,7 +193,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (10,'2015-01-01 00:00:00','Trés bonne année à tous !','Cette année Votre club modifie complètement son image avec une communication à l\'image du club moderne et dynamique. Suivez notre actualité et les évenements du club. ','<p><strong>Nouveau site</strong></p>\r\n<p>Votre club modifie compl&egrave;tement son image avec une communication &agrave; l\'image du club moderne et dynamique. Suivez notre actualit&eacute; et les &eacute;venements du club.</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p>&nbsp;<img src=\"/uploads/DSC01984.jpg\" alt=\"\" width=\"413\" height=\"309\" /></p>'),(15,'2015-01-16 00:00:00','Très bonne année à tous l','ddd','<p><img src=\"/uploads/logo.png\" alt=\"\" width=\"463\" height=\"80\" />ddddd</p>');
+INSERT INTO `news` VALUES (10,'2015-01-01 00:00:00','Trés bonne année à tous !','Cette année Votre club modifie complètement son image avec une communication à l\'image du club moderne et dynamique. Suivez notre actualité et les évenements du club. ','<p><strong>Nouveau site</strong></p>\r\n<p>Votre club modifie compl&egrave;tement son image avec une communication &agrave; l\'image du club moderne et dynamique. Suivez notre actualit&eacute; et les &eacute;venements du club.</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p style=\"text-align: center;\">&nbsp;</p>\r\n<p>&nbsp;<img src=\"/uploads/DSC01985.jpg\" alt=\"\" width=\"413\" height=\"309\" /></p>'),(15,'2015-01-16 00:00:00','Très bonne année à tous l','ddd','<p><img src=\"/uploads/logo.png\" alt=\"\" width=\"463\" height=\"80\" /></p>\r\n<p>&nbsp;</p>');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,7 +210,7 @@ CREATE TABLE `newsletter` (
   `titre` varchar(250) DEFAULT NULL,
   `bas_page` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -219,7 +219,7 @@ CREATE TABLE `newsletter` (
 
 LOCK TABLES `newsletter` WRITE;
 /*!40000 ALTER TABLE `newsletter` DISABLE KEYS */;
-INSERT INTO `newsletter` VALUES (12,'2015-01-01 00:00:00','Ceci est la toute nouvelle actu','ljhjkl');
+INSERT INTO `newsletter` VALUES (12,'2015-01-01 00:00:00','Ceci est la toute nouvelle actu','ljhjkl'),(13,'2015-02-25 00:00:00','Très bonne année à tous l','Desinscrivez vous');
 /*!40000 ALTER TABLE `newsletter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -238,7 +238,7 @@ CREATE TABLE `newsletter_detail` (
   `link` varchar(250) DEFAULT NULL,
   `texte` text,
   PRIMARY KEY (`id`,`id_newsletter`)
-) ENGINE=InnoDB AUTO_INCREMENT=324 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=335 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,7 +247,7 @@ CREATE TABLE `newsletter_detail` (
 
 LOCK TABLES `newsletter_detail` WRITE;
 /*!40000 ALTER TABLE `newsletter_detail` DISABLE KEYS */;
-INSERT INTO `newsletter_detail` VALUES (323,12,'','/uploads/bsport3.jpg','http://dev.bsport.fr/','');
+INSERT INTO `newsletter_detail` VALUES (325,12,'','/uploads/bsport3.jpg','http://dev.bsport.fr/',''),(326,12,'','/uploads/bsport5.jpg','http://dev.bsport.fr/',''),(333,13,'La piscine est de nouveau opérationnelle','/uploads/DSC01966.jpg','http://dev.bsport.fr/','Un grand ksdjfksj sj lksj skfj slkjsùq ùfjfklzjf eisjf kznep zjfj sk,fksjfz'),(334,13,'bbffffff','/uploads/DSC01968.jpg','http://dev.bsport.fr/','ddsdc sd sdf sdf sdf sf sdf s');
 /*!40000 ALTER TABLE `newsletter_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -286,4 +286,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-22 16:23:12
+-- Dump completed on 2015-02-25  9:45:28
