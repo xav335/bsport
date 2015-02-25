@@ -27,7 +27,7 @@
 					<div class="large-4 medium-4 small-12 columns">
 						<a target="_blank" href="https://www.facebook.com/pages/Bsport/184340404943880" >rejoignez-nous ! <img src="img/facebook.png" title="rejoignez-nous !" /></a><br/>
 						Tél. 05 56 69 91 23<br/>
-						<a href="mailto:contact@bsport.fr">contact@bsport.fr</a>
+						<a href="contact.php">contact@bsport.fr</a>
 					</div>
 					
 				</div>
