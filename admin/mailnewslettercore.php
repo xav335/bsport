@@ -13,7 +13,7 @@ if (!empty($_GET)){ //Modif
 		$id= 			$_GET['id'];
 		$titre=  		$result[0]['titre'];
 		$date= 			traitement_datetime_affiche($result[0]['date']);
-		$bas_page= 		$result[0]['bas_page'];
+		$bas_page= 		nl2br($result[0]['bas_page']);
 		$detail=		$result[0]['newsletter_detail'];
 	}
 } else { 
@@ -34,7 +34,7 @@ $sujet = "Bsport - Newsletter ";
 $entete = "From:Bsport <contact@bsport.fr>\n";
 $entete .= "MIME-version: 1.0\n";
 $entete .= "Content-type: text/html; charset= iso-8859-1\n";
-$entete .= "Bcc: fjavi.gonzalez@gmail.com,xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com\n";
+$entete .= "Bcc: fredericlesca@iconeo.fr,xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com\n";
 
 $corps = <<<EOD
 
@@ -82,7 +82,7 @@ if(isset($detail)) {
 		} else {
 			$url= '';
 		}
-		$texte = $value['texte'];
+		$texte = nl2br($value['texte']);
 		if ($titre != '' || $url != '' || $texte != '') {
 			$corps .= <<<EOD
 					$titre
