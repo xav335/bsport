@@ -127,6 +127,9 @@ if (!empty($_POST)){
 				if ($_POST['postaction'] == 'preview' ) {
 					$newsletter = null;
 					header('Location: /admin/mailnewslettercore.php?postaction=preview&id='. $_POST['id']);
+				} elseif ($_POST['postaction'] == 'preview' ) {
+					$newsletter = null;
+					header('Location: /admin/mailnewslettercore.php?postaction=envoi&id='. $_POST['id']);
 				} elseif ($_POST['postaction']=='addBloc') {
 					$newsletter = null;
 					header('Location: /admin/newsletter-edit.php?addBloc=1&id='. $_POST['id']);

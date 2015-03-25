@@ -31,6 +31,24 @@ class Contact extends StorageManager {
 			return "errrrrrrooooOOor";
 		}	
 	}
+	
+	public function contactGetForNewsletter(){
+		$this->dbConnect();
+		try {
+			$sql = "SELECT DISTINCT email FROM contact WHERE newsletter=1;" ;
+			//print_r($sql);exit();
+			$new_array = null;
+			$result = mysqli_query($this->mysqli,$sql);
+			while( $row = mysqli_fetch_assoc( $result)){
+				$new_array[] = $row;
+			}
+			$this->dbDisConnect();
+			return $new_array;
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql contactGet ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	}
 
 	public function contactNumberGet(){
 		 $this->dbConnect();

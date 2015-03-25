@@ -203,4 +203,86 @@ class Newsletter extends StorageManager {
 		$this->dbDisConnect();
 	}
 	
+	public function journalNewsletterAdd($value){
+		//print_r($value); exit();
+		$this->dbConnect();
+		$this->begin();
+		try {
+			$sql = "INSERT INTO  newsletter_journal
+						(id_newsletter)
+						VALUES (
+						'". addslashes($value) ."'
+					);";
+			$result = mysqli_query($this->mysqli,$sql);
+	
+			if (!$result) {
+				throw new Exception($sql);
+			}
+			$id_record = mysqli_insert_id($this->mysqli);
+				
+			$this->commit();
+	
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql journalNewsletterAdd". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+		$this->dbDisConnect();
+		return $id_record;
+	}
+	
+	public function journalNewsletterDetailAdd($id_newsletter_journal,$email,$coderandom,$error){
+		//print_r($value); exit();
+		$this->dbConnect();
+		$this->begin();
+		try {
+			$sql = "INSERT INTO  newsletter_journal_detail
+						(id_newsletter_journal,email,coderandom,error)
+						VALUES (
+						". $id_newsletter_journal .",
+						'". addslashes($email) ."',
+						'". addslashes($coderandom) ."',
+						'". addslashes($error) ."'
+					);";
+			$result = mysqli_query($this->mysqli,$sql);
+	
+			if (!$result) {
+				throw new Exception($sql);
+			}
+			$id_record = mysqli_insert_id($this->mysqli);
+	
+			$this->commit();
+	
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql journalNewsletterDetailAdd". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+		$this->dbDisConnect();
+		return $id_record;
+	}
+	
+	public function journalNewsletterTrack($value){
+		//print_r($value); exit();
+		$this->dbConnect();
+		$this->begin();
+		try {
+			$sql = "UPDATE  newsletter_journal_detail SET
+					`read`=1 WHERE `coderandom`='". $value ."';";
+			$result = mysqli_query($this->mysqli,$sql);
+			if (!$result) {
+				throw new Exception($sql);
+			}
+				
+			$this->commit();
+	
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql newsletterModify ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	
+		$this->dbDisConnect();
+	}
+	
 }
