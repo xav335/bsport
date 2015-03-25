@@ -144,6 +144,35 @@ class Contact extends StorageManager {
 	}	
 	
 	
+	public function contactUnsubscribeNewsletter($email, $message){
+		//print_r($value);
+		//exit();
+	
+		$this->dbConnect();
+		$this->begin();
+		try {
+			$sql = "UPDATE  contact SET
+					`newsletter`= 0,
+					`message`='". addslashes($message) ."'
+					WHERE `email`='". $email ."';";
+			$result = mysqli_query($this->mysqli,$sql);
+	
+			if (!$result) {
+				throw new Exception($sql);
+			}
+	
+			$this->commit();
+	
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	
+	
+		$this->dbDisConnect();
+	}
+	
 	public function contactDelete($value){
 		//print_r($value);
 		//exit();

@@ -1,6 +1,11 @@
 <?php
-	session_start();
-	
+require '../admin/classes/Contact.php';
+
+if (!empty($_POST)){
+	$contact = new Contact();
+	$contact->contactUnsubscribeNewsletter($_POST['email'], $_POST['message']);
+	$contact = null;
+}
 ?>
 <!doctype html>
 <html class="no-js" lang="fr">
@@ -12,14 +17,22 @@
 </head>
 <body>	
 
-  	<div class="container">       
-		<div class="col-md-4">
-			<img src="../img/logo.png" class="img-responsive" alt="Responsive image">
-		</div>
-	</div>
+	<img src="../img/logo.png" width="200">
+<?php if (!empty($_POST)){ ?>
+	<br><br>Votre désincription a été prise en compte ! <br><br>
 	
-	
-	
+	<a href="http://bsport.fr/" >Allez sur le site </a>
+<?php } else { ?>
+	<form name="formulaire" class="form-horizontal" method="POST"  action="desinscription.php">
+		Indiquez votre e-mail<br>
+		<input name="email" id="email" type="email" placeholder="e-mail" required /><br><br>
+		
+		Message (éventuel) <br>
+		<textarea name="message" id="message" placeholder="Votre message" ></textarea><br><br>
+
+		<input class="suite" id="bouton" type="submit" value="Validez la désincription à notre newsletter"/>
+	</form>
+<?php }  ?>
 </body>
 </html>
 
