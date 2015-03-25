@@ -42,7 +42,7 @@
 			<div class="row">
 				<div class="large-6 columns">
 					<label>Téléphone
-						<input type="text" id="tel" name="tel" placeholder="Téléphone" />
+						<input type="text" id="tel" name="tel" required placeholder="Téléphone" />
 					</label>
 					<small class="error">Votre téléphone est obligatoire</small>
 				</div>
