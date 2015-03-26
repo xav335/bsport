@@ -82,7 +82,7 @@ CREATE TABLE `contact` (
   `fromcontact` tinyint(4) NOT NULL DEFAULT '0',
   `message` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24419 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24418 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -338,4 +338,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-25 18:06:58
+-- Dump completed on 2015-03-26  9:29:15

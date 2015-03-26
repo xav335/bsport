@@ -285,4 +285,67 @@ class Newsletter extends StorageManager {
 		$this->dbDisConnect();
 	}
 	
+	public function journalNewsletterGet(){
+		$this->dbConnect();
+		try {
+			$sql = "SELECT nsj.date_envoi, newsletter.titre,newsletter.id,nsj.id as id_newsletter
+					FROM newsletter_journal as nsj 
+					INNER JOIN newsletter ON newsletter.id = nsj.id_newsletter 
+					ORDER BY date_envoi;" ;
+			//print_r($requete);
+			$new_array = null;
+			$result = mysqli_query($this->mysqli,$sql);
+			while( $row = mysqli_fetch_assoc( $result)){
+				$new_array[] = $row;
+			}
+			$this->dbDisConnect();
+			return $new_array;
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql contactGet ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	}
+	
+	public function journalNewsletterDetailNumberGet($id){
+		$this->dbConnect();
+		try {
+			$requete = "SELECT count(*) as nb FROM `newsletter_journal_detail` 
+					WHERE id_newsletter_journal=".$id .";" ;
+			//print_r($requete);
+			$new_array = null;
+			$result = mysqli_query($this->mysqli,$requete);
+			while( $row = mysqli_fetch_assoc( $result)){
+				$new_array[] = $row;
+			}
+			$this->dbDisConnect();
+			return $new_array[0]['nb'];
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql contactGet ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	}
+	
+	public function journalNewsletterDetailGet($id, $offset, $count){
+		$this->dbConnect();
+		try {
+				if (isset($offset) && isset($count)) {
+					$sql = "SELECT * FROM `newsletter_journal_detail` WHERE `id_newsletter_journal`=".$id ." ORDER BY `email` ASC LIMIT ". $offset .",". $count .";" ;
+				} else {
+					$sql = "SELECT * FROM `newsletter_journal_detail` WHERE `id_newsletter_journal`=".$id ." ORDER BY `email`;" ;
+				}
+			//print_r($sql);
+			$new_array = null;
+			$result = mysqli_query($this->mysqli,$sql);
+			while( $row = mysqli_fetch_assoc( $result)){
+				$new_array[] = $row;
+			}
+			$this->dbDisConnect();
+			return $new_array;
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql contactGet ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	}
+	
+	
 }
