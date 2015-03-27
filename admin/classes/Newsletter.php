@@ -306,12 +306,13 @@ class Newsletter extends StorageManager {
 		}
 	}
 	
-	public function journalNewsletterDetailNumberGet($id){
+	public function journalNewsletterDetailNumberGet($id, $read){
+
 		$this->dbConnect();
 		try {
 			$requete = "SELECT count(*) as nb FROM `newsletter_journal_detail` 
-					WHERE id_newsletter_journal=".$id .";" ;
-			//print_r($requete);
+					WHERE id_newsletter_journal=".$id ." WHERE read=". $read .";" ;
+			print_r($requete);
 			$new_array = null;
 			$result = mysqli_query($this->mysqli,$requete);
 			while( $row = mysqli_fetch_assoc( $result)){
