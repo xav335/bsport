@@ -310,11 +310,16 @@ class Newsletter extends StorageManager {
 
 		$this->dbConnect();
 		try {
-			$requete = "SELECT count(*) as nb FROM `newsletter_journal_detail` 
-					WHERE id_newsletter_journal=".$id ." WHERE read=". $read .";" ;
-			print_r($requete);
+			if(!empty($read)){
+				$sql = "SELECT count(*) as nb FROM `newsletter_journal_detail` 
+					WHERE id_newsletter_journal=".$id ." AND `read`=". $read .";" ;
+			} else {
+				$sql = "SELECT count(*) as nb FROM `newsletter_journal_detail`
+					WHERE id_newsletter_journal=".$id .";" ;
+			}
+			//print_r($sql);
 			$new_array = null;
-			$result = mysqli_query($this->mysqli,$requete);
+			$result = mysqli_query($this->mysqli,$sql);
 			while( $row = mysqli_fetch_assoc( $result)){
 				$new_array[] = $row;
 			}

@@ -5,11 +5,11 @@
 require 'classes/Newsletter.php';
 
 	$newsletter = new Newsletter();
-	$total = $newsletter->journalNewsletterDetailNumberGet($_GET['id'],1);
-	//$totalread = $newsletter->journalNewsletterDetailNumberGet($_GET['id'],1);
+	$total = $newsletter->journalNewsletterDetailNumberGet($_GET['id'],null);
+	$totalread = $newsletter->journalNewsletterDetailNumberGet($_GET['id'],1);
 	//echo $totalread;
 	
-	$epp = 13; // nombre d'entrées à afficher par page (entries per page)
+	$epp = 5; // nombre d'entrées à afficher par page (entries per page)
 	$nbPages = ceil($total/$epp); // calcul du nombre de pages $nbPages (on arrondit à l'entier supérieur avec la fonction ceil())
 	 
 	// Récupération du numéro de la page courante depuis l'URL avec la méthode GET
@@ -57,12 +57,20 @@ require 'classes/Newsletter.php';
 			<div class="col-xs-12 col-sm-12 col-md-12">
 			<h3>Tracking de l'envoi de mail n°: <?php echo $_GET['id']?></h3>
 				<?php echo paginate('journalnewsletter-detail.php?id='. $_GET['id'], '&p=', $nbPages, $current); ?>
+				<a class="btn btn-success pull-right" href="/admin/journalnewsletter-list.php">Retour</a>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12">
-
+				
 				<table class="table table-hover table-bordered table-condensed table-striped" >
+					<thead>
+						<tr>
+							<th class="col-md-3" style="" colspan="3">
+								<h4>Emails lus: <?php echo $totalread?> - Emails non lus : <?php echo $total-$totalread?></h4>  
+							</th>
+						</tr>
+					</thead>
 					<thead>
 						<tr>
 							<th class="col-md-3" style="">
