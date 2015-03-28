@@ -9,7 +9,7 @@ require 'classes/Newsletter.php';
 	$totalread = $newsletter->journalNewsletterDetailNumberGet($_GET['id'],1);
 	//echo $totalread;
 	
-	$epp = 5; // nombre d'entrées à afficher par page (entries per page)
+	$epp = 13; // nombre d'entrées à afficher par page (entries per page)
 	$nbPages = ceil($total/$epp); // calcul du nombre de pages $nbPages (on arrondit à l'entier supérieur avec la fonction ceil())
 	 
 	// Récupération du numéro de la page courante depuis l'URL avec la méthode GET
