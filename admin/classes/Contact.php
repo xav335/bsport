@@ -74,9 +74,9 @@ class Contact extends StorageManager {
 		 $this->dbConnect();
 		$this->begin();
 		try {
-			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
-			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
-			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
+			(!empty($value['newsletter']) && $value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
+            (!empty($value['fromgoldbook']) && $value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
+            (!empty($value['fromcontact']) && $value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
 
 			$sql = "INSERT INTO  .`contact`
 						(`name`, `email`, `firstname`,`newsletter`,`fromgoldbook`,`fromcontact`)
@@ -113,9 +113,9 @@ class Contact extends StorageManager {
 		 $this->dbConnect();
 		$this->begin();
 		try {
-			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
-			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
-			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
+			(!empty($value['newsletter']) && $value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
+            (!empty($value['fromgoldbook']) && $value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
+            (!empty($value['fromcontact']) && $value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
 	
 			$sql = "UPDATE  .`contact` SET
 					`name`='". addslashes($value['name']) ."',
