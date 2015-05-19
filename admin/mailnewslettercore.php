@@ -24,7 +24,41 @@ if (!empty($_GET)){ //Modif
 	exit();
 }
 ?>
+<?php 
+	function sendElasticEmail($to, $subject, $body_text, $body_html, $from, $fromName)
+	{
+		$res = "";
+	
+		$data = "username=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
+		$data .= "&api_key=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
+		$data .= "&from=".urlencode($from);
+		$data .= "&from_name=".urlencode($fromName);
+		$data .= "&to=".urlencode($to);
+		$data .= "&subject=".urlencode($subject);
+		if($body_html)
+			$data .= "&body_html=".urlencode($body_html);
+		if($body_text)
+			$data .= "&body_text=".urlencode($body_text);
+	
+		$header = "POST /mailer/send HTTP/1.0\r\n";
+		$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
+		$header .= "Content-Length: " . strlen($data) . "\r\n\r\n";
+		$fp = fsockopen('ssl://api.elasticemail.com', 443, $errno, $errstr, 30);
+	
+		if(!$fp)
+			return "ERROR. Could not open connection";
+		else {
+			fputs ($fp, $header.$data);
+			while (!feof($fp)) {
+				$res .= fread ($fp, 1024);
+			}
+			fclose($fp);
+		}
+		return $res;
+	}
+//echo sendElasticEmail("test@test.com", "My Subject", "My Text", "My HTML", "youremail@yourdomain.com", "Your Name");
 
+?>
 <?php
 $urlSite = $_SERVER['HTTP_HOST'];
 
@@ -108,7 +142,7 @@ if (empty($_GET['action']) && empty($_GET['postaction']) ) {
 	echo $corps;
 }	
 
-$corps = utf8_decode( $corps );
+//$corps = utf8_decode( $corps );
 
 $sujet = "Bsport - Newsletter ";
 $entete = "From:Bsport <contact@bsport.fr>\n";
@@ -120,17 +154,22 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 	echo "<br><br><h3>Newsletter de Test envoyee a contact@bsport.fr !!!! </h3><br><br>
 		<a href='javascript:history.back()'>retour</a>";
 	
-	//$_to = "contact@bsport.fr";
-	$_to = "fjavi.gonzalez@gmail.com";
-	//$entete .= "Bcc: xav335@hotmail.com,xavier.gonzalez@laposte.net,jav_gonz@yahoo.com\n";
+	$_to = "contact@bsport.fr";
+	//$_to = "fjavi.gonzalez@gmail.com";
+	$entete .= "Bcc: xav335@hotmail.com,fjavi.gonzalez@gmail.com,jav_gonz@yahoo.com\n";
 	
 	//echo "Envoi du message à " . $_to . "<br>";
-	$corps = str_replace('XwXwXwXw', randomChar(), $corps);
+	$corpsCode = str_replace('XwXwXwXw', randomChar(), $corps);
 	//echo $corps;
 	////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!////////////
-	mail($_to, $sujet, stripslashes($corps), $entete);
+	//mail($_to, $sujet, stripslashes($corps), $entete);
 	///////////////////////////////////////////////////////////
-	
+	////////////////ELASTIC MAIL ICONEO!!!!!!!!!!////////////
+	sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), "contact@bsport.fr", "Bsport");
+	sendElasticEmail("fjavi.gonzalez@gmail.com", $sujet, "", stripslashes($corpsCode), "contact@bsport.fr", "Bsport");
+	sendElasticEmail("xav335@hotmail.com", $sujet, "", stripslashes($corpsCode), "contact@bsport.fr", "Bsport");
+	sendElasticEmail("jav_gonz@yahoo.com", $sujet, "", stripslashes($corpsCode), "contact@bsport.fr", "Bsport");
+	///////////////////////////////////////////////////////////
 } elseif (!empty($_GET['postaction']) && $_GET['postaction']=='envoi') { 
 // ENVOI EN MASSE ENVOI EN MASSEENVOI EN MASSEENVOI EN MASSEENVOI EN MASSEENVOI EN MASSE
 	$id_journal = $newsletter->journalNewsletterAdd($_GET['id']);
@@ -149,6 +188,10 @@ if (!empty($_GET['postaction']) && $_GET['postaction']=='preview') {
 				////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!////////////
 				//mail($_to, $sujet, stripslashes($corpsCode), $entete);
 				///////////////////////////////////////////////////////////
+				////////////////ELASTIC MAIL ICONEO!!!!!!!!!!////////////
+        			sendElasticEmail($_to, $sujet, "", stripslashes($corpsCode), "contact@bsport.fr", "Bsport");
+        			///////////////////////////////////////////////////////////
+
 				echo "envoi OK : ". $value['email'] ."<br>";
 			} else {
 				$newsletter->journalNewsletterDetailAdd($id_journal,$_to,null,'bad email');
