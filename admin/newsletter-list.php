@@ -64,7 +64,7 @@ require 'classes/Newsletter.php';
 								      <button type="button" class="btn btn-danger" onclick="location.href='formprocess.php?reference=newsletter&action=delete&id=<?php echo $value['id'] ?>'">Oui !</button>
 								 	</div>
 								 <a href="newsletter-send.php?id=<?php echo $value['id'] ?>"><img src="img/env.png" width="30" alt="Supprimer"></a> &nbsp;&nbsp;&nbsp;&nbsp;
-								<img src="img/del.png" width="20" alt="Supprimer" onclick="$('.supp<?php echo $value['id']?>').css('display', 'block');"> </td>
+								<img src="img/del.png" width="20" alt="Supprimer" oncl="$('.supp<?php echo $value['id']?>').css('display', 'block');"> </td>
 							</tr>
 							<?php } ?>
 						<?php } ?>	
