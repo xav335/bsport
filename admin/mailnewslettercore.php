@@ -29,8 +29,10 @@ if (!empty($_GET)){ //Modif
 	{
 		$res = "";
 	
-		$data = "username=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
-		$data .= "&api_key=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
+		//$data = "username=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
+		//$data .= "&api_key=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
+		$data = "username=".urlencode("a906616a-990e-4b85-b6ca-7338ea6d2acb");
+                $data .= "&api_key=".urlencode("a906616a-990e-4b85-b6ca-7338ea6d2acb");
 		$data .= "&from=".urlencode($from);
 		$data .= "&from_name=".urlencode($fromName);
 		$data .= "&to=".urlencode($to);
@@ -126,7 +128,7 @@ $corps .= <<<EOD
 
 					<a href="http://$urlSite"><img  src="http://$urlSite/newsletter/pano.png" alt=""></a><br>
 					<p>$bas_page</p>
-					<a><img src="http://$urlSite/newsletter/log2.png" alt=""></a><br>
+					<a href="http://www.facebook.com/BiSPORT"><img src="http://$urlSite/newsletter/log2.png" alt=""></a><br>
 					<p class="bas">Si vous souhaitez vous désinscrire de cette newslettrer suivez le lien suivant : <a href="http://$urlSite/newsletter/desinscription.php?id=" >désinscription</a></p>
 					<img src="http://$urlSite/newsletter/track.php?id=XwXwXwXw" alt="">
 				</div>
