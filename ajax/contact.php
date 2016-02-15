@@ -39,7 +39,7 @@ if ($_POST["action"] == "sendMail") {
 		
 	$corps = "";
 	$corps .= "Bonjour,<br>";
-	$corps .= "Sujet : " . $_POST["sujet"] ."<br>";
+	//$corps .= "Sujet : " . $_POST["sujet"] ."<br>";
 	$corps .= "Nv message de :<br>" . $_POST["name"] . " ". $_POST["firstname"]  . " (" . $_POST["email"] . ")<br>";
 	$corps .= "Tel : ". $_POST["tel"] ."<br>";
 	$corps .= "<b>Message :</b><br>";

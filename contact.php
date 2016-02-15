@@ -53,6 +53,7 @@
 					<small class="error">Votre e-mail est obligatoire</small>
 				</div>
 			</div>
+			<!-- 
 			<div class="row">
 				<div class="large-12 columns">
 					<label>Sujet
@@ -66,7 +67,7 @@
 					<small class="error">Merci de choisir un sujet</small>
 				</div>
 			</div>
-			
+			 -->
 			<div class="row">
 				<div class="large-12 columns">
 					<label>Message
