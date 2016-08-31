@@ -31,6 +31,24 @@ class Contact extends StorageManager {
 			return "errrrrrrooooOOor";
 		}	
 	}
+	
+	public function contactGetForNewsletter(){
+		$this->dbConnect();
+		try {
+			$sql = "SELECT DISTINCT email FROM contact WHERE newsletter=1;" ;
+			//print_r($sql);exit();
+			$new_array = null;
+			$result = mysqli_query($this->mysqli,$sql);
+			while( $row = mysqli_fetch_assoc( $result)){
+				$new_array[] = $row;
+			}
+			$this->dbDisConnect();
+			return $new_array;
+		} catch (Exception $e) {
+			throw new Exception("Erreur Mysql contactGet ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	}
 
 	public function contactNumberGet(){
 		 $this->dbConnect();
@@ -56,9 +74,9 @@ class Contact extends StorageManager {
 		 $this->dbConnect();
 		$this->begin();
 		try {
-			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
-			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
-			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
+			(!empty($value['newsletter']) && $value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
+            (!empty($value['fromgoldbook']) && $value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
+            (!empty($value['fromcontact']) && $value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
 
 			$sql = "INSERT INTO  .`contact`
 						(`name`, `email`, `firstname`,`newsletter`,`fromgoldbook`,`fromcontact`)
@@ -95,9 +113,9 @@ class Contact extends StorageManager {
 		 $this->dbConnect();
 		$this->begin();
 		try {
-			($value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
-			($value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
-			($value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
+			(!empty($value['newsletter']) && $value['newsletter']=='on') ? $newsletter = 1 : $newsletter = 0;
+            (!empty($value['fromgoldbook']) && $value['fromgoldbook']=='on') ? $fromgoldbook = 1 : $fromgoldbook = 0;
+            (!empty($value['fromcontact']) && $value['fromcontact']=='on') ? $fromcontact = 1 : $fromcontact = 0;
 	
 			$sql = "UPDATE  .`contact` SET
 					`name`='". addslashes($value['name']) ."',
@@ -125,6 +143,35 @@ class Contact extends StorageManager {
 		$this->dbDisConnect();
 	}	
 	
+	
+	public function contactUnsubscribeNewsletter($email, $message){
+		//print_r($value);
+		//exit();
+	
+		$this->dbConnect();
+		$this->begin();
+		try {
+			$sql = "UPDATE  contact SET
+					`newsletter`= 0,
+					`message`='". addslashes($message) ."'
+					WHERE `email`='". $email ."';";
+			$result = mysqli_query($this->mysqli,$sql);
+	
+			if (!$result) {
+				throw new Exception($sql);
+			}
+	
+			$this->commit();
+	
+		} catch (Exception $e) {
+			$this->rollback();
+			throw new Exception("Erreur Mysql ". $e->getMessage());
+			return "errrrrrrooooOOor";
+		}
+	
+	
+		$this->dbDisConnect();
+	}
 	
 	public function contactDelete($value){
 		//print_r($value);

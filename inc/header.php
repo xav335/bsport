@@ -21,7 +21,7 @@
 					<li><a href="les-cours.php">Les cours</a></li>
 					<li><a href="actualites.php">Actualités</a></li>
 					<li><a href="livreOr.php">Livre d'or</a></li>
-					<li><a href="contact.php">Contact</a></li>
+					<li><a href="contact.php">Nous contacter</a></li>
 				</ul>
 			</aside>
 	
@@ -57,7 +57,7 @@
 						<li><a href="actualites.php">Actualités</a></li>
 						<li><a href="planning.php">Planning</a></li>
 						<li><a href="livreOr.php">Livre d'or</a></li>
-						<li><a href="contact.php">Contact</a></li>
+						<li><a href="contact.php">Nous contacter</a></li>
 					</ul>
 				</div>
 			</div>

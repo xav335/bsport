@@ -22,7 +22,7 @@ if (empty($result)) {
 <head>
 	<title>Bsport.fr | Salle de sport et fitness Bordeaux - Le Bouscat</title>
 	<meta name="Description" content="Bsport est une salle de sport qui propose des cours de fitness, de remise en forme, des salles de musculation, des cours en piscine par aquagym, à Bordeaux Le Bouscat ">
-	<meta name="Keywords" content="salle de sport, fitness, aquagym, aquabike, aquabiking, piscine, musculation, remise en forme, altères, cours de gym, cours de fitness, cardio, lesmills, bordeaux">
+	<meta name="Keywords" content="salle de sport, fitness, aquagym, aquabike, aquabiking, Aquacycling, Waterbike, Aquasport, piscine, musculation, remise en forme, altères, cours de gym, cours de fitness, cardio, lesmills, bordeaux">
 
 	<?php include('inc/meta.php'); ?>
 	

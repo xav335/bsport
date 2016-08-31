@@ -32,14 +32,14 @@ if ($_POST["action"] == "sendMail") {
 	$sujet = "Bsport - Contact Site";
 	//echo "Envoi du message à " . $_to . "<br>";
 		
-	$entete = "From:Bsport <contact@bsport.fr>\n";
+	$entete = "From:". $_POST["email"] ."\n";
 	$entete .= "MIME-version: 1.0\n";
 	$entete .= "Content-type: text/html; charset= iso-8859-1\n";
 	$entete .= "Bcc: fjavi.gonzalez@gmail.com, xav335@hotmail.com\n";
 		
 	$corps = "";
 	$corps .= "Bonjour,<br>";
-	$corps .= "Sujet : " . $_POST["sujet"] ."<br>";
+	//$corps .= "Sujet : " . $_POST["sujet"] ."<br>";
 	$corps .= "Nv message de :<br>" . $_POST["name"] . " ". $_POST["firstname"]  . " (" . $_POST["email"] . ")<br>";
 	$corps .= "Tel : ". $_POST["tel"] ."<br>";
 	$corps .= "<b>Message :</b><br>";

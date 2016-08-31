@@ -84,11 +84,11 @@
 		<div class="large-7 medium-7 small-12 columns">
 			<h3>Studio vélo indoor</h3><br>
 			<p>
-				50 vélos indoor de marque BODYBIKE dernière génération. Espace dédié aux adeptes des cours sur vélos pour entrainer son cœur différemment, brûler le maximum de calories, se dépasser, se défouler.
+				Espace dédié aux adeptes des cours sur vélos pour entrainer son cœur différemment, brûler le maximum de calories, se dépasser, se défouler.
 			</p>
 			<div class="flex-video">
-				<iframe width="420" height="315" src="//www.youtube.com/embed/LH0OKF0PfdE" frameborder="0" allowfullscreen></iframe>
-			</div>	
+    			<a class="fancybox" href="img/photos5.jpg"><img src="img/photos5.jpg" class="fancy" alt="" /></a>
+			</div>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
 			<img src="img/espace-velo.png" alt="" />
