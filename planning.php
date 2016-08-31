@@ -36,7 +36,7 @@ if (!empty($result)) {
 <div class="row content">
 	<div class="large-12 medium-12 small-12 columns">
 		<h1>Planning des cours B'SPORT</h1>
-		<h2>Période 2014 - 2015</h2>
+		<h2><?php echo $titre?></h2>
 		
 	  
 	<div class="magnify fullwidth">
