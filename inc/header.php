@@ -33,11 +33,12 @@
 			<img src="img/bg-top.png" alt="" class="bottom" />
 			<div class="pattern"></div>
 			<div class="slider autoplay">
-				<div><img src="img/bsport1.jpg" alt="" /></div>
-				<div><img src="img/bsport2.jpg" alt="" /></div>
-				<div><img src="img/bsport3.jpg" alt="" /></div>
-				<div><img src="img/bsport4.jpg" alt="" /></div>
-				<div><img src="img/bsport5.jpg" alt="" /></div>
+				<div><img src="img/bsport11.jpg" alt="" /></div>
+				<div><img src="img/bsport21.jpg" alt="" /></div>
+				<div><img src="img/bsport31.jpg" alt="" /></div>
+				<div><img src="img/bsport41.jpg" alt="" /></div>
+				<div><img src="img/bsport51.jpg" alt="" /></div>
+				<div><img src="img/bsport61.jpg" alt="" /></div>
 			</div>
 		</div>
 	</div>
