@@ -25,6 +25,7 @@ if (empty($result)) {
 	<meta name="Keywords" content="salle de sport, fitness, aquagym, aquabike, aquabiking, Aquacycling, Waterbike, Aquasport, piscine, musculation, remise en forme, altères, cours de gym, cours de fitness, cardio, lesmills, bordeaux">
 
 	<?php include('inc/meta.php'); ?>
+	<?php include('inc/slideshow2.php'); ?>
 	
 </head>
 <body class="<?php if (basename(__FILE__) != "index.php") {echo "page";} ?>">
@@ -69,6 +70,69 @@ if (empty($result)) {
 	
 	
 </div>
+
+
+    <!-- Jssor Slider Begin -->
+    <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
+    
+    <div id="slider1_container" style="position: relative; margin: 0 auto; width:600px; height:300px; left:0px; top:0px;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 900px; height: 200px;
+            overflow: hidden;">
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/01.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-01.jpg" />
+            </div>
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/02.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-02.jpg" />
+            </div>
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/03.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-03.jpg" />
+            </div>
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/04.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-04.jpg" />
+            </div>
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/05.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-05.jpg" />
+            </div>
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/06.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-06.jpg" />
+            </div>
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/07.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-07.jpg" />
+            </div>
+            <div>
+                <img u="image" src="http://cdn.jssor.com/demos/img/landscape/08.jpg" />
+                <img u="thumb" src="http://cdn.jssor.com/demos/img/landscape/thumb-08.jpg" />
+            </div>
+        </div>
+        <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
+        <!-- Trigger -->
+    </div>
+    <script>jssor_slider1_starter("slider1_container");</script>
+    <!-- Jssor Slider End -->
+
+    
+
+
+
 <div class="row">
 	<div class="large-4 medium-4 small-12 columns">
 		&nbsp;
@@ -115,9 +179,7 @@ if (empty($result)) {
 	</div>
 
 </div>
-<div class="row content">
-	
-</div>
+
 <!-- /Content -->
 
 <!-- Footer -->
