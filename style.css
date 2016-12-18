@@ -46,7 +46,7 @@ a:hover {color: #d75b00;}
 .menu ul li:hover a, .menu ul li.active a {color: #d75b00;}
 
 /* Content */
-.content {margin-bottom:95px;}
+.content {margin-bottom:25px;}
 .content.fix {margin-top:145px;}
 .encart {padding:20px 20px 40px 20px;text-transform:uppercase;}
 .encart .titre, .encart .titre2 {background:#ff4800;color:#fff;padding:5px;line-height:30px;}
