@@ -101,7 +101,7 @@ if (!empty($_GET)){
 <!-- Scripts -->
 <?php include('inc/script.php'); ?>
 <script>
-	$('.menu ul li:nth-child(4), .left-off-canvas-menu li:nth-child(4)').addClass('active');
+	$('.menu ul li:nth-child(5), .left-off-canvas-menu li:nth-child(5)').addClass('active');
 </script>
 
 </body>

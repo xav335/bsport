@@ -18,9 +18,11 @@
 				<ul>
 					<li><a href="./">Accueil</a></li>
 					<li><a href="espace.php">L'Espace</a></li>
+					<li><a href="cardiomuscu.php">Cardio/Muscu</a></li>
 					<li><a href="les-cours.php">Les cours</a></li>
 					<li><a href="actualites.php">Actualités</a></li>
 					<li><a href="livreOr.php">Livre d'or</a></li>
+					<li><a href="partenaires.php">Partenaires</a></li>
 					<li><a href="contact.php">Nous contacter</a></li>
 				</ul>
 			</aside>
@@ -52,13 +54,15 @@
 			<div class="row">
 				<div class="large-12 columns">
 					<ul>
-						<li><a href="./">Accueil</a></li>
-						<li><a href="espace.php">L'Espace</a></li>
-						<li><a href="les-cours.php">Les cours</a></li>
-						<li><a href="actualites.php">Actualités</a></li>
-						<li><a href="planning.php">Planning</a></li>
-						<li><a href="livreOr.php">Livre d'or</a></li>
-						<li><a href="contact.php">Nous contacter</a></li>
+					   	<li><a href="./">Accueil</a></li>
+    					<li><a href="espace.php">L'Espace</a></li>
+    					<li><a href="cardiomuscu.php">Cardio / Muscu</a></li>
+    					<li><a href="les-cours.php">Les cours</a></li>
+    					<li><a href="actualites.php">Actualités</a></li>
+    					<li><a href="livreOr.php">Livre d'or</a></li>
+    					<li><a href="partenaires.php">Partenaires</a></li>
+    					<li><a href="contact.php">Nous contacter</a></li>
+					   
 					</ul>
 				</div>
 			</div>
