@@ -40,7 +40,7 @@ a:hover {color: #d75b00;}
 .menu.fix {position:fixed;top:0;margin-bottom:0;z-index:105;}
 .menu .row {max-width:62em;margin:0 auto;}
 .menu .columns {padding:0;}
-.menu ul li {list-style-type:none;float:left;font-family:'PT Sans Narrow', sans-serif;font-size:17px;text-align:center;border-bottom:5px solid transparent;width:calc(100%/8);}
+.menu ul li {list-style-type:none;float:left;font-family:'PT Sans Narrow', sans-serif;font-size:16px;text-align:center;border-bottom:5px solid transparent;width:calc(100%/9);}
 .menu ul li a {color:#fff;text-transform:uppercase;display:block;font-style:italic;line-height:70px;}
 .menu ul li:hover, .menu ul li.active {border-bottom:5px solid #d75b00;}
 .menu ul li:hover a, .menu ul li.active a {color: #d75b00;}

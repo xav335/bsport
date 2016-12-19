@@ -190,3 +190,7 @@
 			box-shadow: 0 0 50px #222;
 		}
 	</style>
+	
+	<link rel="stylesheet" type="text/css" href="css/zoomslider.css" />
+	<script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/zoomsliderCusto.css" />

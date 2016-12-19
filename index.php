@@ -67,59 +67,17 @@ if (empty($result)) {
 			<div><a class="suite" href="actualites.php">Voir la Suite</a></div>
 		</div>
 	</div>	
-	
-	
 </div>
-
-<div class="row">
-    <div >
-    <!-- Jssor Slider Begin -->
-    <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
-    
-    <div  id="slider1_container" style="position: relative; margin: 0 auto; width:978px; height:300px; left:0px; top:0px;">
-
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-        </div>
-
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 15px;  width: 978px; height: 300px;  border-style: solid;border-width: 12px;
-            overflow: hidden;">
-            <div>
-                <img u="image" src="img/bsport11.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/bsport21.jpg" />
-            </div>
-            <div>
-                 <img u="image" src="img/bsport31.jpg" />
-            </div>
-            <div>
-                 <img u="image" src="img/bsport41.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/bsport51.jpg" />
-            </div>
-            <div>
-                <img u="image" src="img/bsport41.jpg" />
-            </div>
-        </div>
-        <a style="display: none" href="http://www.jssor.com">jQuery Slider</a>
-        <!-- Trigger -->
-    </div>
-    <script>jssor_slider1_starter("slider1_container");</script>
-    <!-- Jssor Slider End -->
-
-    </div>
-</div>    
 <br>
-
+<div class="row">
+	<div class="large-12 medium-12 small-12 columns">
+        <div  id="demo-1" data-zs-src='["img/bsport11.jpg", "img/bsport21.jpg", "img/bsport31.jpg", "img/bsport41.jpg", "img/bsport51.jpg", "img/bsport61.jpg"]' data-zs-overlay="false" data-zs-bullets="false" data-zs-speed="8000" data-zs-interval="5000" data-zs-switchSpeed="800">
+		  <div class="demo-inner-content">
+		  
+		  </div>
+	   </div>
+    </div>
+ </div>
 
 <div class="row">
 	<div class="large-4 medium-4 small-12 columns">

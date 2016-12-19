@@ -16,6 +16,7 @@
 				<div class="row">
 					<div class="large-4 medium-4 small-12 columns">
 						<a href="./">Accueil</a> - <a href="espace.php">espace</a><br/>
+						<a href="cardiomuscu.php">Cardio / Musculation</a><br/>
 						<a href="les-cours.php">les cours</a> - <a href="actualites.php">actualités</a><br/>
 						<a href="planning.php">planning</a> - <a href="livreOr.php">livre d'or</a><br>
 						<a href="contact.php">contact</a> - <a href="mentions.php">mentions légales</a>
@@ -53,4 +54,4 @@
   ga('send', 'pageview');
 
 </script>
-
+	<script type="text/javascript" src="js/jquery.zoomslider.min.js"></script>
