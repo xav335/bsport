@@ -28,7 +28,8 @@
 		<div class="large-5 medium-5 small-12 columns">
 			
 		</div>
-	</div>		
+	</div>	
+    <img class="cadrex" src="img/muscubandeau.jpg"  alt="" />
 	
 	<div class="large-12 columns" style="; padding: 30px 10px 30px 10px;  background: #FFF;" >
 		<div class="large-7 medium-7 small-12 columns">
@@ -65,7 +66,18 @@
 			</div>	
 		</div>		
 	</div>	
-			
+	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px;  background: #FFF;" >
+		<div class="large-6 medium-6 small-12 columns">
+			<div class="flex-video">
+				<a class="fancybox" href="img/muscu11.jpg"><img src="img/muscu11.jpg" class="fancy" data-fancybox-group="muscu" alt="" /></a>
+			</div>	
+		</div>	
+		<div class="large-6 medium-6 small-12 columns">	
+			<div class="flex-video">	
+				<a class="fancybox" href="img/muscu12.jpg"><img src="img/muscu12.jpg" class="fancy" data-fancybox-group="muscu"  alt="" /></a>
+			</div>	
+		</div>		
+	</div>			
 	
 	<div class="large-12 columns"  style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px; " >
 		<div class="large-7 medium-7 small-12 columns">
@@ -100,6 +112,18 @@
 		<div class="large-6 medium-6 small-12 columns">	
 			<div class="flex-video">	
 				<a class="fancybox" href="img/photos64.jpg"><img src="img/photos64.jpg" class="fancy" data-fancybox-group="produit"  alt="" /></a>
+			</div>	
+		</div>		
+	</div>	
+	<div class="large-12 columns" style=";  padding: 30px 10px 30px 10px;  " >
+		<div class="large-6 medium-6 small-12 columns">
+			<div class="flex-video">	
+				<a class="fancybox" href="img/cardio11.jpg"><img src="img/cardio11.jpg" class="fancy" alt="" /></a>
+			</div>
+		</div>	
+		<div class="large-6 medium-6 small-12 columns">	
+			<div class="flex-video">	
+				<a class="fancybox" href="img/cardio12.jpg"><img src="img/cardio12.jpg" class="fancy" data-fancybox-group="produit"  alt="" /></a>
 			</div>	
 		</div>		
 	</div>		

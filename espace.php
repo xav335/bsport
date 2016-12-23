@@ -35,14 +35,15 @@
 			<p>
 				Une piscine à votre disposition de 15 m sur 6 vous autorise de véritables moments de détente dans un milieu où stress, complexe et préoccupations n’existent plus… Avec l’aquagym…que du plaisir : efficacité renforcée, efforts allégés, amélioration de la circulation sanguine, massage remodelant.
 			</p>
-			<div class="flex-video">
-    			<a class="fancybox" href="img/photos11.jpg"><img src="img/photos11.jpg" class="fancy" alt="" /></a>
-			</div>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
 			<img src="img/espace-aqua.png" alt="" />
 		</div>
+		<img src="img/bsport112.jpg" class="fancy" alt="" />
 	</div>		
+	
+	
+	
 	<div class="large-12 columns" style="; padding: 30px 10px 30px 10px;  background: #FFF;" >
 		<div class="large-7 medium-7 small-12 columns">
 			<h3>Espace Musculation</h3><br>
@@ -67,6 +68,21 @@
 		</div>	
 		<a href="cardiomuscu.php">+ Plus d'informations</a>	
 	</div>	
+	
+	
+	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px; " >
+		<div class="large-7 medium-7 small-12 columns">
+			<h3>Salle Fitness</h3><br>
+			<p>
+				Un salle adaptée à vos cours ,un très grand espace à votre disposition.
+			</p>
+		</div>
+		<div class="large-5 medium-5 small-12 columns">
+			<img src="img/espace-fitness.png" alt="" />
+		</div>
+		<img src="img/sallebandeau.jpg" alt="" />
+	</div>		
+	
 	
 	
 	<div class="large-12 columns" style=";  padding: 30px 10px 30px 10px;  background: #FFF;" >

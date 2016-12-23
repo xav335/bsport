@@ -11,6 +11,8 @@ h2:before {content:'// ';}
 h3 {font-family:inherit;font-weight:bold;font-size:20px;line-height:18px;color:#d75b00;text-transform:uppercase;margin-top:0;margin-bottom:0px;}
 h4 {font-family:inherit;font-style:normal;font-size:18px;line-height:18px;color:#18293c;text-transform:none;margin-top:0;margin-bottom:0px;}
 
+.cadrex {border: 10px; border-style: solid; border-color: #18293c;}
+
 a:hover {color: #d75b00;}
 
 .fullwidth {max-width:100%;}

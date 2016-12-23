@@ -92,7 +92,7 @@ if (!empty($result)) {
 <!-- Scripts -->
 <?php include('inc/script.php'); ?>
 <script>
-	$('.menu ul li:nth-child(5), .left-off-canvas-menu li:nth-child(5)').addClass('active');
+	$('.menu ul li:nth-child(7), .left-off-canvas-menu li:nth-child(7)').addClass('active');
 </script>
 
 </body>

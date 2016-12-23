@@ -84,7 +84,7 @@ if (empty($result)) {
 		&nbsp;
 		<a href="espace.php" >
 		<div class="slider-espace fade">
-			<div><img src="img/img-velo.jpg" alt="" /></div>
+			<div><img src="img/espace44.jpg" alt="" /></div>
 			<div><img src="img/espace21.jpg" alt="" /></div>
 			<div><img src="img/espace22.jpg" alt="" /></div>
 			<div><img src="img/espace33.jpg" alt="" /></div>
@@ -115,17 +115,17 @@ if (empty($result)) {
 	<div class="large-4 medium-4 small-12 columns">
 		&nbsp;
 		<a href="planning.php" >
+		
+		<img src="img/imgplanning.jpg" alt="" />
 		<div class="encart bg-white">
 			<span class="titre">Planning</span><br/>
 			<span class="titre2">des cours</span>
 		</div>
-		<img src="img/planning.jpg" alt="" />
-		
 		</a>
 	</div>
 
 </div>
-
+</br>
 <!-- /Content -->
 
 <!-- Footer -->

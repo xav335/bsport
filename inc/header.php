@@ -22,7 +22,7 @@
 					<li><a href="les-cours.php">Les cours</a></li>
 					<li><a href="actualites.php">Actualités</a></li>
 					<li><a href="livreOr.php">Livre d'or</a></li>
-					<li><a href="partenaires.php">Partenaires</a></li>
+<!-- 					<li><a href="partenaires.php">Partenaires</a></li> -->
 					<li><a href="planning.php">Planning</a></li>
 					<li><a href="contact.php">Nous contacter</a></li>
 				</ul>
@@ -36,7 +36,7 @@
 			<img src="img/bg-top.png" alt="" class="bottom" />
 			<div class="pattern"></div>
 			<div class="slider autoplay">
-				<div><img src="img/bsport11.jpg" alt="" /></div>
+				<div><img src="img/bsport112.jpg" alt="" /></div>
 				<div><img src="img/bsport21.jpg" alt="" /></div>
 				<div><img src="img/bsport31.jpg" alt="" /></div>
 				<div><img src="img/bsport41.jpg" alt="" /></div>
@@ -61,7 +61,7 @@
     					<li><a href="les-cours.php">Les cours</a></li>
     					<li><a href="actualites.php">Actualités</a></li>
     					<li><a href="livreOr.php">Livre d'or</a></li>
-    					<li><a href="partenaires.php">Partenaires</a></li>
+<!--     					<li><a href="partenaires.php">Partenaires</a></li> -->
     					<li><a href="planning.php">Planning</a></li>
     					<li><a href="contact.php">Nous contacter</a></li>
 					   
