@@ -141,7 +141,7 @@
 		<div class="large-7 medium-7 small-12 columns">
 			<h3>ETIREMENTS, ABDOS, ECHAUFFEMENTS</h3><br>
 			<div class="flex-video">	
-				<a class="fancybox" href="img/espave55.jpg"><img src="img/espace55.jpg" class="fancy" alt="" /></a>
+				<a class="fancybox" href="img/espace55.jpg"><img src="img/espace55.jpg" class="fancy" alt="" /></a>
 			</div>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
