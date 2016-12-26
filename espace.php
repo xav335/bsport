@@ -74,7 +74,7 @@
 		<div class="large-7 medium-7 small-12 columns">
 			<h3>Salle Fitness</h3><br>
 			<p>
-				Un salle adaptée à vos cours ,un très grand espace à votre disposition.
+				Un salle adaptée à vos cours, un très grand espace à votre disposition.
 			</p>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
@@ -137,14 +137,27 @@
 		
 	
 	
-	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px;  background: #FFF;" >
+	<div class="large-12 columns" style="border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px;  background: #FFF;" >
 		<div class="large-7 medium-7 small-12 columns">
 			<h3>ETIREMENTS, ABDOS, ECHAUFFEMENTS</h3><br>
-			<p>
-			</p>
+			<div class="flex-video">	
+				<a class="fancybox" href="img/espave55.jpg"><img src="img/espace55.jpg" class="fancy" alt="" /></a>
+			</div>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
 			<img src="img/espace-etirement.png" alt="" />
+		</div>
+	</div>		
+	
+	<div class="large-12 columns" style="border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px; " >
+		<div class="large-7 medium-7 small-12 columns">
+			<h3>COIN DOUCHES</h3><br>
+			<div class="flex-video">	
+				<a class="fancybox" href="img/douche1.jpg"><img src="img/douche1.jpg" class="fancy" alt="" /></a>
+			</div>
+		</div>
+		<div class="large-5 medium-5 small-12 columns">
+			<a class="fancybox" href="img/douche2.jpg"><img src="img/douche2.jpg" class="fancy" alt="" /></a>
 		</div>
 	</div>		
 </div>

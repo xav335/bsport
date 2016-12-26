@@ -41,7 +41,7 @@
 				<div><img src="img/bsport31.jpg" alt="" /></div>
 				<div><img src="img/bsport41.jpg" alt="" /></div>
 				<div><img src="img/bsport51.jpg" alt="" /></div>
-				<div><img src="img/bsport61.jpg" alt="" /></div>
+				<div><img src="img/bsport612.jpg" alt="" /></div>
 			</div>
 		</div>
 	</div>

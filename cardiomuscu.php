@@ -77,6 +77,18 @@
 				<a class="fancybox" href="img/muscu12.jpg"><img src="img/muscu12.jpg" class="fancy" data-fancybox-group="muscu"  alt="" /></a>
 			</div>	
 		</div>		
+	</div>		
+	<div class="large-12 columns" style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px;  background: #FFF;" >
+		<div class="large-6 medium-6 small-12 columns">
+			<div class="flex-video">
+				<a class="fancybox" href="img/muscu22.jpg"><img src="img/muscu22.jpg" class="fancy" data-fancybox-group="muscu" alt="" /></a>
+			</div>	
+		</div>	
+		<div class="large-6 medium-6 small-12 columns">	
+		    <div class="flex-video">  
+		      <a class="fancybox" href="img/muscu123.jpg"><img src="img/muscu123.jpg" class="fancy" data-fancybox-group="muscu" alt="" /></a>
+		    </div>	
+		</div>		
 	</div>			
 	
 	<div class="large-12 columns"  style=";border-bottom : 4px ridge white;  padding: 30px 10px 30px 10px; " >
@@ -127,7 +139,18 @@
 			</div>	
 		</div>		
 	</div>		
-	
+	<div class="large-12 columns" style=";  padding: 30px 10px 30px 10px;  " >
+		<div class="large-6 medium-6 small-12 columns">
+			<div class="flex-video">	
+				<a class="fancybox" href="img/cardio22.jpg"><img src="img/cardio22.jpg" class="fancy" alt="" /></a>
+			</div>
+		</div>	
+		<div class="large-6 medium-6 small-12 columns">	
+			<div class="flex-video">	
+			 <a class="fancybox" href="img/cardio.jpg"><img src="img/cardio.jpg" class="fancy" alt="" /></a>
+			</div>	
+		</div>		
+	</div>		
 </div>
 <!-- /Content -->
 

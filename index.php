@@ -71,7 +71,7 @@ if (empty($result)) {
 <br>
 <div class="row">
 	<div class="large-12 medium-12 small-12 columns">
-        <div  id="demo-1" data-zs-src='["img/bsport11.jpg", "img/bsport21.jpg", "img/bsport31.jpg", "img/bsport41.jpg", "img/bsport51.jpg", "img/bsport61.jpg"]' data-zs-overlay="false" data-zs-bullets="false" data-zs-speed="8000" data-zs-interval="5000" data-zs-switchSpeed="800">
+        <div  id="demo-1" data-zs-src='["img/bsport11.jpg", "img/bsport21.jpg", "img/bsport31.jpg", "img/bsport41.jpg", "img/bsport51.jpg", "img/bsport612.jpg"]' data-zs-overlay="false" data-zs-bullets="false" data-zs-speed="8000" data-zs-interval="5000" data-zs-switchSpeed="800">
 		  <div class="demo-inner-content">
 		  
 		  </div>
