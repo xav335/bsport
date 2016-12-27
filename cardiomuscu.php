@@ -118,7 +118,7 @@
 	<div class="large-12 columns" style=";  padding: 30px 10px 30px 10px;  " >
 		<div class="large-6 medium-6 small-12 columns">
 			<div class="flex-video">	
-				<a class="fancybox" href="img/photos63.jpg"><img src="img/photos63.jpg" class="fancy" alt="" /></a>
+				<a class="fancybox" href="img/cardio22.jpg"><img src="img/cardio22.jpg" class="fancy" alt="" /></a>
 			</div>
 		</div>	
 		<div class="large-6 medium-6 small-12 columns">	
@@ -136,18 +136,6 @@
 		<div class="large-6 medium-6 small-12 columns">	
 			<div class="flex-video">	
 				<a class="fancybox" href="img/cardio12.jpg"><img src="img/cardio12.jpg" class="fancy" data-fancybox-group="produit"  alt="" /></a>
-			</div>	
-		</div>		
-	</div>		
-	<div class="large-12 columns" style=";  padding: 30px 10px 30px 10px;  " >
-		<div class="large-6 medium-6 small-12 columns">
-			<div class="flex-video">	
-				<a class="fancybox" href="img/cardio22.jpg"><img src="img/cardio22.jpg" class="fancy" alt="" /></a>
-			</div>
-		</div>	
-		<div class="large-6 medium-6 small-12 columns">	
-			<div class="flex-video">	
-			 <a class="fancybox" href="img/cardio.jpg"><img src="img/cardio.jpg" class="fancy" alt="" /></a>
 			</div>	
 		</div>		
 	</div>		

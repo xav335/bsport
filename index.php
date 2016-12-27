@@ -43,14 +43,14 @@ if (empty($result)) {
 			Pour la plénitude du corps et de l’esprit, B'Sport conçoit un programme de remise en forme qui vous ressemble : une approche sportive douce ou plus intense, ponctuée d’instants de détente essentiels à la sérénité.
 		</p>
 		
-		<div class="large-8 medium-8 small-12 columns">	
+		<div class="large-6 medium-6 small-12 columns">	
 			<div style="padding-left: 0px;">
 				<a class="fancybox-media" href="https://www.youtube.com/watch?v=FQY8beNFrXc">
-				<img src="img/video.jpg" alt="" /></a>
+				<img src="img/video2.jpg" alt="" /></a>
 			</div>	
-			<div style="padding-left: 2px;">	
-				<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=FQY8beNFrXc"><img src="img/youtube.png" alt="" /> &nbsp; &nbsp;Notre video de présentation &nbsp; &nbsp;</a>
-			</div>
+		</div>
+		<div class="large-6 medium-6 small-12 columns">	
+			<a class="fancybox" href="img/cardio.jpg"><img src="img/cardio.jpg" alt="" /></a>
 		</div>
 	</div>
 	
