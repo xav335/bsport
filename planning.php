@@ -19,7 +19,7 @@ if (!empty($result)) {
 //print_r($result);
 ?>
 <head>
-	<title>Bsport.fr | Salle de sport | Planning </title>
+	<title>Time-Sport.fr | Salle de sport | Planning </title>
 	<meta name="Description" content="Prennez connaissance et téléchargez le planning des cours actualisé">
 	<meta name="Keywords" content="cours, planning, réservations, agenda">
 <?php include('inc/meta.php'); ?>
@@ -65,7 +65,7 @@ if (!empty($result)) {
 <!-- Content -->
 <div class="row content">
 	<div class="large-12 medium-12 small-12 columns">
-		<h1>Planning des cours B'SPORT</h1>
+		<h1>Planning des cours <span class="red">Time</span>Sport</h1>
 		<h2><?php echo $titre?></h2>
 		
 	  

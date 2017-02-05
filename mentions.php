@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-<title>Bsport.fr | Salle de sport | Mentions légales</title>
+<title>Time-Sport.fr | Salle de sport | Mentions légales</title>
 	<meta name="Description" content="Mentions légales du site internet">
 	<meta name="Keywords" content="mentions légales">
 <?php include('inc/meta.php'); ?>
@@ -19,7 +19,7 @@
 
 		<div class="large-12 medium-12 small-12 columns">
 			<h1>Mentions légales</h1>
-			<h2>B'SPORT</h2>
+			<h2><span class="red">Time</span>Sport</h2>
 			<div
 				style="border-bottom: 4px ridge white; padding: 0px 4px 4px 4px;"></div>
 			<div style="text-align: justify;">
@@ -47,7 +47,7 @@
 				<p>En accédant au présent site et aux informations qu’il contient,
 					l’utilisateur reconnaît avoir pris connaissance des présentes
 					conditions générales d’utilisation et s’engage à les
-					respecter.B'sport se réserve le droit de modifier la présente
+					respecter.<span class="red">Time</span>Sport se réserve le droit de modifier la présente
 					notice à tout moment et notamment afin de l’adapter aux évolutions
 					du site.L’utilisateur s’engage donc à consulter la présente notice
 					régulièrement. L’utilisateur est réputé accepter cette dernière
@@ -63,7 +63,7 @@
 					site. Dans ce cas, cette interruption sera notifiée au moyen d’un
 					avertissement figurant sur la page d’accueil ou par tout autre
 					procédé. Cette interruption ne peut en aucun cas engager la
-					responsabilité de B'Sport et n’ouvre droit à aucune indemnité.</p>
+					responsabilité de <span class="red">Time</span>Sport et n’ouvre droit à aucune indemnité.</p>
 				<p>
 					<strong>Tarifications</strong>
 				</p>
@@ -82,7 +82,7 @@
 					modifier, d’altérer ou de supprimer frauduleusement les contenus
 					accessibles via le site et d’introduire frauduleusement des données
 					sur le site.</p>
-				<p>En conséquence, B'sport :</p>
+				<p>En conséquence, <span class="red">Time</span>Sport :</p>
 				<p>– ne saurait être tenu responsable des dommages qui pourraient
 					éventuellement être subis, à l’occasion d’une visite sur son site,
 					par l’environnement technique de l’utilisateur et notamment, ses
@@ -111,7 +111,7 @@
 					Le présent site et l’ensemble des éléments y figurant
 					(informations, données, texte, sons, images, dessins, graphismes,
 					signes distinctifs, logos, marques,?) sont la propriété exclusive
-					de B'sport.</p>
+					de <span class="red">Time</span>Sport.</p>
 				<p>L’ensemble de ces éléments est soumis aux dispositions du Code de
 					la propriété intellectuelle et, à ce titre, est protégé contre
 					toute utilisation non autorisée par la loi ou les présentes

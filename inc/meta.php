@@ -1,7 +1,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="index,follow" />
-	<meta name="apple-mobile-web-app-title" content="B.SPORT" />
+	<meta name="apple-mobile-web-app-title" content="TimeSport" />
 	
 	<meta name="google-site-verification" content="eOp4F9hnVSo12BiWnQy39GiRqcOh-Ln_Qj3CprqmnbU" />
 	<meta name="msvalidate.01" content="0F652D91935F25317C22102440B50132" />

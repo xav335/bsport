@@ -14,7 +14,7 @@
 		
 			<!-- Off Canvas Menu -->
 			<aside class="left-off-canvas-menu">
-				<img src="img/logo-blanc.png" alt="B.SPORT" title="B.SPORT" /><br/>
+				<img src="img/logo-blanc.png" alt="TimeSport" title="TimeSport" /><br/>
 				<ul>
 					<li><a href="./">Accueil</a></li>
 					<li><a href="espace.php">L'Espace</a></li>
@@ -32,7 +32,7 @@
 	<!-- Slider -->
 	<div class="row fullwidth slider-top">
 		<div class="large-12 columns">
-			<img src="img/logo.png" alt="" title="B.SPORT" class="logo" />
+			<img src="img/logo.png" alt="" title="TimeSport" class="logo" />
 			<img src="img/bg-top.png" alt="" class="bottom" />
 			<div class="pattern"></div>
 			<div class="slider autoplay">
