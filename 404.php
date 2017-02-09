@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-<title>Bsport.fr | Salle de sport | Mentions légales</title>
-	<meta name="Description" content="Mentions légales du site internet">
-	<meta name="Keywords" content="mentions légales">
+<title>Time-Sport.fr | Salle de sport | 404</title>
+	<meta name="Description" content="404 Not found">
+	<meta name="Keywords" content="404">
 <?php include('inc/meta.php'); ?>
 	
 </head>
@@ -19,8 +19,7 @@
 
 		<div class="large-12 medium-12 small-12 columns">
 			<h1>Cette page est intraouvable sur le site !</h1>
-			<h2>B'SPORT</h2>
-			
+			<h2><span class="red">Time</span>Sport</h2>
 		</div>
 
 	</div>

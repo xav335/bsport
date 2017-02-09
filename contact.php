@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Salle de sport | Contact / Plan / Facebook </title>
+	<title>Time-Sport.fr | Salle de sport | Contact / Plan / Facebook </title>
 	<meta name="Description" content="Contactez nous à l'aide du formulaire de contact à votre disposition">
 	<meta name="Keywords" content="contact, plan, facebook, adresse, téléphone, coordonnées, like">
 <?php include('inc/meta.php'); ?>
@@ -16,7 +16,7 @@
 <!-- Content -->
 <div class="row content">
 	<div class="large-8 medium-8 small-12 columns">
-		<h1>Contactez B'SPORT</h1>
+		<h1>Contactez <span class="red">Time</span>Sport</h1>
 		<h2>Le Bouscat</h2>
 		<p>
 			32 rue des marronniers 33110 LE BOUSCAT (sur boulevard Godard)<br/>
@@ -78,7 +78,7 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de B'Sport.
+					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de <span class="red">Time</span>Sport.
 				</div>
 			</div>
 			<button type="submit">Envoyer la demande</button>

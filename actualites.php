@@ -24,7 +24,7 @@ if (!empty($_GET)){
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Salle de sport | actualités</title>
+	<title>Time-Sport.fr | Salle de sport | actualités</title>
 	<meta name="Description" content="consultez les actualités du club et les évènements avenir">
 	<meta name="Keywords" content="actualités, évènements, fêtes, soirées, réunions">
 <?php include('inc/meta.php'); ?>
@@ -39,7 +39,7 @@ if (!empty($_GET)){
 <!-- Content -->
 <div class="row content">
 	<div class="large-8 medium-8 small-12 columns">
-		<h1>Actualités B'SPORT</h1>
+		<h1>Actualités <span class="red">Time</span>Sport</h1>
 		<h2>Club de forme</h2>
 			 <div id="resultat">
 			 	

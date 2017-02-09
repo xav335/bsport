@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Nos salles de sport </title>
+	<title>Time-Sport.fr | Nos salles de sport </title>
 	<meta name="Description" content="Découvrez notre espace et nos salle de sport ainsi que la grande piscine">
 	<meta name="Keywords" content="salles, piscine, vélo, musculation, rpm, vestiares">
 
@@ -18,7 +18,7 @@
 <div class="row content">
 	<div class="large-12 columns">
 		<div class="large-7 medium-7 small-12 columns">
-			<h1>Espace B'SPORT</h1>
+			<h1>Espace <span class="red">Time</span>Sport</h1>
 			<h2>Club de forme</h2>
 			<p>
 				Dans un cadre architectural unique sur la région, avec un véritable espace de 2000 m2, le club vous propose 6 univers entièrement dédiés à votre forme et à votre bien-être.
