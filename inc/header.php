@@ -32,7 +32,7 @@
 	<!-- Slider -->
 	<div class="row fullwidth slider-top">
 		<div class="large-12 columns">
-			<img src="img/logo.png" alt="" title="B.SPORT" class="logo" />
+			<img src="img/logo2.png" alt="" title="B.SPORT" class="logo" />
 			<img src="img/bg-top.png" alt="" class="bottom" />
 			<div class="pattern"></div>
 			<div class="slider autoplay">
