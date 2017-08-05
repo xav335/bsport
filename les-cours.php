@@ -15,7 +15,7 @@
 
 <!-- Content -->
 <div class="row content">
-		<h1>Les Cours B'SPORT - LES MILLS -</h1>
+		<h1>Les Cours <span class="red">Sport</span>&nbsp;One - LES MILLS -</h1>
 		<h2>Les Mills c'est quoi ?</h2>
 		<p>
 			Les Mills est une méthode d’entraînement pour les pratiquants des clubs de remise en forme proposant des cours collectifs haut de gamme chorégraphiés en musique, ainsi qu’une méthode de personal training., élaborés par les meilleurs experts internationaux du fitness.	

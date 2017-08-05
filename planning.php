@@ -65,7 +65,7 @@ if (!empty($result)) {
 <!-- Content -->
 <div class="row content">
 	<div class="large-12 medium-12 small-12 columns">
-		<h1>Planning des cours B'SPORT</h1>
+		<h1>Planning des cours <span class="red">Sport</span>&nbsp;One</h1>
 		<h2><?php echo $titre?></h2>
 		
 	  

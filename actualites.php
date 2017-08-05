@@ -39,7 +39,7 @@ if (!empty($_GET)){
 <!-- Content -->
 <div class="row content">
 	<div class="large-8 medium-8 small-12 columns">
-		<h1>Actualités B'SPORT</h1>
+		<h1>Actualités <span class="red">Sport</span>&nbsp;One</h1>
 		<h2>Club de forme</h2>
 			 <div id="resultat">
 			 	

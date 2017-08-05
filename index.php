@@ -37,7 +37,7 @@ if (empty($result)) {
 <!-- Content -->
 <div class="row ">
 	<div class="large-8 medium-8 small-12 columns">
-		<h1>B'SPORT</h1>
+		<h1><span class="red">Sport</span>&nbsp;One</h1>
 		<h2>Club de forme</h2>
 		<p>
 			Pour la plénitude du corps et de l’esprit, B'Sport conçoit un programme de remise en forme qui vous ressemble : une approche sportive douce ou plus intense, ponctuée d’instants de détente essentiels à la sérénité.

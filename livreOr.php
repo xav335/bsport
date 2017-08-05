@@ -67,7 +67,7 @@ $goldbook = null;
 		</form>
 	</div>
 	<div class="large-7 medium-7 small-12 columns">
-		<h1>Le Livre d'or B'SPORT</h1>
+		<h1>Le Livre d'or <span class="red">Sport</span>&nbsp;One</h1>
 		<h2>Retrouvez les témoignages de nos adhérents</h2>
 			<div style=";border-bottom : 4px ridge white;padding:0px 4px 4px 4px; " class="<?php if ($i%2!=0) echo 'info'?>">
 			</div>

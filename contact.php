@@ -16,7 +16,7 @@
 <!-- Content -->
 <div class="row content">
 	<div class="large-8 medium-8 small-12 columns">
-		<h1>Contactez B'SPORT</h1>
+		<h1>Contactez <span class="red">Sport</span>&nbsp;One</h1>
 		<h2>Le Bouscat</h2>
 		<p>
 			32 rue des marronniers 33110 LE BOUSCAT (sur boulevard Godard)<br/>

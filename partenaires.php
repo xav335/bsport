@@ -18,7 +18,7 @@
 <div class="row content">
 	<div class="large-12 columns">
 		<div class="large-7 medium-7 small-12 columns">
-			<h1>Les partenaire  B'SPORT</h1>
+			<h1>Les partenaire  <span class="red">Sport</span>&nbsp;One</h1>
 			<h2>Club de forme</h2>
 			<p>
 			 TEXTE POUR LES PARTENAIRE
