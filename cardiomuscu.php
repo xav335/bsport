@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Nos salles de sport </title>
+	<title>Sport-One.fr| Nos salles de sport </title>
 	<meta name="Description" content="Découvrez notre espace et nos salle de sport ainsi que la grande piscine">
 	<meta name="Keywords" content="salles, piscine, vélo, musculation, rpm, vestiares">
 

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-<title>Bsport.fr | Salle de sport | Mentions légales</title>
+<title>Sport-One.fr | Salle de sport | Mentions légales</title>
 	<meta name="Description" content="Mentions légales du site internet">
 	<meta name="Keywords" content="mentions légales">
 <?php include('inc/meta.php'); ?>
@@ -19,7 +19,7 @@
 
 		<div class="large-12 medium-12 small-12 columns">
 			<h1>Cette page est intraouvable sur le site !</h1>
-			<h2>B'SPORT</h2>
+			<h2>Sport One</h2>
 			
 		</div>
 

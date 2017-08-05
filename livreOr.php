@@ -10,7 +10,7 @@ $goldbook = null;
 ?>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Salle de sport | livre d'or </title>
+	<title>Sport-One.fr| Salle de sport | livre d'or </title>
 	<meta name="Description" content="Laissez vos impressions et vos commentaires sur notre livre d'or et prennez connaissance des avis des autres menbres du club">
 	<meta name="Keywords" content="avis, commentaire, remarques, impressions">
 <?php include('inc/meta.php'); ?>
@@ -60,7 +60,7 @@ $goldbook = null;
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de B'Sport.
+					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de Sport One.
 				</div>
 			</div>
 			<input class="suite" id="bouton" type="submit" value="Laissez nous votre témoignage"/>

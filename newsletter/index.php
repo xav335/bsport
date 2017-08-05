@@ -29,7 +29,7 @@
 					<h2>La piscine est réparé et à 32° !!</h2>
 					<img width="554" src="http://dev.bsport.fr/uploads/bsport3.jpg"><br>
 					<p >Notre piscine est enfin réparé, nous avons mis tous les moyens afin que vosu puissiez retrouvé le fleuron de notre club dans un état impeccable.
-					Encore toute nos excuses pour ce désagrément et à très bientôt. B'Sportez vous bien !!</p>
+					Encore toute nos excuses pour ce désagrément et à très bientôt. Sport Oneez vous bien !!</p>
 					<img width="554" src="http://dev.bsport.fr/newsletter/sep.png">
 					<br><br>
 					<br><br>

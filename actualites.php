@@ -24,7 +24,7 @@ if (!empty($_GET)){
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Salle de sport | actualités</title>
+	<title>Sport-One.fr | Salle de sport | actualités</title>
 	<meta name="Description" content="consultez les actualités du club et les évènements avenir">
 	<meta name="Keywords" content="actualités, évènements, fêtes, soirées, réunions">
 <?php include('inc/meta.php'); ?>

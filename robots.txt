@@ -10,4 +10,4 @@ Disallow: /log/
 Disallow: /source/
 Disallow: /factures/
 
-Sitemap: http://www.bsport.fr/sitemap.xml
+Sitemap: http://www.sport-one.fr/sitemap.xml

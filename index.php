@@ -20,7 +20,7 @@ if (empty($result)) {
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Salle de sport et fitness Bordeaux - Le Bouscat</title>
+	<title>Sport-One.fr| Salle de sport et fitness Bordeaux - Le Bouscat</title>
 	<meta name="Description" content="Bsport est une salle de sport qui propose des cours de fitness, de remise en forme, des salles de musculation, des cours en piscine par aquagym, à Bordeaux Le Bouscat ">
 	<meta name="Keywords" content="salle de sport, fitness, aquagym, aquabike, aquabiking, Aquacycling, Waterbike, Aquasport, piscine, musculation, remise en forme, altères, cours de gym, cours de fitness, cardio, lesmills, bordeaux">
 
@@ -40,13 +40,12 @@ if (empty($result)) {
 		<h1><span class="red">Sport</span>&nbsp;One</h1>
 		<h2>Club de forme</h2>
 		<p>
-			Pour la plénitude du corps et de l’esprit, B'Sport conçoit un programme de remise en forme qui vous ressemble : une approche sportive douce ou plus intense, ponctuée d’instants de détente essentiels à la sérénité.
+			Pour la plénitude du corps et de l’esprit, Sport One conçoit un programme de remise en forme qui vous ressemble : une approche sportive douce ou plus intense, ponctuée d’instants de détente essentiels à la sérénité.
 		</p>
 		
 		<div class="large-6 medium-6 small-12 columns">	
 			<div style="padding-left: 0px;">
-				<a class="fancybox-media" href="https://www.youtube.com/watch?v=FQY8beNFrXc">
-				<img src="img/video2.jpg" alt="" /></a>
+				<a class="fancybox" href="img/pistoche.jpg"><img src="img/pistoche.jpg" alt="" /></a>
 			</div>	
 		</div>
 		<div class="large-6 medium-6 small-12 columns">	

@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<title>Bsport.fr | Salle de sport | Contact / Plan / Facebook </title>
+	<title>Sport-One.fr| Salle de sport | Contact / Plan / Facebook </title>
 	<meta name="Description" content="Contactez nous à l'aide du formulaire de contact à votre disposition">
 	<meta name="Keywords" content="contact, plan, facebook, adresse, téléphone, coordonnées, like">
 <?php include('inc/meta.php'); ?>
@@ -78,12 +78,13 @@
 			</div>
 			<div class="row">
 				<div class="large-12 columns">
-					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de B'Sport.
+					<input type="checkbox" id="newsletter" name="newsletter"  checked/> J'accepte de recevoir la newsletter de Sport One.
 				</div>
 			</div>
 			<button type="submit">Envoyer la demande</button>
 		</form>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2828.0334900768985!2d-0.58771!3d44.861613000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5528116548cf0d%3A0x103b756ab7c3535d!2sB&#39;SPORT!5e0!3m2!1sfr!2sfr!4v1416662515707" width="100%" height="300" frameborder="0" style="border:0"></iframe>
+	
+		  <a target="_blank" href="https://www.google.fr/maps/place/B'SPORT/@44.8615904,-0.5899175,17z/data=!3m1!4b1!4m5!3m4!1s0xd5528116548cf0d:0x103b756ab7c3535d!8m2!3d44.8615904!4d-0.5877235"><img src="img/plan.jpg" alt="" /></a>
 	</div>
 	<div class="large-4 medium-4 small-12 columns">
 		<div class="large-12 columns">
@@ -98,6 +99,7 @@
 		
 	</div>
 </div>
+
 <!-- /Content -->
 <script type="text/javascript">
 

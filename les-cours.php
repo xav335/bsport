@@ -217,7 +217,7 @@
 		<div class="row ">
 			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
 				<h1>Aquabiking</h1>
-				<h3>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;B'SPORT</h3>
+				<h3>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Sport One</h3>
 				<p><br>
 					Véritable phénomène de mode, l’Aquabiking est un sport à part entière. Le vélo dans l’eau réunit 
 					tout les avantages de l’Aquagym à ceux du cyclisme. En raison de la résistance de l’eau, cette activité 
@@ -236,7 +236,7 @@
 		<div class="row ">
 			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
 				<h1>Pilates</h1>
-				<h3>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;B'SPORT</h3>
+				<h3>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Sport One</h3>
 				<p><br>
 					La célèbre méthode d’entrainement qui s’inspire du yoga, de la danse et de la gymnastique.
 					Objectif : un renforcement musculaire en profondeur et harmonieux pour une meilleure posture, un corps plus résistant et plus souple.

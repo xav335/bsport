@@ -5,13 +5,13 @@
 /* Communs */
 body {background:url('img/bg-pattern.png') #fff;font-family:'PT Sans Narrow', sans-serif;}
 p {font-size:22px;}
-h1 {font-family:inherit;font-weight:bold;font-style:italic;font-size:36px;line-height:36px;color:#18293c;text-transform:uppercase;margin-bottom:0;}
+h1 {font-family:inherit;font-weight:bold;font-style:italic;font-size:36px;line-height:36px;color:#000;text-transform:uppercase;margin-bottom:0;}
 h2 {font-family:inherit;font-style:italic;font-size:18px;line-height:18px;color:#f2971e;text-transform:uppercase;margin-top:0;margin-bottom:30px;}
 h2:before {content:'// ';}
 h3 {font-family:inherit;font-weight:bold;font-size:20px;line-height:18px;color:#f2971e;text-transform:uppercase;margin-top:0;margin-bottom:0px;}
-h4 {font-family:inherit;font-style:normal;font-size:18px;line-height:18px;color:#18293c;text-transform:none;margin-top:0;margin-bottom:0px;}
+h4 {font-family:inherit;font-style:normal;font-size:18px;line-height:18px;color:#000;text-transform:none;margin-top:0;margin-bottom:0px;}
 
-.cadrex {border: 10px; border-style: solid; border-color: #18293c;}
+.cadrex {border: 10px; border-style: solid; border-color: #000;}
 
 a:hover {color: #f2971e;}
 
@@ -21,10 +21,10 @@ a:hover {color: #f2971e;}
 span.red {color:#f2971e;}
 
 /* Liens */
-.suite {background:#18293c;padding:10px;color:#fff;text-transform:uppercase;}
+.suite {background:#000;padding:10px;color:#fff;text-transform:uppercase;}
 .suite:hover {background:#f2971e;color:#fff;}
 
-.suite2 {background:#18293c;padding:2px;color:#fff;text-transform:uppercase;cursor: pointer;}
+.suite2 {background:#000;padding:2px;color:#fff;text-transform:uppercase;cursor: pointer;}
 .suite2:hover {background:#f2971e;color:#fff;}
 
 /* Slider Top */
@@ -56,7 +56,7 @@ span.red {color:#f2971e;}
 .encart .titre {font-size:18px;}
 .encart .titre2 {font-size:24px;}
 .encart .titre2:before {content:'// ';}
-.encart.bg-orange .titre, .encart.bg-orange .titre2 {background:#18293c;}
+.encart.bg-orange .titre, .encart.bg-orange .titre2 {background:#000;}
 
 /* Slider MILLS */
 .slider-mills .slick-prev, .slider-mills .slick-next {z-index:100;width:21px;height:46px;margin-top:-23px;}
@@ -74,14 +74,14 @@ span.red {color:#f2971e;}
 /* Footer */
 .footer {background:url('img/bg-footer.png') top center no-repeat #fff;padding:95px 0;}
 .footer .row {max-width:62em;margin:0 auto;}
-.footer .row div:first-child {text-transform:uppercase;color:#18293c;font-size:20px;}
-.footer .row div:first-child a {color:#18293c;}
+.footer .row div:first-child {text-transform:uppercase;color:#000;font-size:20px;}
+.footer .row div:first-child a {color:#000;}
 .footer .row div:nth-child(2) {text-align:center;font-size:14px;}
 .footer .row div:nth-child(2) img {margin-bottom:10px;}
 .footer .row div:last-child {font-size:30px;color:#f2971e;text-align:center;}
 /*.footer .row div:last-child a {display:block;}*/
 .footer .row div:last-child a:first-child {font-size:11px;color:#f2971e;text-transform:uppercase;}
-.footer .row div:last-child a:last-child {font-size:18px;color:#18293c;}
+.footer .row div:last-child a:last-child {font-size:18px;color:#000;}
 .footer .row div a:hover {color: #f2971e;}
 
 /* Page */
@@ -97,7 +97,7 @@ button:hover {background-color:#f2971e;}
 /* Menu mobile */
 .left-off-canvas-toggle {position:absolute;z-index:100;padding:5px 10px;display:none;}
 .left-off-canvas-toggle img {width:20px;}
-.left-off-canvas-menu {background:#18293c;}
+.left-off-canvas-menu {background:#000;}
 .left-off-canvas-menu li {list-style-type:none;text-transform:uppercase;}
 .left-off-canvas-menu a {color:#fff;display:block;}
 .left-off-canvas-menu ul {margin:0;}
