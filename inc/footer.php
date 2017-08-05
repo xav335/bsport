@@ -22,7 +22,7 @@
 						<a href="contact.php">contact</a> - <a href="mentions.php">mentions légales</a>
 					</div>
 					<div class="large-4 medium-4 small-12 columns">
-						<img src="img/logo-footer.png" alt="" title="BSPORT" /><br/>
+						<img src="img/logo-footer.png" alt="" title="Sport One" /><br/>
 						32 rue des marronniers - 33110 LE BOUSCAT
 					</div>
 					<div class="large-4 medium-4 small-12 columns">
