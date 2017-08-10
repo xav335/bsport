@@ -108,12 +108,11 @@
 		
 		<div class="row ">
 			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
-				<img src="img/aquaworkT.png" alt="" />
+				<img src="img/AquaBody.png" alt="" />
 			<p><br>
-				AQUAWORK™ est un cours d'aqua fitness exécuté dans l'eau à l'aide d'accessoires
-				 (rondin en mousse et tubbing en élastique). AQUAWORK™ permet de renforcer musculairement 
-				 tous les muscles du corps à l'aide de rondins et de tubings, 
-				grace à la combinaisons des résistances mécanique et hydraulique.
+				AQUABODY est un cours d'aqua fitness exécuté dans l'eau à l'aide d'accessoires (frites , élastiques et altères en mousse).
+                L'AQUABODY permet de renforcer musculairement tous les muscles du corps grâce à la résistance de l'eau sur le corps. 
+                Vous bénéficierez d'un effet de drainage et massage de l'eau sur le corps.
 			</p>
 			<div style="padding-left: 2px;">	
 				<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=V7qg1ZouhUc"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez la video &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
@@ -225,8 +224,7 @@
 					 Il permet de développer ses capacités cardio-vasculaires et son endurance.
 				</p>
 				<div style="padding-left: 2px;">	
-					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=jq_ka9es27I"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez les videos &nbsp; &nbsp;&nbsp;1 &nbsp; &nbsp;</a>
-					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=Y1FJo-P1UD8">&nbsp; &nbsp;2 &nbsp; &nbsp;</a>
+					<a class="fancybox-media suite" href="https://youtu.be/N-Tt7-YoV-8"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez les videos &nbsp; &nbsp;&nbsp;1 &nbsp; &nbsp;</a>
 				</div>
 			<div class="large-4 medium-4 small-12 columns" >
 				
