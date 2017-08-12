@@ -213,10 +213,11 @@
 			</div>	
 		</div>
 		
+		
 		<div class="row ">
 			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
 				<h1>Aquabiking</h1>
-				<h3>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Sport One</h3>
+				<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sport One</h3>
 				<p><br>
 					Véritable phénomène de mode, l’Aquabiking est un sport à part entière. Le vélo dans l’eau réunit 
 					tout les avantages de l’Aquagym à ceux du cyclisme. En raison de la résistance de l’eau, cette activité 
@@ -224,12 +225,13 @@
 					 Il permet de développer ses capacités cardio-vasculaires et son endurance.
 				</p>
 				<div style="padding-left: 2px;">	
-					<a class="fancybox-media suite" href="https://youtu.be/N-Tt7-YoV-8"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez les videos &nbsp; &nbsp;&nbsp;1 &nbsp; &nbsp;</a>
+					<a class="fancybox-media suite" href="https://youtu.be/N-Tt7-YoV-8"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez la video &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
 				</div>
-			<div class="large-4 medium-4 small-12 columns" >
-				
 			</div>	
-		</div>
+			<div class="large-4 medium-4 small-12 columns" >
+				<div style="margin-top: 34px;"><img src="img/aquabiking-accueil.jpg" alt="" /></div>
+			</div>	
+		</div>	
 		
 		<div class="row ">
 			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
@@ -244,9 +246,11 @@
 				</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-				
+				<div style="margin-top: 34px;"><img src="img/bodybalance.jpg" alt="" /></div>
 			</div>	
 		</div>
+		
+		
 </div>
 <!-- /Content -->
 
