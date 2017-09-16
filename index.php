@@ -54,6 +54,9 @@ if (empty($result)) {
 	</div>
 	
 	<div class="large-4 medium-4 small-12 columns">
+	   <div class="large-12 medium-12 small-12 columns">	
+			<div><a class="suite3" target="_blank" href="https://cloud.heitzsystem.com/heitzfit/1330/app">RESERVATION AQUABIKE</a></div>
+		</div>
 		&nbsp;
 		<h1>Actualités du Club</h1>
 		<h2><?php echo $titre?></h2>

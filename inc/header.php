@@ -25,6 +25,7 @@
 <!-- 					<li><a href="partenaires.php">Partenaires</a></li> -->
 					<li><a href="planning.php">Planning</a></li>
 					<li><a href="contact.php">Nous contacter</a></li>
+					<li><a target="_blank" href="https://cloud.heitzsystem.com/heitzfit/1330/app">Réservation aquabike</a></li>
 				</ul>
 			</aside>
 	
@@ -64,7 +65,6 @@
 <!--     					<li><a href="partenaires.php">Partenaires</a></li> -->
     					<li><a href="planning.php">Planning</a></li>
     					<li><a href="contact.php">Nous contacter</a></li>
-					   
 					</ul>
 				</div>
 			</div>
