@@ -194,20 +194,17 @@
 		
 		<div class="row ">
 			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
-				<img src="img/cxworkT.png" alt="" />
+				<img src="img/btnBodyAttack.png" alt="" />
 				<p><br>
-					CXWORX™ - l'entrainement pour le core - Abdos, fessiers, dos - 
-					Révolutionnaire et intensif, qui en 30 minutes vous donne les résultats là où cela compte le plus.
+					BODYATTACK™ - combine course, flexions, sauts avec des exercices de force comme des pompes et des squats (interval training).<br>
+                    Ce programme brûle jusqu'à 730 calories!.<br>
+                    Cours de qualité certifié Les Mills™ se déroule dans une atmosphère survoltée !
 				</p>
-				<div style="padding-left: 2px;">	
-					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=NNsSJ6WaRd0"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez la video &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
-				</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
 				<div class="large-12 columns" style="margin-top: 34px;">
 					<div class="slider-mills">
-						<div><img src="img/cxworx1.jpg" alt="" /></div>
-						<div><img src="img/cxworx2.jpg" alt="" /></div>
+						<div><img src="img/boby-attack.jpg" alt="" /></div>
 					</div>
 				</div>
 			</div>	
