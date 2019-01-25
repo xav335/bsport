@@ -93,7 +93,7 @@ if (!empty($_GET)){ //Modif
 	
 	
 						function RoxyFileBrowser(field_name, url, type, win) {
-						  var roxyFileman = '/admin/fileman/index.html';
+						  var roxyFileman = '/admin/fileman/index.php';
 						  if (roxyFileman.indexOf("?") < 0) {     
 						    roxyFileman += "?type=" + type;   
 						  }
