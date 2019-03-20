@@ -154,6 +154,13 @@
 				<p>Tout lien vers le présent site doit faire l’objet d’une
 					autorisation expresse et préalable de , lequel se réserve la
 					possibilité de faire supprimer ce lien à tout moment.</p>
+					<p>
+					<b>Raison sociale :</b> ENA <br>
+                    <b>Numero de RCS :</b> 814886883<br>
+                   <b> Capital social :</b> 10000 €<br>
+                    <b>numero tva intracommunautaire :</b> FR22 814886886<br>
+                    <b>Médiateur référencé :</b> Médicis 73 boulevard de Clichy - 75009 Paris au 0149701593<br>
+					</p>
 			</div>
 		</div>
 
