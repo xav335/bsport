@@ -6,6 +6,7 @@ session_start();
 $contact = new Contact();
 
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['action'] ."\n", 3, "../log/spy.log");
+error_log(date("Y-m-d H:i:s") ." : ". $_POST['essai'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['name'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['firstname'] ."\n", 3, "../log/spy.log");
 error_log(date("Y-m-d H:i:s") ." : ". $_POST['email'] ."\n", 3, "../log/spy.log");
@@ -29,13 +30,18 @@ if ($_POST["action"] == "sendMail") {
 
 	$_to = "contact@sport-one.fr";
 	//$_to = "fjavi.gonzalez@gmail.com";
-	$sujet = "Sport-One - Contact Site";
+	if ($_POST["essai"]=='1') {
+	    $sujet = "Sport-One - Demande essai gratuit";
+	} else {
+	    $sujet = "Sport-One - Contact Site";
+	}
+	
 	//echo "Envoi du message à " . $_to . "<br>";
 		
 	$entete = "From:". $_POST["email"] ."\n";
 	$entete .= "MIME-version: 1.0\n";
 	$entete .= "Content-type: text/html; charset= iso-8859-1\n";
-	$entete .= "Bcc: contact@bsport.fr, fjavi.gonzalez@gmail.com, xav335@hotmail.com\n";
+	$entete .= "Bcc: contact@sport-one.fr, fjavi.gonzalez@gmail.com, xav335@hotmail.com\n";
 		
 	$corps = "";
 	$corps .= "Bonjour,<br>";

@@ -37,6 +37,7 @@
 			<p>
 				Avec prés de 60 postes cet espace permet de pratiquer toutes les formes de musculation ; quels que soient vos objectifs, l’ensemble de l’équipe vous aidera à les concrétiser grâce à 1 bilan forme, 1 programme personnalisé dés le 1er jour et 1 suivi permanent et attentif de vos séances d’entraînement.
 			</p>
+			<a class="suite4" target="" href="contact.php?essai=1">Demandez un essai gratuit et sans engagement</a>
 		</div>
 		<div class="large-5 medium-5 small-12 columns">
 			<img src="img/espace-muscu.png" alt="" />
@@ -137,7 +138,8 @@
 			<div class="flex-video">	
 				<a class="fancybox" href="img/cardio12.jpg"><img src="img/cardio12.jpg" class="fancy" data-fancybox-group="produit"  alt="" /></a>
 			</div>	
-		</div>		
+		</div>	
+		<a class="suite4" target="" href="contact.php?essai=1">Demandez un essai gratuit et sans engagement</a>	
 	</div>		
 </div>
 <!-- /Content -->

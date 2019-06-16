@@ -20,8 +20,9 @@
 		<p>
 			Les Mills est une méthode d’entraînement pour les pratiquants des clubs de remise en forme proposant des cours collectifs haut de gamme chorégraphiés en musique, ainsi qu’une méthode de personal training., élaborés par les meilleurs experts internationaux du fitness.	
 		</p>
+		<a class="suite4" target="" href="contact.php?essai=1">Demandez un essai gratuit et sans engagement</a>
 		<div class="row ">
-			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
+			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; padding: 30px 10px 30px 10px;" >
 				<img src="img/bodycombatT.png" alt="" />
 				<p><br>
 					Le BODYCOMBAT™ est le cours de cardio qui vous donne un coup de fouet et vous permet de vous lâcher complètement.
@@ -119,7 +120,7 @@
 			</div>
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
-					<div><img src="img/aquawork1.jpg" alt="" /></div>
+				<div><img src="img/aquawork1.jpg" alt="" /></div>
 			</div>	
 		</div>
 		
@@ -241,13 +242,14 @@
 				<div style="padding-left: 2px;">	
 					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=hdR64sjBAK8"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez la video &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</a>
 				</div>
+				
 			</div>	
 			<div class="large-4 medium-4 small-12 columns" >
 				<div style="margin-top: 34px;"><img src="img/bodybalance.jpg" alt="" /></div>
 			</div>	
 		</div>
-		
-		
+		<br><br>
+		<a class="suite4" target="" href="contact.php?essai=1">Demandez un essai gratuit et sans engagement</a>
 </div>
 <!-- /Content -->
 

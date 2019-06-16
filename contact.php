@@ -16,16 +16,33 @@
 <!-- Content -->
 <div class="row content">
 	<div class="large-8 medium-8 small-12 columns">
-		<h1>Contactez <span class="red">Sport</span>&nbsp;One</h1>
-		<h2>Le Bouscat</h2>
+	<?php if ($_GET["essai"]=='1') { ?>
+	 	<h1>Demande d'un <span class="red">essai gratuit</span>&nbsp;</h1>
+	 	<p>
+	 	 Veuillez renseigner vos coordonnées et indiquez dans votre message la disciple que vous souhaitez tester. 
+	 	</p>
+	 <?php } else { ?>
+	    <h1>Contactez <span class="red">Sport</span>&nbsp;One</h1>
+	    <h2>Le Bouscat</h2>
 		<p>
 			32 rue des marronniers 33110 LE BOUSCAT (sur boulevard Godard)<br/>
 			Tél. 05 56 69 91 23
 		</p>
+	 <?php  } ?>
+	
+		
+		
+		
 		<div id="resultat">
 		
     	</div>
 		<form data-abide id="formulaire">
+		
+		 <?php if ($_GET["essai"]=='1') { ?>
+		  <input type="hidden" id="essai" name="essai" value="1">
+		 <?php } else { ?>
+		   <input type="hidden" id="essai" name="essai" value="0"> 
+		 <?php  } ?>
 			<div class="row">
 				<div class="large-6 columns">
 					<label>Nom
@@ -126,6 +143,7 @@
 		        	$("#email").val("");
 		        	$("#tel").val("");
 		           	$("#message").val("");
+		           	$("#essai").val("");
 		        },
 		        error: function() {
 		        	 $("#resultat").html("<h3>Une erreur s'est produite !</h3>");

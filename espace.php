@@ -23,13 +23,14 @@
 			<p>
 				Dans un cadre architectural unique sur la région, avec un véritable espace de 2000 m2, le club vous propose 6 univers entièrement dédiés à votre forme et à votre bien-être.
 			</p>
-			
+			<a class="suite4" target="" href="contact.php?essai=1">Demandez un essai gratuit et sans engagement</a>
 		</div>
+		
 		<div class="large-5 medium-5 small-12 columns">
 			
 		</div>
 	</div>		
-	<div class="large-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px; " >
+	<div class="large-12 columns" style=";border-bottom : 4px ridge white; padding: 30px 10px 30px 10px; " >
 		<div class="large-7 medium-7 small-12 columns">
 			<h3>Espace Aquatique</h3><br>
 			<p>
