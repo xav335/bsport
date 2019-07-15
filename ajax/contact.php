@@ -41,7 +41,7 @@ if ($_POST["action"] == "sendMail") {
 	$entete = "From:". $_POST["email"] ."\n";
 	$entete .= "MIME-version: 1.0\n";
 	$entete .= "Content-type: text/html; charset= iso-8859-1\n";
-	$entete .= "Bcc: contact@sport-one.fr, fjavi.gonzalez@gmail.com, xav335@hotmail.com\n";
+	$entete .= "Bcc: contact@bsport.fr, fjavi.gonzalez@gmail.com, xav335@hotmail.com\n";
 		
 	$corps = "";
 	$corps .= "Bonjour,<br>";
