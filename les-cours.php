@@ -35,7 +35,7 @@
 				<div style="padding-left: 2px;">	
 					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=vDI4ss9XVrk"><img src="img/youtube.png" alt="" />&nbsp; &nbsp;Regardez les videos &nbsp; &nbsp;&nbsp;1 &nbsp; &nbsp;</a>
 					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=poahflXB6nA">&nbsp; &nbsp;2 &nbsp; &nbsp;</a>
-					<a class="fancybox-media suite" href="https://www.youtube.com/watch?v=2ccc_bgR4DA">&nbsp; &nbsp;3 &nbsp; &nbsp;</a>
+					<a class="fancybox-media suite" href="https://youtu.be/1ZmEfrD_VGg">&nbsp; &nbsp;3 &nbsp; &nbsp;</a>
 					
 				</div>
 			</div>	
