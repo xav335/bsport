@@ -248,7 +248,7 @@
 				<div style="margin-top: 34px;"><img src="img/bodybalance.jpg" alt="" /></div>
 			</div>	
 		</div>
-		
+		<div id="thetrip"></div>
 		
 		<div class="row ">
 			<div class="large-8 medium-8 small-12 columns" style=";border-bottom : 4px ridge white; border-top:4px ridge white; padding: 30px 10px 30px 10px;" >
