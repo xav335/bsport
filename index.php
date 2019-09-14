@@ -49,7 +49,8 @@ if (empty($result)) {
 			</div>	
 		</div>
 		<div class="large-6 medium-6 small-12 columns">	
-			<a class="fancybox-media" href="https://youtu.be/hZ2_-u258Jg?list=PLeEqGsesiFRq6ScAjS_8l-6NwyLHmI_jS"><img src="img/video.jpg" alt="" /></a>
+			<a class="fancybox-media" href="https://youtu.be/RVhIvLIh1bg?autoplay=1"><img src="img/video.jpg" alt="" /></a>
+		<!-- https://youtu.be/RVhIvLIh1bg   https://youtu.be/hZ2_-u258Jg -->
 		</div>
 	</div>
 	
