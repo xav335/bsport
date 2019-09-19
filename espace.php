@@ -27,7 +27,9 @@
 		</div>
 		
 		<div class="large-5 medium-5 small-12 columns">
-			<iframe src="https://www.youtube.com/embed/hZ2_-u258Jg?rel=0&amp;showinfo=0&amp;controls=1&amp;autoplay=1" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+		  <div class="video-responsive">
+			<iframe src="https://www.youtube.com/embed/hZ2_-u258Jg?rel=0&showinfo=0&amp;controls=1&autoplay=1" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+		  </div>
 		</div>
 	</div>		
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white; padding: 30px 10px 30px 10px; " >
