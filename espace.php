@@ -31,7 +31,16 @@
 			<iframe src="https://www.youtube.com/embed/hZ2_-u258Jg?rel=0&showinfo=0&amp;controls=1&autoplay=1" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 		  </div>
 		</div>
+	</div>	
+	<div class="large-12 columns" style=";border-bottom : 4px ridge white; padding: 30px 10px 30px 10px; " >
+		<div class="large-12 medium-12 small-12 columns">
+			<h3>Visite virtuelle du club</h3><br>
+
+			<iframe width='853' height='480' src='https://my.matterport.com/show/?m=dVWcyxf4TAK&brand=0' frameborder='0' allowfullscreen allow='vr'></iframe>
+		</div>
+		
 	</div>		
+		
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white; padding: 30px 10px 30px 10px; " >
 		<div class="large-7 medium-7 small-12 columns">
 			<h3>Espace Aquatique</h3><br>
