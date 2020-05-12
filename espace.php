@@ -16,6 +16,7 @@
 
 <!-- Content -->
 <div class="row content">
+
 	<div class="large-12 columns">
 		<div class="large-7 medium-7 small-12 columns">
 			<h1>Espace <span class="red">Sport</span>&nbsp;One</h1>
@@ -35,8 +36,9 @@
 	<div class="large-12 columns" style=";border-bottom : 4px ridge white; padding: 30px 10px 30px 10px; " >
 		<div class="large-12 medium-12 small-12 columns">
 			<h3>Visite virtuelle du club</h3><br>
-
-			<iframe width='853' height='480' src='https://my.matterport.com/show/?m=dVWcyxf4TAK&brand=0' frameborder='0' allowfullscreen allow='vr'></iframe>
+			<div class="video-responsive">
+				<iframe width='853' height='480' src='https://my.matterport.com/show/?m=dVWcyxf4TAK&brand=0' frameborder='0' allowfullscreen allow='vr'></iframe>
+			</div>	
 		</div>
 		
 	</div>		

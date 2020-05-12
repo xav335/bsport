@@ -1,5 +1,5 @@
 
-    <script type="text/javascript" src="http://cdn.jssor.com/script/jssor.slider-22.0.6.min.js"></script>
+    <script type="text/javascript" src="/js/jssor.slider-22.0.6.min.js"></script>
 
     <script>
         var _SlideshowTransitionC = {};
