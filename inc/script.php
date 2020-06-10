@@ -5,8 +5,8 @@
 
 <script>
       $(document).foundation();
-      /*$( document ).ready(function() {
+      $( document ).ready(function() {
         console.log( "ready!" );
         $('#myModal').foundation('reveal', 'open');
-        });*/
+        });
 </script>
