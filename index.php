@@ -48,7 +48,7 @@ if (empty($result)) {
 	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div> -->
 <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-<a class="close-reveal-modal"><img src="img/Reouverture.jpg" alt="" /></a>
+<a class="close-reveal-modal"><img src="img/Reouverture2.jpg" alt="" /></a>
 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
