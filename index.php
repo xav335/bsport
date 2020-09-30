@@ -48,7 +48,13 @@ if (empty($result)) {
 	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div> -->
 <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-<a class="close-reveal-modal"><img src="img/Reouverture2.jpg" alt="" /></a>
+<!-- <a class="close-reveal-modal"><img src="img/Reouverture2.jpg" alt="" /></a> -->
+    <div class="large-12 medium-12 small-12 columns">	
+        <h1>Planning training en <u>extérieur</u> et en direct <u>live</u> sur la page<a href="https://www.facebook.com/groups/2577764599019093/about" target="_blank"> facebook "team sport one"</a></h1>
+   </div> 
+    <div class="large-12 medium-12 small-12 columns">	
+        <a class="close-reveal-modal"><img src="img/pltemp.jpg" alt="" /></a>
+   </div> 
 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
