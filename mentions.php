@@ -51,12 +51,12 @@
 					notice à tout moment et notamment afin de l’adapter aux évolutions
 					du site.L’utilisateur s’engage donc à consulter la présente notice
 					régulièrement. L’utilisateur est réputé accepter cette dernière
-					version à chaque nouvelle connexion au Site.</p>
+					version à chaque nouvelle connexion au site.</p>
 				<p>Ce site est soumis à la loi française. La majorité des contenus
 					et services du présent site est proposée en français et parfois en
 					anglais. En cas de litige, la version française fera foi. Les
 					documents, informations et offres de services diffusés sur le site
-					sont destinés aussi bien aux clients de , qu’aux non-clients.</p>
+					sont destinés aussi bien aux clients de Sport one, qu’aux non-clients.</p>
 				<p>Le présent site est accessible 24 heures sur 24, 7 jours sur 7,
 					sauf cas de force majeure, fait(s) de tiers et/ou travaux de
 					maintenance et interventions nécessaires au bon fonctionnement du

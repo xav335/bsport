@@ -50,11 +50,12 @@ if (empty($result)) {
 <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 <!-- <a class="close-reveal-modal"><img src="img/Reouverture2.jpg" alt="" /></a> -->
     <div class="large-12 medium-12 small-12 columns">	
-        <h1>Planning temporaire training en <u>extérieur</u> et en direct <u>live</u> sur la page<a href="https://www.facebook.com/groups/2577764599019093/about" target="_blank"> facebook "team sport one"</a></h1>
-        <br><h2>Les cours ci dessous sont assurés sur le parking du club -  Merci de votre compréhension - L'équipe Sport One</h2>
+        <h1>chers adhérents,  nous sommes heureux de vous annoncer la réouverture de votre Cub à compter du samedi 10 octobre à 9h00.
+Toutes les activités sont bien entendu accessibles : aquatique et fitness. À très vite 
+L'équipe Sport One </h1>
    </div> 
     <div class="large-12 medium-12 small-12 columns">	
-        <a class="close-reveal-modal"><img src="img/pltemp.jpg" alt="" /></a>
+        <a class="close-reveal-modal"><img src="img/Reouverture.jpg" alt="" /></a>
    </div> 
 <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
