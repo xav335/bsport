@@ -47,18 +47,18 @@ if (empty($result)) {
 	<a target="_blank" href="https://www.facebook.com/groups/2577764599019093/?ref=shareQ">CLIQUEZ ICI </a></p>
 	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div> -->
-<div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-<!-- <a class="close-reveal-modal"><img src="img/Reouverture2.jpg" alt="" /></a> -->
-    <div class="large-12 medium-12 small-12 columns">	
-        <h1>chers adhérents,  nous sommes heureux de vous annoncer la réouverture de votre Cub à compter du samedi 10 octobre à 9h00.
-Toutes les activités sont bien entendu accessibles : aquatique et fitness. À très vite 
-L'équipe Sport One </h1>
-   </div> 
-    <div class="large-12 medium-12 small-12 columns">	
-        <a class="close-reveal-modal"><img src="img/Reouverture.jpg" alt="" /></a>
-   </div> 
-<a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+            
+          <!-- <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                <div class="large-12 medium-12 small-12 columns">	
+                    <h1>chers adhérents,  nous sommes heureux de vous annoncer la réouverture de votre Cub à compter du samedi 10 octobre à 9h00.
+            Toutes les activités sont bien entendu accessibles : aquatique et fitness. À très vite 
+            L'équipe Sport One </h1>
+               </div> 
+                <div class="large-12 medium-12 small-12 columns">	
+                    <a class="close-reveal-modal"><img src="img/Reouverture.jpg" alt="" /></a>
+               </div> 
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+            </div> -->
 
 	<div class="large-8 medium-8 small-12 columns">
 		<h1><span class="red">Sport</span>&nbsp;One</h1>
