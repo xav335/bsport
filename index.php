@@ -38,15 +38,17 @@ if (empty($result)) {
 <!-- Content -->
 <div class="row ">
 
-<!-- <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-	<h3  id="modalTitle">PERIODE DE CONFINEMENT</h3><br>
-	<h2  id="modalTitle">COURS COLLECTIFS EN LIGNE sur : </h2>
+ <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+	<h3  id="modalTitle">PERIODE DE CONFINEMENT 2</h3><br>
+	<h2  id="modalTitle">Planning en Direct Live (à partir du lundi 2 novembre) sur : </h2>
 	<a target="_blank" href="https://www.facebook.com/groups/2577764599019093/?ref=shareQ"><img src="img/facebooklogo.png" alt="" /></a><br>
-	<p  >Pendant cette période de confinement,  nous vous proposons des cours collectifs en Live sur Facebook<br>
-	Merci de <br>
-	<a target="_blank" href="https://www.facebook.com/groups/2577764599019093/?ref=shareQ">CLIQUEZ ICI </a></p>
+	 
+	<p>Pour visualiser les futurs cours en Direct Live, n’hésitez pas à demander un ajout au groupe Facebook "Team Sport One"<br></p>
+	 <div class="large-12 medium-12 small-12 columns">	
+                    <a class="close-reveal-modal"><img src="img/planconf2.jpg" alt="" /></a>
+               </div>
 	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div> -->
+</div>
             
           <!-- <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
                 <div class="large-12 medium-12 small-12 columns">	
