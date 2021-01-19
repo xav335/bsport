@@ -45,7 +45,7 @@ if (empty($result)) {
 	 
 	<p>Pour visualiser les futurs cours en Direct Live, n’hésitez pas à demander un ajout au groupe Facebook "Team Sport One"<br></p>
 	 <div class="large-12 medium-12 small-12 columns">	
-                    <a class="close-reveal-modal"><img src="img/coroplan2.png" alt="" /></a>
+                    <a class="close-reveal-modal"><img src="img/PlanningCorona.png" alt="" /></a>
                </div>
 	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
