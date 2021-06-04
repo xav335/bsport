@@ -38,7 +38,7 @@ if (empty($result)) {
 <!-- Content -->
 <div class="row ">
 
- <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+ <!-- <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 	<h3  id="modalTitle">PERIODE DE CONFINEMENT 2</h3><br>
 	<h2  id="modalTitle">Planning en Direct Live (à partir du lundi 2 novembre) sur : </h2>
 	<a target="_blank" href="https://www.facebook.com/groups/2577764599019093/?ref=shareQ"><img src="img/facebooklogo.png" alt="" /></a><br>
@@ -48,7 +48,7 @@ if (empty($result)) {
                     <a class="close-reveal-modal"><img src="img/PlanningCorona.png" alt="" /></a>
                </div>
 	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div>
+</div> -->
             
           <!-- <div style="text-align: center" id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
                 <div class="large-12 medium-12 small-12 columns">	
